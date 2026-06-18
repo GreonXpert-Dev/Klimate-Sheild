@@ -1,4 +1,18 @@
 /********** Template CSS **********/
+html {
+    overscroll-behavior: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
 :root {
     --primary: #348E38;
     --secondary: #525368;
@@ -10,7 +24,7 @@
     position: fixed;
     display: none;
     right: 30px;
-    bottom: 30px;
+    bottom: 40px;
     z-index: 99;
 }
 
@@ -93,21 +107,21 @@ h6,
 
 /*** Navbar ***/
 .navbar.sticky-top {
-    top: -100px;
+    top: 0;
     transition: .5s;
 }
 
 .navbar .navbar-brand,
 .navbar a.btn {
-    height: 80px
+    height: 60px
 }
 
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
-    padding: 25px 0;
+    padding: 14px 0;
     color: var(--dark);
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
     outline: none;
 }
 
@@ -371,6 +385,240 @@ h6,
 }
 
 
+/*** Service Stacked Card Carousel ***/
+
+/* Section layout */
+.svc-layout { margin-top: 2rem; }
+
+/* Outer row: stack + right arrow side by side */
+.svc-outer-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+/* Wrapper — right-aligned, overflow visible for fanned cards */
+.svc-stack-wrapper {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-right: 0;
+    overflow: visible;
+    flex: 1;
+}
+
+/* Stack container */
+.svc-stack {
+    position: relative;
+    width: 520px;
+    height: 380px;
+    cursor: grab;
+    user-select: none;
+    overflow: visible;
+}
+.svc-stack:active { cursor: grabbing; }
+
+/* Each card */
+.svc-card {
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    top: 60px;
+    left: 0;
+    border-radius: 0 !important;
+    transition: transform 0.85s cubic-bezier(.25,.1,.25,1), opacity 0.85s, box-shadow 0.4s;
+    will-change: transform, opacity;
+}
+.svc-card.is-dragging { transition: transform 0.08s linear !important; }
+
+/* Stack fan positions — front card right, back cards spread upper-left */
+.svc-card[data-pos="0"] {
+    transform: translate(0px,    0px)  rotate(0deg)   scale(1);
+    opacity: 1; z-index: 10;
+    box-shadow: 0 8px 36px rgba(0,0,0,0.22);
+}
+.svc-card[data-pos="1"] {
+    transform: translate(-120px,-18px) rotate(-6deg)  scale(0.97);
+    opacity: 1; z-index: 9;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.16);
+}
+.svc-card[data-pos="2"] {
+    transform: translate(-230px,-34px) rotate(-12deg) scale(0.94);
+    opacity: 0.88; z-index: 8;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.svc-card[data-pos="3"] {
+    transform: translate(-330px,-48px) rotate(-18deg) scale(0.91);
+    opacity: 0.72; z-index: 7;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.09);
+}
+.svc-card[data-pos="4"] {
+    transform: translate(-420px,-60px) rotate(-24deg) scale(0.88);
+    opacity: 0.55; z-index: 6;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.06);
+}
+.svc-card[data-pos="hidden"] {
+    transform: translate(-500px,-70px) rotate(-28deg) scale(0.85);
+    opacity: 0; z-index: 1;
+    pointer-events: none;
+}
+
+/* Exit — card flies off to the right */
+.svc-card.svc-exit-left {
+    transform: translate(115%, 20px) rotate(8deg) !important;
+    opacity: 0 !important;
+    transition: transform 0.80s cubic-bezier(.25,.1,.25,1), opacity 0.70s !important;
+}
+
+/* Service item fills card */
+.svc-card .service-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 !important;
+    overflow: hidden;
+    box-shadow: none;
+    text-align: left;
+}
+
+.svc-card .service-img { border-radius: 0 !important; }
+
+/* Full-bleed gradient overlay — always on, not just hover */
+.svc-card .service-item .service-text {
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.50) 45%, transparent 75%) !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 1.75rem 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Always-white heading & description */
+.svc-card .service-item .service-text h4 {
+    color: #ffffff !important;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+.svc-card .service-item .service-text p {
+    color: rgba(255,255,255,0.88) !important;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+}
+
+/* READ MORE — plain arrow link style like reference */
+.svc-card .service-item .service-text .btn {
+    width: 100% !important;
+    height: auto !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0 0 6px 0 !important;
+    border: none !important;
+    text-transform: uppercase;
+    display: block !important;
+    text-align: left !important;
+    overflow: visible !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    border-radius: 0 !important;
+    transition: color 0.25s !important;
+    position: relative;
+}
+.svc-card .service-item .service-text .btn span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.svc-card .service-item .service-text .btn::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.6);
+    margin-top: 8px;
+    transition: background 0.25s;
+}
+.svc-card .service-item .service-text .btn:hover {
+    color: #6fcf97 !important;
+}
+.svc-card .service-item .service-text .btn:hover::after {
+    background: #6fcf97;
+}
+
+/* Side arrow buttons — plain icon style matching projects section */
+.svc-side-arrow {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: #2d6a4f;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+.svc-side-arrow:hover {
+    color: #1b4332;
+    transform: scale(1.2);
+}
+
+/* Both arrows are flex siblings of svc-stack-wrapper */
+.svc-outer-row > .svc-side-left,
+.svc-outer-row > .svc-side-right {
+    position: static;
+    transform: none;
+    flex-shrink: 0;
+    align-self: center;
+}
+.svc-outer-row > .svc-side-left:hover,
+.svc-outer-row > .svc-side-right:hover {
+    color: #1b4332;
+    transform: scale(1.2);
+}
+
+/* Bottom dots */
+.svc-bottom-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+.svc-dots { display: flex; gap: 8px; align-items: center; }
+.svc-dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: rgba(26,107,60,0.22);
+    border: none; cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    padding: 0;
+}
+.svc-dot.active {
+    background: #1a6b3c;
+    transform: scale(1.35);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .svc-stack-wrapper { height: 320px; padding-right: 20px; padding-top: 40px; }
+    .svc-stack { width: 90%; }
+    .svc-card { height: 240px; }
+}
+
 /*** Project Portfolio ***/
 #portfolio-flters {
     display: inline-block;
@@ -504,37 +752,169 @@ h6,
 }
 
 
-/*** Testimonial ***/
+/*** Testimonial — Stacked tilt-card ***/
 
-.testimonial-carousel .owl-item img {
-    width: 100px;
-    height: 100px;
+/* stage: keep overflow hidden so cards don't spill during slide */
+.testimonial-carousel.owl-carousel .owl-stage-outer {
+    overflow: hidden;
+    padding: 28px 0 44px;
 }
 
-.testimonial-carousel .owl-nav {
-    margin-top: 30px;
+/* ── Card base ── */
+.tcard {
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px 22px 18px;
+    margin: 0 4px;
+    position: relative;
+    box-shadow: 0 6px 32px rgba(10,30,15,.11);
     display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* non-center cards tilt alternately */
+    transform: rotate(-4deg) scale(.92);
+    transform-origin: center center;
+    opacity: .72;
+    transition: transform .45s cubic-bezier(.25,.8,.25,1),
+                box-shadow .45s, opacity .45s;
+}
+
+/* even owl items tilt the opposite way */
+.testimonial-carousel .owl-item:nth-child(even) .tcard {
+    transform: rotate(4deg) scale(.92);
+}
+
+/* center/active card — upright, full size */
+.testimonial-carousel .owl-item.center .tcard {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    box-shadow: 0 16px 56px rgba(10,30,15,.18);
+}
+
+/* ── CTA tag ── */
+.tcard-cta {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #0b1f10;
+    color: #fff;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    border-radius: 4px;
+}
+
+/* ── Stars ── */
+.tcard-stars {
+    color: #f5a623;
+    font-size: .78rem;
+    letter-spacing: 2px;
+}
+
+/* ── Quote text ── */
+.tcard-text {
+    font-size: .82rem;
+    color: #3c4a3e;
+    line-height: 1.8;
+    margin: 0;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ── Author row ── */
+.tcard-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #eaf0ec;
+}
+
+.tcard-avatar {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px;
+    max-width: 48px;
+    border-radius: 50% !important;
+    object-fit: cover;
+    object-position: top center;
+    border: 2.5px solid var(--primary);
+    flex-shrink: 0;
+    display: block;
+}
+
+.tcard-name {
+    margin: 0 0 2px;
+    font-size: .88rem;
+    font-weight: 700;
+    color: #0b1f10;
+}
+
+.tcard-role {
+    font-size: .72rem;
+    color: #6b7a6e;
+    font-weight: 500;
+}
+
+/* ── Nav buttons ── */
+.testimonial-carousel .owl-nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
 
 .testimonial-carousel .owl-nav .owl-prev,
 .testimonial-carousel .owl-nav .owl-next {
-    margin-right: 15px;
-    width: 45px;
-    height: 45px;
-    display: flex;
+    background: transparent;
+    border: 1.5px solid #c2d5c8;
+    border-radius: 6px;
+    padding: 0;
+    line-height: 1;
+    transition: border-color .25s, background .25s;
+}
+
+.tc-nav-btn {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    background: var(--light);
-    border-radius: 4px;
-    font-size: 22px;
-    transition: .5s;
+    gap: 7px;
+    padding: 9px 20px;
+    font-size: .74rem;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: #3c4c40;
 }
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
+    border-color: var(--primary);
     background: var(--primary);
-    color: var(--light);
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover .tc-nav-btn,
+.testimonial-carousel .owl-nav .owl-next:hover .tc-nav-btn {
+    color: #fff;
+}
+
+/* dots off */
+.testimonial-carousel .owl-dots { display: none; }
+
+/* ── Mobile: disable tilt ── */
+@media (max-width: 767px) {
+    .tcard,
+    .testimonial-carousel .owl-item:nth-child(even) .tcard {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    .testimonial-carousel.owl-carousel .owl-stage-outer {
+        padding: 10px 0 24px;
+    }
 }
 
 
@@ -560,13 +940,23 @@ h6,
 
 .footer .btn.btn-link:hover {
     color: var(--primary);
-    letter-spacing: 1px;
+    letter-spacing: 0;
     box-shadow: none;
 }
 
+.footer,
+.container-fluid.bg-dark.footer {
+    background-color: #1c3d22 !important;
+}
+
+.footer h4 { color: #ffffff !important; }
+.footer p, .footer i { color: #ffffff !important; }
+.footer .btn.btn-link { color: #ffffff; }
+.footer h4 { font-size:1rem; letter-spacing:0.05em; text-transform:uppercase; border-bottom:2px solid rgba(255,255,255,.35); padding-bottom:10px; margin-bottom:16px !important; }
+
 .copyright {
     color: var(--light);
-    background: #072A19;
+    background: #0a1f11;
 }
 
 .copyright a {
@@ -574,5 +964,57 @@ h6,
 }
 
 .copyright a:hover {
-    color: var(--primary);
+    color: var(--ks-leaf);
 }
+
+/* =====================================================
+   PROFESSIONAL IMPROVEMENTS
+   ===================================================== */
+
+/* Global typography */
+body { font-family: "Open Sans", sans-serif !important; font-size: 1rem !important; line-height: 1.75 !important; color: #3a3a3a; }
+h1, .h1 { font-family: "Jost", sans-serif !important; font-size: 2.25rem !important; line-height: 1.2 !important; }
+h2, .h2 { font-family: "Jost", sans-serif !important; font-size: 2rem !important; line-height: 1.25 !important; }
+h3, .h3 { font-family: "Jost", sans-serif !important; font-size: 1.6rem !important; }
+h4, .h4 { font-family: "Jost", sans-serif !important; font-size: 1.25rem !important; }
+
+/* Navbar improvements */
+.navbar.sticky-top { box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+.navbar .navbar-brand h1 { font-size:1.4rem !important; color:#085041 !important; }
+/* ── Navbar font — edit HERE to change font/size across ALL pages ── */
+.navbar .navbar-nav .nav-link { margin-right:28px; padding:14px 0; color:#444; font-family:'Jost',sans-serif !important; font-size:15px; font-weight:600; letter-spacing:0.02em; }
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active { color: var(--primary); }
+
+/* About section */
+.about-section { background: #fff; }
+.about-image-container { position: relative; display: inline-block; }
+.about-image { border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,.12); width: 100%; }
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--primary);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(29,158,117,.4);
+}
+.experience-badge .years { font-size: 2rem; font-weight: 700; line-height: 1; }
+.experience-badge .exp-text { font-size: .65rem; font-weight: 600; line-height: 1.2; }
+.about-section .section-title { font-family: "Jost", sans-serif !important; font-size: 1.8rem !important; color: #085041; }
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 40px;
+    z-index: 99;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: var(--primary) !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+.back-to-top:hover { box-shadow: 0 0 0 4px #1a4d2e !important; }
