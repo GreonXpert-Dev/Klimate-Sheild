@@ -1,0 +1,157 @@
+/* =========================================
+   SERVICE PAGE — Klimate Shield
+   ========================================= */
+
+:root {
+  --green-900: #1B4332;
+  --green-700: #2D6A4F;
+  --green-500: #40916C;
+  --green-400: #52B788;
+  --green-200: #B7E4C7;
+  --green-50:  #F0FDF4;
+  --text:      #111827;
+  --muted:     #6B7280;
+  --white:     #FFFFFF;
+  --border:    #E5E7EB;
+  --radius:    14px;
+  --transition: 0.28s cubic-bezier(.4,0,.2,1);
+}
+
+body { color: var(--text); }
+.svc-section, .svc-section * { font-family: 'Open Sans', sans-serif; }
+.svc-section { padding: 90px 0; background: #fff; }
+
+/* ── Section Intro ───────────────────────── */
+.svc-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+.svc-label {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--green-500);
+  background: var(--green-50);
+  border: 1px solid var(--green-200);
+  padding: 5px 16px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+.svc-intro h2 {
+  font-family: 'Jost', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--green-900);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+.svc-intro p {
+  font-size: .925rem;
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ── Cards ───────────────────────────────── */
+.svc-card-link {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.icon-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 28px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.icon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(27,67,50,0.12);
+  border-color: var(--green-200);
+}
+
+/* icon + heading row */
+.icon-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.icon-card__icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  background: var(--green-50);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+.icon-card__icon i {
+  font-size: 18px;
+  color: var(--green-700);
+  transition: color var(--transition);
+}
+.icon-card:hover .icon-card__icon {
+  background: var(--green-700);
+}
+.icon-card:hover .icon-card__icon i {
+  color: #fff;
+}
+
+/* text */
+.icon-card h4 {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: .01em;
+}
+.icon-card p {
+  font-size: .855rem;
+  line-height: 1.72;
+  color: var(--muted);
+  margin: 0 0 auto;
+}
+
+/* arrow */
+.svc-card-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  width: 100%;
+  margin-top: 22px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--green-700);
+  transition: gap var(--transition), color var(--transition);
+}
+.svc-card-arrow i { font-size: .9rem; }
+.icon-card:hover .svc-card-arrow {
+  gap: 10px;
+  color: var(--green-500);
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 991px) { .svc-section { padding: 64px 0; } }
+@media (max-width: 767px) {
+  .svc-section { padding: 48px 0; }
+  .svc-intro h2 { font-size: 1.6rem; }
+  .icon-card { padding: 28px 22px 24px; }
+}

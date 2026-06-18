@@ -1,229 +1,926 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Klimate Sheild</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>Klimate Shield</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.svg" rel="icon" type="image/svg+xml" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
 
-<body>
+    <style>
+      /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       About Page  Premium Redesign
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+      /* â”€â”€ Eyebrow label â”€â”€ */
+      .section-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #348e38;
+        margin-bottom: 0.9rem;
+      }
+      .section-eyebrow::before {
+        content: "";
+        display: inline-block;
+        width: 28px;
+        height: 2px;
+        background: linear-gradient(90deg, #348e38, #81c784);
+        border-radius: 2px;
+      }
+
+      /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+       WHO WE ARE  split hero
+    â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+      .who-hero {
+        padding: 0px 0 60px;
+        background: #fff;
+      }
+      .who-hero .text-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        padding-right: 3rem;
+      }
+      .who-hero h2 {
+        font-size: clamp(1.4rem, 2.6vw, 2rem);
+        font-weight: 800;
+        color: #0f2d1a;
+        line-height: 1.2;
+        margin-bottom: 1.2rem;
+      }
+      .who-hero h2 em {
+        font-style: normal;
+        color: #348e38;
+      }
+      .who-hero .lead-text {
+        font-size: 0.93rem;
+        color: #4d6659;
+        line-height: 1.85;
+        margin-bottom: 0.9rem;
+      }
+      .who-hero .lead-text strong {
+        color: #0f2d1a;
+        font-weight: 700;
+      }
+      @media (max-width: 991px) {
+        .who-hero .text-col {
+          padding-right: 0;
+        }
+        .who-hero {
+          padding: 60px 0 50px;
+        }
+      }
+
+      /* â”€â”€ Stats Carousel â”€â”€ */
+      .stats-carousel-wrap {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 12px 0 12px;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent 0%,
+          #000 5%,
+          #000 95%,
+          transparent 100%
+        );
+        mask-image: linear-gradient(
+          to right,
+          transparent 0%,
+          #000 5%,
+          #000 95%,
+          transparent 100%
+        );
+      }
+      .stats-carousel-track {
+        display: flex;
+        gap: 14px;
+        width: max-content;
+      }
+      .stats-carousel-track.row-ltr {
+        animation: statsScrollLTR 22s linear infinite;
+      }
+      .stats-carousel-track.row-rtl {
+        animation: statsScrollRTL 22s linear infinite;
+      }
+      .stats-carousel-wrap:hover .stats-carousel-track {
+        animation-play-state: paused;
+      }
+      @keyframes statsScrollLTR {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes statsScrollRTL {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .sc-card {
+        flex: 0 0 175px;
+        width: 175px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.35);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 0;
+        padding: 18px 18px 16px;
+        box-shadow:
+          0 8px 32px rgba(15, 45, 26, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        text-align: left;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .sc-card:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 16px 40px rgba(15, 45, 26, 0.15),
+          inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      /* left accent bar on hover */
+      .sc-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 15%;
+        bottom: 15%;
+        width: 3px;
+        background: #348e38;
+        border-radius: 0 3px 3px 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .sc-card:hover::before {
+        opacity: 1;
+      }
+
+      .sc-card-icon {
+        display: none;
+      }
+
+      .sc-card-num {
+        font-size: 1.7rem;
+        font-weight: 600;
+        font-family: "Jost", sans-serif;
+        color: #0f2d1a;
+        line-height: 1;
+        margin-bottom: 5px;
+        letter-spacing: -0.03em;
+      }
+      .sc-card-num span {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #348e38;
+      }
+      .sc-card-label {
+        font-size: 0.62rem;
+        font-weight: 500;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: #2d6a31;
+      }
+
+      /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+       EXPERTISE + VISION  COMBINED SPLIT PANEL
+    â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+      .ev-combined {
+        display: flex;
+        min-height: 680px;
+      }
+
+      /* â”€â”€ LEFT: Expertise (light) â”€â”€ */
+      .ev-expertise {
+        flex: 1 1 50%;
+        background: #f7faf8;
+        padding: 80px 60px 80px max(24px, calc((100vw - 1320px) / 2 + 12px));
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .ev-expertise .inner {
+        max-width: 100%;
+        margin-left: auto;
+        padding-left: 0;
+      }
+      .ev-expertise h2 {
+        font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+        font-weight: 800;
+        color: #0f2d1a;
+        line-height: 1.2;
+        margin-bottom: 0.9rem;
+      }
+      .ev-expertise > .inner > p {
+        font-size: 0.93rem;
+        color: #4d6659;
+        line-height: 1.85;
+        margin-bottom: 2rem;
+      }
+
+      /* â”€â”€ Expertise Cards â”€â”€ */
+      .exp-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 24px 22px;
+        height: 100%;
+        min-height: 190px;
+        border: 1px solid #e0ebe3;
+        box-shadow: 0 4px 18px rgba(15, 45, 26, 0.06);
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
+          box-shadow 0.35s ease;
+      }
+      .exp-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 44px rgba(15, 45, 26, 0.12);
+      }
+      .exp-card-step {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        color: rgba(52, 142, 56, 0.3);
+        font-family: "Jost", sans-serif;
+      }
+      .exp-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+      .exp-card-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #edf7f1, #d0edda);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: #348e38;
+        flex-shrink: 0;
+        margin-bottom: 0;
+      }
+      .exp-card h5 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #0f2d1a;
+        margin-bottom: 0;
+      }
+      .exp-card p {
+        font-size: 0.81rem;
+        color: #5c7063;
+        line-height: 1.65;
+        margin: 0;
+      }
+      .exp-card::after {
+        display: none;
+      }
+
+      /* â”€â”€ DIVIDER â”€â”€ */
+      .ev-divider {
+        width: 1px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          #c2dece 20%,
+          #c2dece 80%,
+          transparent
+        );
+        flex-shrink: 0;
+      }
+
+      /* â”€â”€ RIGHT: Vision (dark) â”€â”€ */
+      .ev-vision {
+        flex: 1 1 50%;
+        background: #1e5c35;
+        padding: 80px max(24px, calc((100vw - 1320px) / 2 + 12px)) 80px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        overflow: hidden;
+      }
+      .ev-vision::before {
+        display: none;
+      }
+      .ev-vision::after {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(52, 142, 56, 0.12) 0%,
+          transparent 70%
+        );
+        bottom: -80px;
+        left: -60px;
+        pointer-events: none;
+      }
+      .ev-vision .inner {
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        padding-right: 0;
+      }
+      .ev-vision .section-eyebrow {
+        color: #5dcaa5;
+      }
+      .ev-vision .section-eyebrow::before {
+        background: linear-gradient(90deg, #5dcaa5, #81c784);
+      }
+      .ev-vision h2 {
+        font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.18;
+        margin-bottom: 1rem;
+      }
+      .ev-vision h2 em {
+        font-style: normal;
+        background: linear-gradient(90deg, #a8f0d4, #c8efc8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .ev-vision p {
+        font-size: 0.93rem;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.85;
+        margin-bottom: 1.8rem;
+      }
+
+      /* â”€â”€ Vision Cards â”€â”€ */
+      .vis-card {
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
+        padding: 22px 20px;
+        height: 100%;
+        min-height: 190px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
+          background 0.35s ease;
+      }
+      .vis-card:hover {
+        transform: translateY(-6px);
+        background: rgba(255, 255, 255, 0.12);
+      }
+      .vis-card-step {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        color: rgba(93, 202, 165, 0.35);
+        font-family: "Jost", sans-serif;
+      }
+      .vis-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+      .vis-card-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: rgba(52, 142, 56, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.95rem;
+        color: #5dcaa5;
+        flex-shrink: 0;
+        margin-bottom: 0;
+      }
+      .vis-card h5 {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0;
+      }
+      .vis-card p {
+        font-size: 0.79rem;
+        color: rgba(255, 255, 255, 0.62);
+        line-height: 1.6;
+        margin: 0;
+      }
+      .vis-card::after {
+        display: none;
+      }
+
+      /* â”€â”€ Responsive â”€â”€ */
+      @media (max-width: 991px) {
+        .ev-combined {
+          flex-direction: column;
+        }
+        .ev-expertise {
+          flex: none;
+          padding: 60px 24px 50px;
+        }
+        .ev-expertise .inner {
+          max-width: 100%;
+          margin-left: 0;
+          padding-left: 0;
+        }
+        .ev-divider {
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(
+            to right,
+            transparent,
+            #c2dece 20%,
+            #c2dece 80%,
+            transparent
+          );
+        }
+        .ev-vision {
+          flex: none;
+          padding: 60px 24px 60px;
+        }
+        .ev-vision .inner {
+          max-width: 100%;
+          padding-right: 0;
+        }
+        .ev-vision::after {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      ></div>
     </div>
     <!-- Spinner End -->
 
-
-  
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h1 class="m-0">Klimate Sheild</h1>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="project.html" class="nav-item nav-link">Projects</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
+    <div id="navbar-placeholder"></div>
+    <script src="js/navbar.js"></script>
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-3 text-white mb-4 animated slideInDown">About Us</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">About</li>
-                </ol>
-            </nav>
-        </div>
+    <div
+      class="container-fluid page-header py-5 mb-0 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center py-5">
+        <h1 class="display-4 text-white mb-4 animated slideInDown">About Us</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About</li>
+          </ol>
+        </nav>
+      </div>
     </div>
     <!-- Page Header End -->
 
-     <!-- About Start -->
-     <section class="about-section py-5">
-        <div class="container py-5">
-          <div class="row g-5 align-items-center">
-            <!-- Left Column: Image + Badge -->
-            <div class="col-lg-5 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
-              <div class="position-relative about-image-container">
-                <img class="img-fluid about-image" src="img/about.jpg" alt="About Klimate Shield">
-                <!-- Experience Badge -->
-                <div class="experience-badge d-flex flex-column align-items-center justify-content-center text-white">
-                  <span class="years">2+</span>
-                  <span class="exp-text">Years of <br> Experience</span>
+    <!-- Catchy Tagline Strip -->
+    <div class="container-fluid pt-5 pb-2 text-center" style="background: #fff">
+      <p
+        class="text-success fw-semibold text-uppercase ls-wide mb-2"
+        style="letter-spacing: 3px; font-size: 0.85rem"
+      >
+        Our Story
+      </p>
+      <h2 class="display-5 fw-bold" style="color: #1a1a1a; line-height: 1.2">
+        Where <span style="color: #28a745">Purpose</span> Meets the Planet
+      </h2>
+      <p
+        class="mt-3 mx-auto text-muted"
+        style="max-width: 600px; font-size: 1.05rem"
+      >
+        Innovating today for a climate-resilient tomorrow.
+      </p>
+    </div>
+    <!-- Catchy Tagline Strip End -->
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+         WHO WE ARE
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <section class="who-hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <!-- Text col -->
+          <div class="col-lg-6 text-col wow fadeInLeft" data-wow-delay="0.1s" style="margin-top: -120px">
+            <span class="section-eyebrow">Who We Are</span>
+            <h2>Innovating for a <em>Sustainable</em> Future</h2>
+            <p class="lead-text">
+              At <strong>KLIMATE SHIELD</strong>, we are more than participants
+              in the fight against climate change&mdash;we are innovators,
+              pioneers, and visionaries redefining the boundaries of
+              possibility.
+            </p>
+            <p class="lead-text">
+              As a global leader in sustainable innovation, we integrate
+              cutting-edge research, rigorous audits, data-driven insights, and
+              transformative capacity-building programs to deliver solutions
+              that inspire action and drive measurable impact.
+            </p>
+            <p class="lead-text mb-0">
+              We equip businesses, governments, and communities with the
+              knowledge, tools, and strategies to navigate environmental
+              stewardship&mdash;whether it&rsquo;s achieving net-zero emissions,
+              enhancing resource efficiency, or building climate-resilient
+              systems.
+            </p>
+          </div>
+
+          <!-- Carousel col -->
+          <div
+            class="col-lg-6 wow fadeInRight"
+            data-wow-delay="0.2s"
+            style="padding-top: 110px"
+          >
+            <div class="stats-carousel-wrap">
+              <!-- Row 1 â†’ scrolls LEFT -->
+              <div class="stats-carousel-track row-ltr">
+                <div class="sc-card">
+                  <div class="sc-card-num">50<span>+</span></div>
+                  <div class="sc-card-label">Countries Reached</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">300<span>+</span></div>
+                  <div class="sc-card-label">Projects Delivered</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">98<span>%</span></div>
+                  <div class="sc-card-label">Client Satisfaction</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">50<span>+</span></div>
+                  <div class="sc-card-label">Countries Reached</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">300<span>+</span></div>
+                  <div class="sc-card-label">Projects Delivered</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">98<span>%</span></div>
+                  <div class="sc-card-label">Client Satisfaction</div>
+                </div>
+              </div>
+
+              <!-- Row 2 â†’ scrolls RIGHT -->
+              <div class="stats-carousel-track row-rtl">
+                <div class="sc-card">
+                  <div class="sc-card-num">10<span>+</span></div>
+                  <div class="sc-card-label">Years of Impact</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">120<span>+</span></div>
+                  <div class="sc-card-label">Expert Team</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">Net<span>-Zero</span></div>
+                  <div class="sc-card-label">Carbon Neutrality</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">10<span>+</span></div>
+                  <div class="sc-card-label">Years of Impact</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">120<span>+</span></div>
+                  <div class="sc-card-label">Expert Team</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">Net<span>-Zero</span></div>
+                  <div class="sc-card-label">Carbon Neutrality</div>
+                </div>
+              </div>
+
+              <!-- Row 3 â†’ scrolls LEFT -->
+              <div class="stats-carousel-track row-ltr">
+                <div class="sc-card">
+                  <div class="sc-card-num">
+                    <i
+                      class="fas fa-tag"
+                      style="font-size: 1.2rem; color: #348e38"
+                    ></i>
+                  </div>
+                  <div class="sc-card-label">No Hidden Cost</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">
+                    <i
+                      class="fas fa-users"
+                      style="font-size: 1.2rem; color: #348e38"
+                    ></i>
+                  </div>
+                  <div class="sc-card-label">Dedicated Team</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">
+                    <i
+                      class="fas fa-headset"
+                      style="font-size: 1.2rem; color: #348e38"
+                    ></i>
+                  </div>
+                  <div class="sc-card-label">24/7 Available</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">
+                    <i
+                      class="fas fa-tag"
+                      style="font-size: 1.2rem; color: #348e38"
+                    ></i>
+                  </div>
+                  <div class="sc-card-label">No Hidden Cost</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">
+                    <i
+                      class="fas fa-users"
+                      style="font-size: 1.2rem; color: #348e38"
+                    ></i>
+                  </div>
+                  <div class="sc-card-label">Dedicated Team</div>
+                </div>
+                <div class="sc-card">
+                  <div class="sc-card-num">
+                    <i
+                      class="fas fa-headset"
+                      style="font-size: 1.2rem; color: #348e38"
+                    ></i>
+                  </div>
+                  <div class="sc-card-label">24/7 Available</div>
                 </div>
               </div>
             </div>
-      
-            <!-- Right Column: Text Content -->
-            <div class="col-lg-7 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
-              <h2 class="section-title mb-4">Innovating for a Sustainable Future</h2>
-              <p class="lead text-muted mb-4">
-                At KLIMATE SHIELD, we are more than just participants in the fight against climate change—we are innovators, pioneers, and visionaries redefining the boundaries of possibility. As a global leader in sustainable innovation, we integrate cutting-edge research, rigorous audits, data-driven insights, and transformative capacity-building programs to deliver solutions that inspire action and drive measurable impact.
-              </p>
-              <p class="mb-4">
-                We provide expert consultation across a wide spectrum of sustainability domains, equipping businesses, governments, and communities with the knowledge, tools, and strategies needed to navigate the complexities of environmental stewardship. Whether it’s achieving net-zero emissions, enhancing resource efficiency, or building climate-resilient systems, we empower our clients to lead with purpose and impact.
-              </p>
-      
-              <h4 class="mb-3 text-primary">A Multidisciplinary Approach</h4>
-              <p class="mb-4">
-                Our global team of experts spans environmental science, circular economy, climate resilience, renewable energy, and the SDGs—ensuring every initiative is holistic and forward-thinking. From comprehensive sustainability audits to developing actionable roadmaps for net-zero transitions, our work is driven by excellence, innovation, and collaboration.
-              </p>
-      
-              <h5 class="mb-3">Our Vision: A Regenerative Future</h5>
-              <p class="mb-4">
-                We envision a world where innovative ideas meet actionable solutions—a world where communities and ecosystems thrive in harmony. Partner with KLIMATE SHIELD to co-create solutions that address today’s challenges while laying the foundation for a sustainable, inclusive, and climate-resilient tomorrow.
-              </p>
-      
-              <a href="service.html" class="btn btn-primary px-4 py-2">Explore Our Services</a>
+            <!-- Explore link below cards, right-aligned -->
+            <div class="pt-5 mt-3 d-flex justify-content-end">
+              <a href="service.html" class="about-explore-link">
+                <div>
+                  <span class="explore-label-sub">Discover what we do</span>
+                  <span class="explore-label-main">Explore Our Services</span>
+                </div>
+                <div class="about-explore-icon">
+                  &#8594;
+                </div>
+              </a>
             </div>
           </div>
         </div>
-      </section>
-      <!-- About End -->
-  
+      </div>
+    </section>
 
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+         EXPERTISE + VISION  COMBINED
+    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <section class="ev-combined wow fadeIn" data-wow-delay="0.1s">
+      <!-- LEFT: Expertise -->
+      <div class="ev-expertise">
+        <div class="inner">
+          <span class="section-eyebrow">Our Expertise</span>
+          <h2>A Multidisciplinary Approach</h2>
+          <p>
+            Our global team spans environmental science, circular economy,
+            climate resilience, renewable energy, and the SDGs&mdash;ensuring
+            every initiative is holistic and forward-thinking.
+          </p>
 
-    <!-- Facts Start -->
-    <div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">123</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Happy Clients</span>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="exp-card">
+                <span class="exp-card-step">01</span>
+                <div class="exp-card-header">
+                  <div class="exp-card-icon"><i class="fas fa-flask"></i></div>
+                  <h5>Environmental Science</h5>
                 </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Completed project</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Dedicated Staff</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Awards Achieved</span>
-                </div>
+                <p>
+                  Deep expertise in ecological systems and climate science to
+                  guide evidence-based decisions.
+                </p>
+              </div>
             </div>
-        </div>
-    </div>
-    <!-- Facts End -->
-
-
-   
-
-
-       <!-- Footer Start -->
-       <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Door no. 1/376, Jr Janatha Rd, Cheranallur, Kochi, Ernakulam, Kerala 682034</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 70121 86963</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 98957 08504</p>
-
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@klimatesheild.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+            <div class="col-sm-6">
+              <div class="exp-card">
+                <span class="exp-card-step">02</span>
+                <div class="exp-card-header">
+                  <div class="exp-card-icon">
+                    <i class="fas fa-recycle"></i>
+                  </div>
+                  <h5>Circular Economy</h5>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Landscaping</a>
-                    <a class="btn btn-link" href="">Pruning plants</a>
-                    <a class="btn btn-link" href="">Urban Gardening</a>
-                    <a class="btn btn-link" href="">Garden Maintenance</a>
-                    <a class="btn btn-link" href="">Green Technology</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-             
+                <p>
+                  Designing regenerative business models that eliminate waste
+                  and keep resources in use longer.
+                </p>
+              </div>
             </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">www.klimatesheild.com</a>, All Right Reserved.
+            <div class="col-sm-6">
+              <div class="exp-card">
+                <span class="exp-card-step">03</span>
+                <div class="exp-card-header">
+                  <div class="exp-card-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <h5>Climate Resilience</h5>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">Mohamed Fazil</a>
-                </div>
+                <p>
+                  Building adaptive capacity to withstand and recover from
+                  climate-related disruptions at scale.
+                </p>
+              </div>
             </div>
+            <div class="col-sm-6">
+              <div class="exp-card">
+                <span class="exp-card-step">04</span>
+                <div class="exp-card-header">
+                  <div class="exp-card-icon">
+                    <i class="fas fa-solar-panel"></i>
+                  </div>
+                  <h5>Renewable Energy &amp; SDGs</h5>
+                </div>
+                <p>
+                  Aligning clean energy transitions with the UN Sustainable
+                  Development Goals for lasting impact.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- Copyright End -->
+      </div>
 
+      <!-- DIVIDER -->
+      <div class="ev-divider"></div>
+
+      <!-- RIGHT: Vision -->
+      <div class="ev-vision">
+        <div class="inner">
+          <span class="section-eyebrow">Our Vision</span>
+          <h2>A <em>Regenerative</em> Future</h2>
+          <p>
+            We envision a world where innovative ideas meet actionable
+            solutions&mdash;where communities and ecosystems thrive in harmony.
+            Partner with KLIMATE SHIELD to build climate-resilient solutions for
+            today&rsquo;s challenges.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="vis-card">
+                <span class="vis-card-step">01</span>
+                <div class="vis-card-header">
+                  <div class="vis-card-icon">
+                    <i class="fas fa-balance-scale"></i>
+                  </div>
+                  <h5>Climate Justice</h5>
+                </div>
+                <p>
+                  Ensuring equitable solutions that protect vulnerable
+                  communities on the frontlines of climate change.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="vis-card">
+                <span class="vis-card-step">02</span>
+                <div class="vis-card-header">
+                  <div class="vis-card-icon"><i class="fas fa-leaf"></i></div>
+                  <h5>Biodiversity Protection</h5>
+                </div>
+                <p>
+                  Safeguarding ecosystems and species diversity through
+                  science-led conservation strategies.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="vis-card">
+                <span class="vis-card-step">03</span>
+                <div class="vis-card-header">
+                  <div class="vis-card-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h5>Net-Zero Transitions</h5>
+                </div>
+                <p>
+                  Guiding organisations to achieve science-based net-zero
+                  targets across every sector.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="vis-card">
+                <span class="vis-card-step">04</span>
+                <div class="vis-card-header">
+                  <div class="vis-card-icon">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <h5>Green Innovation</h5>
+                </div>
+                <p>
+                  Pioneering clean technologies and circular business models for
+                  a regenerative economy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid px-0">
+      <div class="d-flex justify-content-end" style="background:#fff; padding: 28px max(24px, calc((100vw - 1320px) / 2 + 12px)) 28px 24px; border-top: 1px solid #e5ede8;">
+        <a href="contact.html" class="about-explore-link">
+          <div>
+            <span class="explore-label-sub">Join Our Mission</span>
+            <span class="explore-label-main">Partner With Us</span>
+          </div>
+          <div class="about-explore-icon">
+            <i class="fa fa-arrow-right"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/footer.js"></script>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -239,6 +936,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
+

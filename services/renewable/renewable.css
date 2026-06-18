@@ -1,0 +1,145 @@
+/* ── Variables & Base ─────────────────────── */
+:root {
+  --green-900: #1a1a1a; --green-700: #28a745; --green-500: #28a745;
+  --green-400: #5cd97a; --green-200: #b7f5c7; --green-50: #f0fff4;
+  --text: #374151; --muted: #6B7280; --white: #FFFFFF; --bg-alt: #F8FAFC;
+  --border: #E5E7EB; --radius: 10px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08); --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+body { color: var(--text); }
+.svc-section, .svc-section * { font-family: 'Open Sans', sans-serif; }
+.svc-section { padding: 60px 0; }
+.svc-section--light { background: var(--white); }
+/* .svc-section--dark-alt { background: var(--bg-alt); } */
+.svc-header { text-align: center; margin-bottom: 36px; }
+.svc-badge { display: inline-block; background: var(--green-50); color: var(--green-700); font-family: 'Jost', sans-serif; font-weight: 600; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; padding: 3px 12px; border-radius: 100px; border: 1px solid var(--green-200); margin-bottom: 10px; }
+.svc-title { font-family: 'Jost', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--green-900); margin-bottom: 10px; line-height: 1.25; }
+.svc-lead { font-size: .97rem; color: var(--muted); max-width: 700px; margin: 0 auto; line-height: 1.7; }
+.body-text { font-size: .93rem; line-height: 1.75; color: var(--text); margin-bottom: 14px; }
+
+/* ── Image Frame (vertical/portrait) ────── */
+.img-frame {
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  height: 420px;
+}
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+.img-frame:hover img { transform: scale(1.03); }
+
+/* ── Left Content Wrapper ────────────────── */
+.svc-left-content { display: flex; flex-direction: column; justify-content: center; }
+
+/* ── Intro Label ─────────────────────────── */
+.svc-intro-label {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'Jost', sans-serif; font-size: .76rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--green-500);
+  margin-bottom: 10px;
+}
+.svc-accent-line {
+  display: inline-block; width: 26px; height: 2px;
+  background: var(--green-400); border-radius: 2px; flex-shrink: 0;
+}
+
+/* ── Stats Row ───────────────────────────── */
+.svc-stats-row {
+  display: flex; gap: 0; margin: 14px 0;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden;
+}
+.svc-stat {
+  flex: 1; padding: 12px 10px; text-align: center;
+  border-right: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+.svc-stat:last-child { border-right: none; }
+.svc-stat-num {
+  display: block; font-family: 'Jost', sans-serif; font-size: 1.35rem;
+  font-weight: 700; color: var(--green-700); line-height: 1.1;
+}
+.svc-stat-label {
+  display: block; font-size: .7rem; color: var(--muted);
+  margin-top: 3px; font-weight: 500; line-height: 1.3;
+}
+
+/* ── More Services Link (left side) ─────── */
+.svc-more-services {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-top: 20px; margin-left: 68%;
+  font-family: 'Jost', sans-serif; font-size: .85rem; font-weight: 700;
+  color: var(--green-700); text-decoration: none;
+  letter-spacing: .06em; text-transform: uppercase;
+  transition: color var(--transition), gap var(--transition);
+}
+.svc-more-services::before {
+  content: '';
+  display: inline-block;
+  width: 32px; height: 1.5px;
+  background: var(--green-400);
+  flex-shrink: 0;
+  transition: width var(--transition);
+}
+.svc-more-services span { transition: transform var(--transition); display: inline-block; }
+.svc-more-services:hover { color: var(--green-900); }
+.svc-more-services:hover::before { width: 44px; }
+.svc-more-services:hover span { transform: translateX(4px); }
+
+/* ── Image CTA Below image (right side) ── */
+.img-below-cta {
+  padding: 100px 4px 0;
+  text-align: right;
+}
+.img-cta-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .8rem; font-style: italic;
+  color: var(--muted);
+  margin: 0 0 6px;
+  letter-spacing: .01em;
+}
+.img-cta-link {
+  display: inline-block;
+  font-family: 'Jost', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--green-700); text-decoration: none;
+  border-bottom: 2px solid var(--green-400);
+  padding-bottom: 2px;
+  transition: color var(--transition), border-color var(--transition);
+}
+.img-cta-link:hover { color: var(--green-900); border-color: var(--green-700); }
+
+.ems-letstalk { padding: 40px 0 !important; border-top: 1px solid var(--border); }
+
+/* ── Image Badge ─────────────────────────── */
+.img-frame-badge {
+  position: absolute; bottom: 14px; left: 14px;
+  background: rgba(27,67,50,0.88); color: var(--white);
+  font-family: 'Jost', sans-serif; font-size: .72rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 5px;
+  backdrop-filter: blur(4px);
+}
+
+/* ── Vision Box ──────────────────────────── */
+.vision-box { background: var(--green-50); border: 1px solid var(--green-200); border-radius: var(--radius); padding: 16px 18px; margin: 14px 0; }
+.vision-box h4 { font-family: 'Jost', sans-serif; font-size: .9rem; font-weight: 700; color: var(--green-900); margin-bottom: 10px; }
+.vision-list { list-style: none; padding: 0; margin: 0; }
+.vision-list li { padding-left: 20px; position: relative; font-size: .88rem; line-height: 1.6; margin-bottom: 7px; color: var(--text); }
+.vision-list li::before { content: '\2713'; position: absolute; left: 0; color: var(--green-500); font-weight: 700; }
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 991px) { .svc-section { padding: 44px 0; } .svc-title { font-size: 1.6rem; } .img-frame { height: 300px; } }
+@media (max-width: 767px) { .svc-section { padding: 36px 0; } .svc-title { font-size: 1.4rem; } .img-frame { height: 240px; } }
+
+/* ── Legacy renewable styles ─────────────── */
+#renewable { padding: 60px 0; background-color: #fff; color: #333; }
+#renewable .renewable-header { text-align: center; margin-bottom: 40px; }
+#renewable .renewable-header h2 { font-family: 'Jost', sans-serif; font-size: 2.5rem; font-weight: 700; color: #133e1d; border-bottom: 3px solid #28a745; display: inline-block; padding-bottom: 10px; margin-bottom: 10px; }

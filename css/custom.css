@@ -1,1150 +1,432 @@
-/* ESG Section Base Styles */
-#esg {
-    padding: 60px 0;
-  }
-  
-  #esg .esg-image {
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* ==========================
+   ABOUT IMAGE + BADGE
+========================== */
+
+.about-img-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.about-main-img {
     width: 100%;
     display: block;
-  }
-  
-  /* Titles & Headings */
-  #esg .esg-title {
-    font-family: 'Jost', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  #esg .esg-subtitle {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  /* Paragraph and Description Styles */
-  #esg .esg-description {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.7;
-    color: #555;
-  }
-  
-  /* Lists */
-  #esg ul {
-    margin-bottom: 20px;
-    padding-left: 20px;
-  }
-  #esg ul li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #444;
-    line-height: 1.6;
-  }
-  #esg ul li strong {
-    color: #222;
-  }
-  
-  /* Custom bullet for benefit/needs/services lists */
-  .esg-benefits,
-.esg-needs,
-.esg-services {
-  list-style: none; /* Removes the default bullets */
-  padding: 0; /* Optional: reset padding if needed */
+    filter: grayscale(30%);
+    border-radius: 0 !important;
 }
 
-.esg-benefits li,
-.esg-needs li,
-.esg-services li {
-  position: relative;
-  padding-left: 25px;
-}
-
-.esg-benefits li::before,
-.esg-needs li::before,
-.esg-services li::before {
-  content: "\2713"; /* checkmark */
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #0e4212;
-  font-weight: bold;
-}
-
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
-    #esg .esg-title {
-      font-size: 2rem;
-    }
-    #esg .esg-subtitle {
-      font-size: 1.5rem;
-    }
-  }
-  
-  /* Carbon Section Base */
-/* Carbon Section Base */
-#carbon {
-    padding: 60px 0;
-    background-color: #fff;
-    color: #333;
-  }
-  #carbon h2 {
-    font-family: 'Jost', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #133e1d; /* green accent */
-  }
-  #carbon .intro {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-  }
-  
-  /* Subsection Headings */
-  #carbon h3 {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.75rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #175826;
-    text-align: center;
-  }
-  
-  /* Carbon Card Styles */
-  .carbon-card {
-    background-color: #fff;
-    border: 2px solid #050505;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
-    height: 300px;             /* Fixed height for uniformity */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-style: preserve-3d;
-    overflow: hidden;          /* Prevent overflow of long content */
-  }
-  .carbon-card:hover {
-    transform: perspective(1000px) rotateY(5deg) scale(1.03);
-    box-shadow: 0 8px 16px rgba(40, 167, 69, 0.4);
-  }
-  
-  /* Card Content and Icon */
-  .carbon-card .card-content {
-    flex: 1;
-    overflow: hidden;
-  }
-  .carbon-card .card-content h4 {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.5rem;
-    color: #060707;
-    margin-bottom: 10px;
-  }
-  .carbon-card .card-content ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
-  .carbon-card .card-content ul li {
-    font-size: 1rem;
-    line-height: 1.5;
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 5px;
-  }
-  .carbon-card .card-content ul li::before {
-    content: "\2713"; /* checkmark */
-    color: #090909;
+.about-badge {
     position: absolute;
+    bottom: 28px;
     left: 0;
-    top: 0;
-  }
-  
-  /* Card Icon */
-  .carbon-card .card-icon {
-    font-size: 2rem;
+    background: #1a4731;
     color: #fff;
-    background-color: #28a745;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    padding: 10px 14px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 15px;
-  }
-  
-  /* Spacing for Rows inside Cards */
-  #carbon .row > [class*="col-"] {
-    margin-bottom: 20px;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
-    .carbon-card {
-      flex-direction: column;
-      text-align: center;
-      height: auto; /* Allow height to adjust on very small screens */
-    }
-    .carbon-card .card-icon {
-      margin: 10px 0 0 0;
-    }
-    #carbon h2 {
-      font-size: 2rem;
-    }
-    #carbon h3 {
-      font-size: 1.5rem;
-    }
-  }
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 80px;
+    z-index: 2;
+}
 
-/* Renewable Energy Section */
-#renewable {
-    padding: 60px 0;
-    background-color: #fff;
-    color: #333;
-  }
-  
-  #renewable .renewable-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  #renewable .renewable-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  #renewable .renewable-header h2 {
-    font-family: 'Jost', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #133e1d;
-    border-bottom: 3px solid #28a745;
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-  }
-  
-  #renewable .service-tagline {
-    font-size: 1.2rem;
-    color: #175826;
-  }
-  
-  #renewable .renewable-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 30px;
-  }
-  
-  #renewable .renewable-text {
-    flex: 1 1 600px;
-  }
-  
-  #renewable .renewable-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-  }
-  
-  #renewable .vision-card {
-    background: #f0fdf4; /* light green background */
-    border: 2px solid #28a745;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
-  }
-  
-  #renewable .vision-card h3 {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.75rem;
-    color: #133e1d;
-    margin-bottom: 15px;
-  }
-  
-  #renewable .vision-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
-  
-  #renewable .vision-list li {
-    position: relative;
-    padding-left: 25px;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
-  
-  #renewable .vision-list li::before {
-    content: "\2713"; /* checkmark */
-    color: #28a745;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  
-  #renewable .renewable-image {
-    flex: 1 1 400px;
-    text-align: center;
-  }
-  
-  #renewable .renewable-image img {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  #renewable .renewable-image img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
-    #renewable .renewable-content {
-      flex-direction: column;
-    }
-    #renewable .renewable-text, 
-    #renewable .renewable-image {
-      flex: 1 1 100%;
-    }
-    #renewable .renewable-header h2 {
-      font-size: 2rem;
-    }
-  }
-  
-  /* EMS Section Base */
-#ems {
-    padding: 60px 0;
-    background-color: #f8f9fa;
-    color: #333;
-  }
-  #ems .container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  #ems .ems-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  #ems .ems-header h2 {
-    font-family: 'Jost', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #0d2212;
-    margin-bottom: 10px;
-    position: relative;
-    padding-bottom: 15px;
-  }
-  #ems .ems-header h2::after {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background-color: #0a1e0e;
-    display: block;
-    margin: 0 auto;
-    border-radius: 2px;
-  }
-  #ems .ems-tagline {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-    color: #133e1d;
-  }
-  
-  /* EMS Card Styles */
-  .ems-card {
-    background-color: #fff;
-    border: 2px solid #28a745;
-    border-radius: 10px;
-    padding: 30px;
-    margin-bottom: 40px;
-    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.15);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    overflow: hidden;
-    min-height: 350px;  /* Uniform height */
-  }
-  
-  /* Hover 3D effect */
-  .ems-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
-  }
-  
-  /* EMS Card Content */
-  .ems-card .ems-card-content h3 {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.75rem;
-    color: #175826;
-    margin-bottom: 20px;
-  }
-  .ems-card .ems-card-content h4 {
-    font-family: 'Jost', sans-serif;
+.about-badge-number {
     font-size: 1.5rem;
-    color: #133e1d;
-    margin-bottom: 15px;
-  }
-  .ems-card .ems-card-content p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: #555;
-  }
-  .ems-card .ems-card-content ul,
-  .ems-card .ems-card-content ol {
-    margin-left: 20px;
-    margin-bottom: 15px;
-    color: #444;
-  }
-  .ems-card .ems-card-content li {
-    list-style: none;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-  }
-  .ems-card .ems-card-content li::before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #204629;
-    font-weight: bold;
-  }
-  
-  /* Alternating Animation Classes */
-  .ems-card-left {
-    animation: slideInFromLeft 0.8s ease-out;
-  }
-  .ems-card-right {
-    animation: slideInFromRight 0.8s ease-out;
-  }
-  
-  /* Keyframe Animations */
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  @keyframes slideInFromRight {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
-    #ems h2 {
-      font-size: 2rem;
-    }
-    .ems-card {
-      padding: 20px;
-      min-height: auto;
-    }
-    .ems-card .ems-card-content h3 {
-      font-size: 1.5rem;
-    }
-    .ems-card .ems-card-content h4 {
-      font-size: 1.3rem;
-    }
-  }
-  
-  /* Procurement Section Base */
-#procurement {
-    padding: 60px 0;
-    background-color: #fff;
-    color: #333;
-  }
-  #procurement .procurement-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  #procurement h2 {
-    font-family: 'Jost', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #133e1d;
-    margin-bottom: 10px;
-    position: relative;
-    padding-bottom: 15px;
-  }
-  #procurement h2::after {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background-color: #28a745;
+    font-weight: 800;
+    line-height: 1;
     display: block;
-    margin: 0 auto;
-    border-radius: 2px;
-  }
-  .procurement-tagline {
-    font-size: 1.1rem;
-    color: #175826;
-  }
-  
-  /* Timeline Container */
-  .timeline {
+    color: #fff;
+}
+
+.about-badge-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    line-height: 1.4;
+    margin-top: 3px;
+    color: #fff;
+}
+
+/* ==========================
+   CURVED ABOUT CARDS (fan arc)
+========================== */
+
+.about-cards-arc {
+    margin-top: 24px;
+    margin-bottom: 0;
     position: relative;
-    padding: 40px 0;
-    margin: 0 auto;
-  }
-  .timeline::before {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2px;
+    padding-bottom: 90px;
+    overflow: visible;
+}
+
+/* Curved baseline */
+.about-cards-arc::before {
     content: '';
     position: absolute;
-    left: 50%;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background: #28a745;
-    transform: translateX(-50%);
-  }
-  
-  /* Timeline Item */
-  .timeline-item {
-    position: relative;
-    width: 48%;
-    padding: 20px;
-    box-sizing: border-box;
-    background: #f8f9fa;
-    border: 2px solid #28a745;
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.15);
-  }
-  .timeline-item.left {
-    float: left;
-    clear: both;
-    transform: translateX(-20px);
-  }
-  .timeline-item.right {
-    float: right;
-    clear: both;
-    transform: translateX(20px);
-  }
-  
-  /* Timeline Marker */
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    width: 16px;
-    height: 16px;
-    background: #28a745;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  .timeline-item.left::before {
-    right: -8px;
-  }
-  .timeline-item.right::before {
-    left: -8px;
-  }
-  
-  /* Timeline Content */
-  .timeline-content h3 {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.75rem;
-    color: #175826;
-    margin-bottom: 15px;
-  }
-  .timeline-content p,
-  .timeline-content ul,
-  .timeline-content ol {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  .timeline-content ul li,
-  .timeline-content ol li {
-    list-style: none;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-  }
-  .timeline-content ul li::before,
-  .timeline-content ol li::before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #113e1b;
-    font-weight: bold;
-  }
-  
-  /* Clear Floats */
-  .timeline::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Animation (Using WOW.js classes) */
-  /* Ensure you include WOW.js and animate.css for these effects */
-  
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
-    .timeline::before {
-      left: 8%;
-    }
-    .timeline-item {
-      width: 90%;
-      margin: 20px auto;
-      transform: none;
-    }
-    .timeline-item.left, .timeline-item.right {
-      float: none;
-    }
-    .timeline-item::before {
-      left: -8px;
-    }
-  }
-  
-  /* Green Investment Section Base */
-#green-investment {
-    padding: 60px 0;
-    background-color: #fff;
-    color: #333;
-  }
-  #green-investment .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  /* Header Styles */
-  .gi-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  #green-investment h2 {
-    font-family: 'Jost', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #133e1d;
-    margin-bottom: 10px;
-    position: relative;
-    padding-bottom: 15px;
-  }
-  #green-investment h2::after {
-    content: "";
-    width: 100px;
-    height: 4px;
-    background-color: #28a745;
-    display: block;
-    margin: 0 auto;
-    border-radius: 2px;
-  }
-  .gi-tagline {
-    font-size: 1.2rem;
-    color: #175826;
-    margin-bottom: 40px;
-  }
-  
-  /* Section Headings */
-  #green-investment h3 {
-    font-family: 'Jost', sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #175826;
-    text-align: center;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  #green-investment h3::after {
-    content: "";
-    width: 60px;
-    height: 3px;
-    background-color: #28a745;
-    display: block;
-    margin: 0 auto;
-    border-radius: 2px;
-  }
-  
-  /* "What is Green Investment" */
-  .gi-what p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-  }
-  
-  /* Cards for Types of Green Investment */
-  .gi-cards {
-    margin-top: 40px;
-  }
-  .gi-card {
-    margin-bottom: 30px;
-    animation: zoomIn 0.6s ease;
-  }
-  .gi-cards .card {
-    background-color: #f8f9fa;
-    border: 2px solid #28a745;
-    border-radius: 10px;
-    padding: 20px;
-    height: 280px; /* Uniform card height */
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    overflow: hidden;
-    position: relative;
-  }
-  .gi-cards .card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 12px 24px rgba(40, 167, 69, 0.3);
-  }
-  .gi-cards .card .card-icon {
-    position: absolute;
-    top: -20px;
+    bottom: 8px;
+    left: -20px;
     right: -20px;
-    background-color: #28a745;
-    color: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-  }
-  .gi-cards .card .card-body {
-    margin-top: 40px;
-  }
-  .gi-cards .card h4 {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.5rem;
-    color: #133e1d;
-    margin-bottom: 15px;
-  }
-  .gi-cards .card ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  .gi-cards .card ul li {
-    font-size: 1rem;
-    line-height: 1.6;
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 8px;
-  }
-  .gi-cards .card ul li::before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #28a745;
-    font-weight: bold;
-  }
-  
-  /* Benefits & Support Sections */
-  .gi-benefits-support {
-    margin-top: 60px;
-  }
-  .gi-benefits-support .row {
-    margin-top: 30px;
-  }
-  .gi-benefits-support ol,
-  .gi-benefits-support ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    line-height: 1.8;
-  }
-  .gi-benefits-support li {
-    list-style: none;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-  }
-  .gi-benefits-support li::before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #103118;
-    font-weight: bold;
-  }
-  
-  /* Keyframe Animations */
-  @keyframes zoomIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
-  
-  /* Support List Animation */
-  .gi-support li {
-    animation: fadeInUp 0.6s ease;
-  }
-  @keyframes fadeInUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
-    #green-investment h2 {
-      font-size: 2.2rem;
-    }
-    #green-investment h3 {
-      font-size: 1.6rem;
-    }
-    .gi-cards .card {
-      height: auto;
-    }
-  }
-  /* Green Investment - Types Items */
-.gi-types {
-    margin-top: 40px;
-  }
-  .gi-types h3 {
-    font-family: 'Jost', sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #175826;
+    height: 1px;
+    background: #d0ddd5;
+    z-index: 0;
+}
+
+/* Card Style */
+.arc-card {
+    width: 130px;
+    min-height: 180px;
+    background: #fff;
+    padding: 14px 10px;
+    border-radius: 4px;
     text-align: center;
-    margin-bottom: 30px;
-  }
-  .gi-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  .gi-item {
-    background: #f8f9fa;
-    border-radius: 8px;
-    padding: 20px;
-    flex: 1 1 calc(33.333% - 30px);
-    min-width: 250px;
-    max-width: 350px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-  }
-  .gi-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(40, 167, 69, 0.3);
-  }
-  .gi-icon {
-    font-size: 3rem;
-    color: #28a745;
-    margin-bottom: 15px;
-  }
-  .gi-item h4 {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.5rem;
-    color: #133e1d;
-    margin-bottom: 15px;
-  }
-  .gi-item ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .gi-item ul li {
-    list-style: none;
-    font-size: 1rem;
-    color: #444;
-    margin-bottom: 8px;
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.06);
     position: relative;
-    padding-left: 20px;
-  }
-  .gi-item ul li::before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #183a20;
-    font-weight: bold;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
-    .gi-types h3 {
-      font-size: 1.75rem;
-    }
-    .gi-item {
-      flex: 1 1 100%;
-    }
-  }
-  
-  /* Sustainable Building Section Base */
-#sustainable-building {
-    padding: 60px 0;
-    background-color: #fff;
-    color: #333;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Header Styles */
-  .sustainable-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .sustainable-header h2 {
-    font-family: 'Jost', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #133e1d;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-  }
-  .sustainable-header h2::after {
-    content: "";
-    width: 100px;
-    height: 4px;
-    background-color: #28a745;
+    z-index: 1;
+    transition: box-shadow 0.25s;
+}
+
+.arc-card:hover {
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* icon */
+.arc-card i {
     display: block;
-    margin: 0 auto;
-    border-radius: 2px;
-  }
-  
-  /* Split Layout */
-  .sustainable-main {
-    margin-bottom: 40px;
-  }
-  .sustainable-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    padding-right: 30px;
-  }
-  .sustainable-image img {
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.2);
-    transition: transform 0.3s ease;
-  }
-  .sustainable-image img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Detail Blocks */
-  .sustainable-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  .detail-item {
-    background-color: #f0fdf4;
-    border: 2px solid #28a745;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    flex: 1 1 480px;
-    text-align: center;
-  }
-  .detail-item:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 8px 16px rgba(40, 167, 69, 0.3);
-  }
-  .detail-item h3 {
-    font-family: 'Jost', sans-serif;
-    font-size: 1.8rem;
-    color: #133e1d;
-    margin-bottom: 15px;
-  }
-  .detail-item p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #555;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
-    .sustainable-header h2 {
-      font-size: 2rem;
-    }
-    .sustainable-main {
-      flex-direction: column;
-    }
-    .sustainable-text,
-    .sustainable-image {
-      flex: 1 1 100%;
-      padding: 0;
-    }
-    .detail-item {
-      flex: 1 1 100%;
-    }
-  }
-  /* Quantitative Survey Section Base */
-#quantitative-survey {
-    padding: 80px 0;
-    background-color: #fff;
-    color: #333;
-    font-family: 'Open Sans', sans-serif;
-  }
-  #quantitative-survey .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  /* Header */
-  .qs-header {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .qs-header h2 {
-    font-family: 'Jost', sans-serif;
-    font-size: 3rem;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    background: #eef5ef;
+    color: #1c5b39;
+    font-size: 15px;
+    margin: 0 auto 12px;
+}
+
+/* title */
+.arc-card h5 {
+    font-size: 15px;
     font-weight: 700;
-    color: #133e1d;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-  }
-  .qs-header h2::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 4px;
-    background: linear-gradient(90deg, #28a745, #8bc34a);
-    border-radius: 2px;
-  }
-  .qs-tagline {
-    font-size: 1.2rem;
-    color: #175826;
-    margin-top: 10px;
-  }
-  
-  /* QS Blocks */
-  .qs-block {
-    margin-bottom: 50px;
-    padding: 30px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.1);
-    overflow: hidden;
-  }
-  .qs-block::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: linear-gradient(to bottom, #28a745, #8bc34a);
-  }
-  
-  /* Block Headings */
-  .qs-block h3 {
-    font-family: 'Jost', sans-serif;
-    font-size: 2rem;
-    color: #175826;
-    margin-bottom: 20px;
-    position: relative;
-    padding-left: 15px;
-  }
-  .qs-block h3::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 12px;
-    background-color: #28a745;
-    border-radius: 50%;
-  }
-  
-  /* Paragraphs */
-  .qs-block p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #555;
-  }
-  
-  /* Timeline for Method */
-  .qs-timeline {
-    margin-top: 20px;
-    border-left: 2px solid #28a745;
-    padding-left: 20px;
-  }
-  .timeline-item {
-    margin-bottom: 20px;
-    position: relative;
-    padding-left: 30px;
-  }
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -13px;
-    top: 0;
-    width: 25px;
-    height: 25px;
-    background: #28a745;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 1rem;
-  }
-  .timeline-item .timeline-icon {
-    margin-right: 10px;
-  }
-  
-  /* Benefits List */
-  .qs-benefits {
-    list-style: none;
-    padding-left: 0;
-  }
-  .qs-benefits li {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    padding-left: 30px;
-    position: relative;
-    color: #444;
+    line-height: 1.3;
+    color: #243b2d;
+    margin-bottom: 8px;
+}
+
+/* text */
+.arc-card p {
+    font-size: 12px;
     line-height: 1.6;
-  }
-  .qs-benefits li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.2rem;
+    color: #777;
+    margin: 0;
+}
+
+/* Card positions on arc */
+.arc-1 {
+    transform: rotate(-18deg) translateY(72px);
+    transform-origin: bottom center;
+    background: #b2d9be;
+}
+.arc-2 {
+    transform: rotate(-9deg) translateY(30px);
+    transform-origin: bottom center;
+    background: #c8e8d2;
+}
+.arc-3 {
+    transform: rotate(0deg) translateY(0px);
+    transform-origin: bottom center;
+    z-index: 5;
+    background: #daf0e3;
+}
+.arc-4 {
+    transform: rotate(9deg) translateY(30px);
+    transform-origin: bottom center;
+    background: #c8e8d2;
+}
+.arc-5 {
+    transform: rotate(18deg) translateY(72px);
+    transform-origin: bottom center;
+    background: #b2d9be;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-cards-arc {
+        flex-wrap: wrap;
+        min-height: auto;
+        gap: 15px;
+        padding-bottom: 0;
+    }
+
+    .about-cards-arc::before {
+        display: none;
+    }
+
+    .arc-card {
+        width: 160px;
+        min-height: auto;
+        transform: none !important;
+    }
+}
+
+
+
+/* About section explore link */
+.about-explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    background: transparent;
+    padding: 12px 0;
+    cursor: pointer;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.3s;
+}
+.about-explore-link:hover {
+    border-bottom-color: #28a745;
+}
+.about-explore-icon {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; color: #28a745;
+    flex-shrink: 0;
+    transition: color 0.3s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+}
+.about-explore-link:hover .about-explore-icon {
+    background: #1D9E75;
+    color: #fff;
+    border-color: #1D9E75;
+    transform: translateX(6px);
+}
+.about-explore-icon i {
+    animation: arrow-bounce 1.6s ease-in-out infinite;
+}
+@keyframes arrow-bounce {
+    0%, 100% { transform: translateX(0); }
+    50%       { transform: translateX(4px); }
+}
+.about-explore-link:hover .about-explore-icon i {
+    animation: none;
+}
+.about-explore-link .explore-label-sub {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: #28a745;
-    font-weight: bold;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 767px) {
-    .qs-header h2 {
-      font-size: 2.5rem;
-    }
-    .qs-block {
-      padding: 20px;
-    }
-    .qs-block h3 {
-      font-size: 1.75rem;
-    }
-    .qs-block p {
-      font-size: 1rem;
-    }
-  }
-  
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+.about-explore-link .explore-label-main {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: block;
+    transition: color 0.3s;
+    letter-spacing: 0.01em;
+}
+.about-explore-link:hover .explore-label-main {
+    color: #1a1a1a;
+}
+
+/* Light variant for dark background */
+.about-explore-link--light:hover {
+    border-bottom-color: #4eca8e;
+}
+.about-explore-link--light .explore-label-sub {
+    color: #4eca8e;
+}
+.about-explore-link--light .explore-label-main {
+    color: #fff;
+}
+.about-explore-link--light:hover .explore-label-main {
+    color: #4eca8e;
+}
+.about-explore-icon--light {
+    border-color: #4eca8e;
+    color: #4eca8e;
+}
+.about-explore-link--light:hover .about-explore-icon--light {
+    background: #4eca8e;
+    color: #0f2d1a;
+    border-color: #4eca8e;
+}
+
+/* Global: sharp corners on all images */
+img { border-radius: 0 !important; }
+
+/* ============================================================
+   STICKY NOTES BOARD — Features Section
+   ============================================================ */
+
+/* ── swing animations (rotate from pin at top) ── */
+@keyframes snoteWiggle {
+  0%   { transform: rotate(0deg)   translateY(-6px) scale(1.04); }
+  20%  { transform: rotate(-3deg)  translateY(-8px) scale(1.04); }
+  40%  { transform: rotate(3deg)   translateY(-8px) scale(1.04); }
+  60%  { transform: rotate(-2deg)  translateY(-7px) scale(1.04); }
+  80%  { transform: rotate(2deg)   translateY(-7px) scale(1.04); }
+  100% { transform: rotate(0deg)   translateY(-6px) scale(1.04); }
+}
+@keyframes floatA {
+  0%   { transform: rotate(3deg);  }
+  25%  { transform: rotate(6deg);  }
+  75%  { transform: rotate(0deg);  }
+  100% { transform: rotate(3deg);  }
+}
+@keyframes floatB {
+  0%   { transform: rotate(-4deg); }
+  25%  { transform: rotate(-1deg); }
+  75%  { transform: rotate(-7deg); }
+  100% { transform: rotate(-4deg); }
+}
+@keyframes floatC {
+  0%   { transform: rotate(2deg);  }
+  25%  { transform: rotate(5deg);  }
+  75%  { transform: rotate(-1deg); }
+  100% { transform: rotate(2deg);  }
+}
+
+/* ── board background ── */
+.sboard {
+  position: relative;
+  padding: 24px 28px 24px;
+  overflow: visible;
+  background-image: url('../img/feature_background_paper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  filter: contrast(1.08) saturate(0.88) brightness(0.98);
+}
+.sboard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* ── rows ── */
+.sb-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+.sb-left  { justify-content: flex-start; padding-right: 58%; }
+.sb-right { justify-content: flex-end;   padding-left:  58%; }
+
+/* ── sticky note card ── */
+.snote {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  padding: 32px 18px 18px;
+  cursor: pointer;
+  overflow: visible;
+  transform-origin: top center;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,.18),
+    0 2px 8px  rgba(0,0,0,.10),
+    0 1px 0    rgba(255,255,255,.9) inset,
+    0 0 0 1.5px rgba(255,255,255,.5) inset;
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+.snote::before { content: none; }
+.snote::after  { content: none; }
+
+/* ── swing per card ── */
+.sb-row:nth-child(1) .snote { animation: floatA 4s   ease-in-out infinite;       }
+.sb-row:nth-child(2) .snote { animation: floatB 5s   ease-in-out infinite 0.8s;  }
+.sb-row:nth-child(3) .snote { animation: floatC 4.5s ease-in-out infinite 0.4s;  }
+
+/* ── glassmorphism pastel backgrounds ── */
+.snote-lavender { background: rgba(253,232,227,0.35); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1.5px solid rgba(255,255,255,0.70); }
+.snote-purple   { background: rgba(237,232,251,0.35); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1.5px solid rgba(255,255,255,0.70); }
+.snote-cream    { background: rgba(222,238,251,0.35); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1.5px solid rgba(255,255,255,0.70); }
+.snote-gray     { background: rgba(254,249,227,0.35); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1.5px solid rgba(255,255,255,0.70); }
+.snote-mint     { background: rgba(227,251,232,0.35); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1.5px solid rgba(255,255,255,0.70); }
+
+/* ── pin ── */
+.snote-pin {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  font-size: 1.45rem;
+  line-height: 1;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.38));
+  transition: transform .25s ease;
+}
+.snote:hover .snote-pin { transform: translateX(-50%) scale(1.2) rotate(-10deg); }
+
+/* ── number ── */
+.snote-num {
+  display: block;
+  font-size: .7rem;
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(100,100,120,.45);
+  margin-bottom: 6px;
+  letter-spacing: .06em;
+  font-family: Georgia, serif;
+}
+
+/* ── title ── */
+.snote-title {
+  font-size: .78rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 7px;
+  line-height: 1.3;
+}
+
+/* ── body text ── */
+.snote-body {
+  font-size: .68rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.65;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+/* ── accent colours per card (pin + num + title + body bg) ── */
+.sb-row:nth-child(1) .snote-pin   { color: #e8836a; }
+.sb-row:nth-child(1) .snote-num   { color: #e8836a; }
+.sb-row:nth-child(1) .snote-title { color: #e8836a; }
+.sb-row:nth-child(1) .snote-body  { color: #b05a44; background: #f9c8be; }
+
+.sb-row:nth-child(2) .snote-pin   { color: #9b7fe8; }
+.sb-row:nth-child(2) .snote-num   { color: #9b7fe8; }
+.sb-row:nth-child(2) .snote-title { color: #9b7fe8; }
+.sb-row:nth-child(2) .snote-body  { color: #6a4fc0; background: #d4c8f7; }
+
+.sb-row:nth-child(3) .snote-pin   { color: #6aabe8; }
+.sb-row:nth-child(3) .snote-num   { color: #6aabe8; }
+.sb-row:nth-child(3) .snote-title { color: #6aabe8; }
+.sb-row:nth-child(3) .snote-body  { color: #2f7ab8; background: #b8d9f5; }
+
+/* ── hover lift ── */
+.snote:hover {
+  box-shadow: 5px 16px 36px rgba(0,0,0,.22) !important;
+}
+
+/* ── mobile ── */
+@media (max-width: 575px) {
+  .sb-left, .sb-right { padding: 0; justify-content: center; }
+  .sb-row:nth-child(1) .snote,
+  .sb-row:nth-child(2) .snote,
+  .sb-row:nth-child(3) .snote { animation: none; transform: none; }
+}
