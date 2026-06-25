@@ -185,23 +185,73 @@ html.lb-disable-scrolling {
 }
 
 .lb-data .lb-close {
-  display: block;
-  float: right;
-  width: 30px;
-  height: 30px;
-  background: url(../images/close.png) top right no-repeat;
-  text-align: right;
-  outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  display: none;
 }
 
-.lb-data .lb-close:hover {
-  cursor: pointer;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+.lb-close-corner {
+  display: block;
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  background: url(../images/close.png) center center no-repeat;
+  background-size: contain;
+  outline: none;
+  z-index: 100;
   opacity: 1;
+  cursor: pointer;
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.lb-close-corner:hover {
+  transform: scale(1.15);
+}
+
+.lb-nav a.lb-prev {
+  opacity: 1 !important;
+  filter: none !important;
+  background-image: none !important;
+}
+
+.lb-nav a.lb-next {
+  opacity: 1 !important;
+  filter: none !important;
+  background-image: none !important;
+}
+
+.lb-nav a.lb-prev::after,
+.lb-nav a.lb-next::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(34, 139, 34, 0.55);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  transition: background-color 0.3s, transform 0.2s;
+  pointer-events: none;
+}
+
+.lb-nav a.lb-prev::after {
+  left: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E");
+}
+
+.lb-nav a.lb-next::after {
+  right: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E");
+}
+
+.lb-nav a.lb-prev:hover::after,
+.lb-nav a.lb-next:hover::after {
+  background-color: rgba(34, 139, 34, 0.9);
+  transform: translateY(-50%) scale(1.1);
 }

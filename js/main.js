@@ -68,16 +68,14 @@
         loop: true,
         center: true,
         dots: false,
-        nav: true,
-        navText: [
-            '<span class="tc-nav-btn"><i class="bi bi-arrow-left"></i> Prev</span>',
-            '<span class="tc-nav-btn">Next <i class="bi bi-arrow-right"></i></span>'
-        ],
+        nav: false,
+        stagePadding: 120,
+        margin: 8,
         responsive: {
-            0:    { items: 1 },
-            768:  { items: 1 },
-            1100: { items: 2 },
-            1400: { items: 3 }
+            0:    { items: 1, stagePadding: 30 },
+            768:  { items: 1, stagePadding: 60 },
+            1100: { items: 2, stagePadding: 120 },
+            1400: { items: 3, stagePadding: 120 }
         }
     });
 

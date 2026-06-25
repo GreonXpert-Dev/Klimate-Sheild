@@ -202,7 +202,7 @@
 }
 
 /* ── Isotope Grid (Projects page) ─────────────── */
-.iso-grid { margin: 0 -12px; }
+.iso-grid { max-width: 960px; margin: 0 auto; }
 .iso-item { width: calc(33.333% - 24px); margin: 0 12px 24px; }
 @media (max-width: 991px) { .iso-item { width: calc(50% - 24px); } }
 @media (max-width: 575px)  { .iso-item { width: calc(100% - 24px); } }

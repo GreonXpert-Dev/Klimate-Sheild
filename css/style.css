@@ -756,16 +756,22 @@ h6,
 
 /* stage: keep overflow hidden so cards don't spill during slide */
 .testimonial-carousel.owl-carousel .owl-stage-outer {
-    overflow: hidden;
+    overflow: visible;
     padding: 28px 0 44px;
+}
+
+/* testimonial section */
+.testimonial-section-wrap {
+    overflow: hidden;
+    padding: 0;
 }
 
 /* ── Card base ── */
 .tcard {
     background: #fff;
     border-radius: 14px;
-    padding: 22px 22px 18px;
-    margin: 0 4px;
+    padding: 16px 16px 14px;
+    margin: 0 8px;
     position: relative;
     box-shadow: 0 6px 32px rgba(10,30,15,.11);
     display: flex;
@@ -815,7 +821,7 @@ h6,
 
 /* ── Quote text ── */
 .tcard-text {
-    font-size: .82rem;
+    font-size: .76rem;
     color: #3c4a3e;
     line-height: 1.8;
     margin: 0;
@@ -939,14 +945,14 @@ h6,
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--primary);
+    color: #1c3d22;
     letter-spacing: 0;
     box-shadow: none;
 }
 
 .footer,
 .container-fluid.bg-dark.footer {
-    background-color: #1c3d22 !important;
+    background-color: #3d7a4a !important;
 }
 
 .footer h4 { color: #ffffff !important; }
@@ -956,7 +962,7 @@ h6,
 
 .copyright {
     color: var(--light);
-    background: #0a1f11;
+    background: #085041;
 }
 
 .copyright a {
