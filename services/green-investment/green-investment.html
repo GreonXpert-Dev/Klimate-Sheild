@@ -22,7 +22,30 @@
 
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/style.css" rel="stylesheet">
-    <link href="green-investment.css" rel="stylesheet">
+    <link href="green-investment.css?v=4" rel="stylesheet">
+    <style>
+      /* force expanding cards layout */
+      #giExpCards {
+        display: flex !important;
+        height: 480px !important;
+        gap: 4px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      #giExpCards .gi-exp-card {
+        position: relative !important;
+        flex: 1 !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-color: #1B4332 !important;
+        cursor: pointer !important;
+        overflow: hidden !important;
+        transition: flex 0.6s cubic-bezier(.4,0,.2,1) !important;
+        min-width: 0 !important;
+      }
+      #giExpCards .gi-exp-card.is-active { flex: 4 !important; }
+    </style>
 </head>
 
 <body>
@@ -47,14 +70,14 @@
         </div>
     </div>
 
-    <!-- â”€â”€ Section 1: Intro + Stats â”€â”€ -->
+    <!-- â"€â"€ Section 1: Intro + Stats â"€â"€ -->
     <section class="svc-section svc-section--light gi-intro">
         <div class="container">
 
             <div class="svc-header wow fadeInUp">
                 <span class="svc-badge">Finance</span>
                 <h2 class="svc-title">Green <span style="color:#28a745;">Investment</span> Driving Sustainable Growth</h2>
-                <p class="svc-lead">Financial capital allocated towards projects and technologies that promote environmental sustainability” aligned with ESG principles, the Paris Agreement, UN SDGs, and Net-Zero commitments.</p>
+                <p class="svc-lead">Financial capital allocated towards projects and technologies that promote environmental sustainability" aligned with ESG principles, the Paris Agreement, UN SDGs, and Net-Zero commitments.</p>
             </div>
 
             <div class="gi-stats wow fadeInUp" data-wow-delay="0.1s">
@@ -79,21 +102,78 @@
         </div>
     </section>
 
-    <!-- â”€â”€ Section 2: Types of Green Investment â”€â”€ -->
-    <section class="svc-section svc-section--light">
-        <div class="container">
+    <!-- ── Section 2: Types of Green Investment ── -->
+    <section class="svc-section svc-section--light gi-types-section">
+        <div class="container-fluid px-0">
 
-            <h3 class="sub-heading wow fadeInUp text-center">Types of Green Investment</h3>
+            <div class="container">
+                <h3 class="sub-heading text-center">Types of Green Investment</h3>
+                <p class="gi-types-lead text-center">Click or hover any card to explore each investment type</p>
+            </div>
 
-            <div class="gi-arc-wrap wow fadeInUp" data-wow-delay="0.2s">
-                <div class="gi-arc-stage" id="giArcStage"></div>
-                <div class="gi-arc-dots" id="giArcDots"></div>
+            <div class="gi-exp-cards" id="giExpCards">
+
+                <div class="gi-exp-card is-active" style="background-image:url('../../img/services/pages/greenInvestment/1.jpg')" data-idx="0">
+                    <div class="gi-exp-overlay"></div>
+                    <div class="gi-exp-num">01</div>
+                    <div class="gi-exp-icon-wrap"><i class="fas fa-solar-panel"></i></div>
+                    <div class="gi-exp-content">
+                        <h4 class="gi-exp-title">Renewable Energy</h4>
+                        <p class="gi-exp-desc">Financing solar, wind, hydro, and bioenergy projects to reduce emissions and transition to clean energy sources.</p>
+                        <span class="gi-exp-line"></span>
+                    </div>
+                </div>
+
+                <div class="gi-exp-card" style="background-image:url('../../img/services/pages/greenInvestment/2.jpg')" data-idx="1">
+                    <div class="gi-exp-overlay"></div>
+                    <div class="gi-exp-num">02</div>
+                    <div class="gi-exp-icon-wrap"><i class="fas fa-city"></i></div>
+                    <div class="gi-exp-content">
+                        <h4 class="gi-exp-title">Sustainable Infrastructure</h4>
+                        <p class="gi-exp-desc">Funding energy-efficient materials, smart grids, and green building certifications for tomorrow's infrastructure.</p>
+                        <span class="gi-exp-line"></span>
+                    </div>
+                </div>
+
+                <div class="gi-exp-card" style="background-image:url('../../img/services/pages/greenInvestment/3.jpg')" data-idx="2">
+                    <div class="gi-exp-overlay"></div>
+                    <div class="gi-exp-num">03</div>
+                    <div class="gi-exp-icon-wrap"><i class="fas fa-hand-holding-usd"></i></div>
+                    <div class="gi-exp-content">
+                        <h4 class="gi-exp-title">Green Bonds &amp; ESG Loans</h4>
+                        <p class="gi-exp-desc">Raising funds for environmental projects with sustainability-linked incentives and green financing structures.</p>
+                        <span class="gi-exp-line"></span>
+                    </div>
+                </div>
+
+                <div class="gi-exp-card" style="background-image:url('../../img/services/pages/greenInvestment/4.jpg')" data-idx="3">
+                    <div class="gi-exp-overlay"></div>
+                    <div class="gi-exp-num">04</div>
+                    <div class="gi-exp-icon-wrap"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="gi-exp-content">
+                        <h4 class="gi-exp-title">Carbon Markets &amp; Offsetting</h4>
+                        <p class="gi-exp-desc">Investing in carbon credit projects and monetizing emission reductions through trading and offset programs.</p>
+                        <span class="gi-exp-line"></span>
+                    </div>
+                </div>
+
+                <div class="gi-exp-card" style="background-image:url('../../img/services/pages/greenInvestment/5.jpg')" data-idx="4">
+                    <div class="gi-exp-overlay"></div>
+                    <div class="gi-exp-num">05</div>
+                    <div class="gi-exp-icon-wrap"><i class="fas fa-sync-alt"></i></div>
+                    <div class="gi-exp-content">
+                        <h4 class="gi-exp-title">Circular Economy</h4>
+                        <p class="gi-exp-desc">Supporting recycling, resource-efficient production, and eco-friendly product development for a circular future.</p>
+                        <span class="gi-exp-line"></span>
+                    </div>
+                </div>
+
             </div>
 
         </div>
     </section>
 
-    <!-- â”€â”€ Section 3: Benefits + How We Support â”€â”€ -->
+    <!-- â"€â"€ Section 3: Benefits + How We Support â"€â"€ -->
     <section class="svc-section gi-benefits-section">
         <div class="container">
 
@@ -161,7 +241,7 @@
         </div>
     </section>
 
-    <!-- â”€â”€ Section 4: What We Offer Tabs â”€â”€ -->
+    <!-- â"€â"€ Section 4: What We Offer Tabs â"€â"€ -->
     <section class="svc-section svc-section--dark-alt">
         <div class="container">
 
@@ -204,7 +284,7 @@
                             <div class="check-item"><i></i><span>GRI, TCFD, SASB, and ISSB aligned reporting.</span></div>
                             <div class="check-item"><i></i><span>ESG due diligence for investment portfolios.</span></div>
                             <div class="check-item"><i></i><span>Impact measurement and investor disclosure.</span></div>
-                            <div class="check-item"><i></i><span>Regulatory compliance” SEBI, BRSR, EU Taxonomy.</span></div>
+                            <div class="check-item"><i></i><span>Regulatory compliance" SEBI, BRSR, EU Taxonomy.</span></div>
                         </div>
                     </div>
                 </div>
@@ -213,7 +293,7 @@
         </div>
     </section>
 
-    <!-- â”€â”€ Let's Talk CTA â”€â”€ -->
+    <!-- â"€â"€ Let's Talk CTA â"€â"€ -->
     <section class="svc-section svc-section--light gi-letstalk">
         <div class="container text-end">
             <p class="img-cta-sub">Ready to make an impact?</p>

@@ -387,7 +387,53 @@ document.addEventListener('DOMContentLoaded', function () {
   }());
 
   /* ═══════════════════════════════════════════
-     GREEN INVESTMENT — ARC CAROUSEL
+     GREEN INVESTMENT — EXPANDING CARDS
+  ═══════════════════════════════════════════ */
+  (function () {
+    var wrap  = document.getElementById('giExpCards');
+    var cards = Array.from(document.querySelectorAll('#giExpCards .gi-exp-card'));
+    if (!cards.length) return;
+
+    var current   = 0;
+    var autoTimer = null;
+    var INTERVAL  = 3000;
+
+    function setActive(idx) {
+      current = ((idx % cards.length) + cards.length) % cards.length;
+      cards.forEach(function (c) { c.classList.remove('is-active'); });
+      cards[current].classList.add('is-active');
+    }
+
+    function startAuto() {
+      stopAuto();
+      autoTimer = setInterval(function () { setActive(current + 1); }, INTERVAL);
+    }
+    function stopAuto() { clearInterval(autoTimer); autoTimer = null; }
+
+    /* Click: lock to that card, restart timer */
+    cards.forEach(function (card, i) {
+      card.addEventListener('click', function () {
+        setActive(i); stopAuto(); startAuto();
+      });
+    });
+
+    /* Hover on desktop: expand on enter, restart auto on leave */
+    if (window.matchMedia('(hover: hover)').matches) {
+      cards.forEach(function (card, i) {
+        card.addEventListener('mouseenter', function () { stopAuto(); setActive(i); });
+        card.addEventListener('mouseleave', function () { startAuto(); });
+      });
+    }
+
+    /* Pause auto when the whole block is hovered (covers gaps between cards) */
+    wrap.addEventListener('mouseleave', startAuto);
+
+    setActive(0);
+    startAuto();
+  }());
+
+  /* ═══════════════════════════════════════════
+     GREEN INVESTMENT — ARC CAROUSEL (legacy, unused)
   ═══════════════════════════════════════════ */
   (function () {
     var stage    = document.getElementById('giArcStage');
