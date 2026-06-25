@@ -45,7 +45,7 @@
        About Page  Premium Redesign
     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-      /* â”€â”€ Eyebrow label â”€â”€ */
+      /* â"€â"€ Eyebrow label â"€â"€ */
       .section-eyebrow {
         display: inline-flex;
         align-items: center;
@@ -66,9 +66,9 @@
         border-radius: 2px;
       }
 
-      /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      /* â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
        WHO WE ARE  split hero
-    â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */
       .who-hero {
         padding: 0px 0 60px;
         background: #fff;
@@ -110,7 +110,7 @@
         }
       }
 
-      /* â”€â”€ Stats Carousel â”€â”€ */
+      /* â"€â"€ Stats Carousel â"€â"€ */
       .stats-carousel-wrap {
         position: relative;
         overflow: hidden;
@@ -239,15 +239,15 @@
         color: #2d6a31;
       }
 
-      /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      /* â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
        EXPERTISE + VISION  COMBINED SPLIT PANEL
-    â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */
       .ev-combined {
         display: flex;
         min-height: 680px;
       }
 
-      /* â”€â”€ LEFT: Expertise (light) â”€â”€ */
+      /* â"€â"€ LEFT: Expertise (light) â"€â"€ */
       .ev-expertise {
         flex: 1 1 50%;
         background: #f7faf8;
@@ -275,7 +275,7 @@
         margin-bottom: 2rem;
       }
 
-      /* â”€â”€ Expertise Cards â”€â”€ */
+      /* â"€â"€ Expertise Cards â"€â"€ */
       .exp-card {
         background: #fff;
         border-radius: 14px;
@@ -339,7 +339,7 @@
         display: none;
       }
 
-      /* â”€â”€ DIVIDER â”€â”€ */
+      /* â"€â"€ DIVIDER â"€â"€ */
       .ev-divider {
         width: 1px;
         background: linear-gradient(
@@ -352,10 +352,11 @@
         flex-shrink: 0;
       }
 
-      /* â”€â”€ RIGHT: Vision (dark) â”€â”€ */
+      /* â"€â"€ RIGHT: Vision (dark) â"€â"€ */
       .ev-vision {
         flex: 1 1 50%;
-        background: #1e5c35;
+        background: linear-gradient(135deg, #0d2b1a 0%, #1B4332 40%, #1e5c35 100%);
+        isolation: isolate;
         padding: 80px max(24px, calc((100vw - 1320px) / 2 + 12px)) 80px 60px;
         display: flex;
         flex-direction: column;
@@ -388,21 +389,21 @@
         padding-right: 0;
       }
       .ev-vision .section-eyebrow {
-        color: #5dcaa5;
+        color: #74c69d;
       }
       .ev-vision .section-eyebrow::before {
-        background: linear-gradient(90deg, #5dcaa5, #81c784);
+        background: linear-gradient(90deg, #74c69d, #b7f5c7);
       }
-      .ev-vision h2 {
+      .ev-vision h2, .ev-vision h3 {
         font-size: clamp(1.4rem, 2.2vw, 1.85rem);
         font-weight: 800;
         color: #fff;
         line-height: 1.18;
         margin-bottom: 1rem;
       }
-      .ev-vision h2 em {
+      .ev-vision h2 em, .ev-vision h3 em {
         font-style: normal;
-        background: linear-gradient(90deg, #a8f0d4, #c8efc8);
+        background: linear-gradient(90deg, #74c69d, #d4f7e0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -414,14 +415,14 @@
         margin-bottom: 1.8rem;
       }
 
-      /* â”€â”€ Vision Cards â”€â”€ */
+      /* â"€â"€ Vision Cards â"€â"€ */
       .vis-card {
-        background: rgba(255, 255, 255, 0.07);
+        background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
         border-radius: 14px;
         padding: 22px 20px;
         height: 100%;
         min-height: 190px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(149,213,178,0.22);
         position: relative;
         overflow: hidden;
         transition:
@@ -430,7 +431,7 @@
       }
       .vis-card:hover {
         transform: translateY(-6px);
-        background: rgba(255, 255, 255, 0.12);
+        background: rgba(255,255,255,0.15); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: rgba(149,213,178,0.45);
       }
       .vis-card-step {
         position: absolute;
@@ -439,7 +440,7 @@
         font-size: 0.62rem;
         font-weight: 800;
         letter-spacing: 0.14em;
-        color: rgba(93, 202, 165, 0.35);
+        color: rgba(116,198,157,0.55);
         font-family: "Jost", sans-serif;
       }
       .vis-card-header {
@@ -477,7 +478,7 @@
         display: none;
       }
 
-      /* â”€â”€ Responsive â”€â”€ */
+      /* â"€â"€ Responsive â"€â"€ */
       @media (max-width: 991px) {
         .ev-combined {
           flex-direction: column;
@@ -540,7 +541,7 @@
       data-wow-delay="0.1s"
     >
       <div class="container text-center py-5">
-        <h1 class="display-4 text-white mb-4 animated slideInDown">About Us</h1>
+        <h1 class="display-5 text-white mb-4 animated slideInDown">About Us</h1>
         <nav aria-label="breadcrumb animated slideInDown">
           <ol class="breadcrumb justify-content-center mb-0">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -559,7 +560,7 @@
       >
         Our Story
       </p>
-      <h2 class="display-5 fw-bold" style="color: #1a1a1a; line-height: 1.2">
+      <h2 class="display-6 fw-bold" style="color: #1a1a1a; line-height: 1.2">
         Where <span style="color: #28a745">Purpose</span> Meets the Planet
       </h2>
       <p
@@ -580,7 +581,7 @@
           <!-- Text col -->
           <div class="col-lg-6 text-col wow fadeInLeft" data-wow-delay="0.1s" style="margin-top: -120px">
             <span class="section-eyebrow">Who We Are</span>
-            <h2>Innovating for a <em>Sustainable</em> Future</h2>
+            <h3>Innovating for a <em>Sustainable</em> Future</h3>
             <p class="lead-text">
               At <strong>KLIMATE SHIELD</strong>, we are more than participants
               in the fight against climate change&mdash;we are innovators,
@@ -748,7 +749,7 @@
       <div class="ev-expertise">
         <div class="inner">
           <span class="section-eyebrow">Our Expertise</span>
-          <h2>A Multidisciplinary Approach</h2>
+          <h3>A Multidisciplinary Approach</h3>
           <p>
             Our global team spans environmental science, circular economy,
             climate resilience, renewable energy, and the SDGs&mdash;ensuring
@@ -825,7 +826,7 @@
       <div class="ev-vision">
         <div class="inner">
           <span class="section-eyebrow">Our Vision</span>
-          <h2>A <em>Regenerative</em> Future</h2>
+          <h3>A <em>Regenerative</em> Future</h3>
           <p>
             We envision a world where innovative ideas meet actionable
             solutions&mdash;where communities and ecosystems thrive in harmony.
