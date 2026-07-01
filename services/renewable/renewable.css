@@ -1,6 +1,6 @@
 /* ── Variables & Base ─────────────────────── */
 :root {
-  --green-900: #1a1a1a; --green-700: #28a745; --green-500: #28a745;
+  --green-900: #1a1a1a; --green-700: #085041; --green-500: #085041;
   --green-400: #5cd97a; --green-200: #b7f5c7; --green-50: #f0fff4;
   --text: #374151; --muted: #6B7280; --white: #FFFFFF; --bg-alt: #F8FAFC;
   --border: #E5E7EB; --radius: 10px;
@@ -13,7 +13,7 @@ body { color: var(--text); }
 .svc-section--light { background: var(--white); }
 /* .svc-section--dark-alt { background: var(--bg-alt); } */
 .svc-header { text-align: center; margin-bottom: 72px; }
-.svc-badge { display: inline-block; background: var(--green-50); color: var(--green-700); font-family: 'Jost', sans-serif; font-weight: 600; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; padding: 3px 12px; border-radius: 100px; border: 1px solid var(--green-200); margin-bottom: 18px; }
+.svc-badge { display: inline-block; background: var(--green-50); color: #085041; font-family: 'Jost', sans-serif; font-weight: 600; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; padding: 3px 12px; border-radius: 100px; border: 1px solid var(--green-200); margin-bottom: 18px; }
 .svc-title { font-family: 'Jost', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--green-900); margin-bottom: 24px; line-height: 1.25; }
 .svc-lead { font-size: .97rem; color: var(--muted); max-width: 700px; margin: 0 auto; line-height: 1.7; }
 .body-text { font-size: .93rem; line-height: 1.75; color: var(--text); margin-bottom: 28px; }
