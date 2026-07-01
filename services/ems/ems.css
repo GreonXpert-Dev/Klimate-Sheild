@@ -1,6 +1,6 @@
 /* ── Variables & Base ─────────────────────── */
 :root {
-  --green-900: #1a1a1a; --green-700: #28a745; --green-500: #28a745;
+  --green-900: #1a1a1a; --green-700: #085041; --green-500: #085041;
   --green-400: #5cd97a; --green-200: #b7f5c7; --green-50: #f0fff4;
   --text: #374151; --muted: #6B7280; --white: #FFFFFF; --bg-alt: #F8FAFC;
   --border: #E5E7EB; --radius: 12px;
@@ -16,7 +16,7 @@ body { color: var(--text); }
 /* ── Shared Typography ── */
 .svc-header { text-align: center; margin-bottom: 40px; }
 .svc-badge {
-  display: inline-block; background: var(--green-50); color: var(--green-700);
+  display: inline-block; background: var(--green-50); color: #085041;
   font-family: 'Jost', sans-serif; font-weight: 600; font-size: .78rem;
   letter-spacing: .12em; text-transform: uppercase; padding: 5px 16px;
   border-radius: 100px; border: 1px solid var(--green-200); margin-bottom: 14px;
@@ -109,8 +109,8 @@ body { color: var(--text); }
   cursor: pointer; border-bottom: 3px solid transparent;
   transition: color var(--transition), border-color var(--transition), background var(--transition);
 }
-.dtab:hover { color: var(--green-700); }
-.dtab.active { color: var(--green-700); background: var(--white); border-bottom-color: var(--green-500); }
+.dtab:hover { color: #085041; }
+.dtab.active { color: #085041; background: var(--white); border-bottom-color: var(--green-500); }
 .detail-tab-panels { padding: 32px; }
 .dtab-panel { display: none; }
 .dtab-panel.active { display: block; }
