@@ -1,942 +1,943 @@
 ﻿<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Klimate Shield</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/logo.svg" rel="icon" type="image/svg+xml" />
+<head>
+  <meta charset="utf-8" />
+  <title>Klimate Shield</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/logo.svg" rel="icon" type="image/svg+xml" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+    rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/custom.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-    <style>
-      /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/custom.css" rel="stylesheet" />
+
+  <style>
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        About Page  Premium Redesign
     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-      /* â"€â"€ Eyebrow label â"€â"€ */
-      .section-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: #348e38;
-        margin-bottom: 0.9rem;
-      }
-      .section-eyebrow::before {
-        content: "";
-        display: inline-block;
-        width: 28px;
-        height: 2px;
-        background: linear-gradient(90deg, #348e38, #81c784);
-        border-radius: 2px;
-      }
+    /* â"€â"€ Eyebrow label â"€â"€ */
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #348e38;
+      margin-bottom: 0.9rem;
+    }
 
-      /* â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+    .section-eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, #348e38, #81c784);
+      border-radius: 2px;
+    }
+
+    /* â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
        WHO WE ARE  split hero
     â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */
-      .who-hero {
-        padding: 0px 0 60px;
-        background: #fff;
-      }
+    .who-hero {
+      padding: 0px 0 60px;
+      background: #fff;
+    }
+
+    .who-hero .text-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      padding-right: 3rem;
+    }
+
+    .who-hero h2 {
+      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      font-weight: 800;
+      color: #0f2d1a;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+
+    .who-hero h2 em {
+      font-style: normal;
+      color: #348e38;
+    }
+
+    .who-hero .lead-text {
+      font-size: 0.93rem;
+      color: #4d6659;
+      line-height: 1.85;
+      margin-bottom: 0.9rem;
+    }
+
+    .who-hero .lead-text strong {
+      color: #0f2d1a;
+      font-weight: 700;
+    }
+
+    @media (max-width: 991px) {
       .who-hero .text-col {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 100%;
-        padding-right: 3rem;
-      }
-      .who-hero h2 {
-        font-size: clamp(1.4rem, 2.6vw, 2rem);
-        font-weight: 800;
-        color: #0f2d1a;
-        line-height: 1.2;
-        margin-bottom: 1.2rem;
-      }
-      .who-hero h2 em {
-        font-style: normal;
-        color: #348e38;
-      }
-      .who-hero .lead-text {
-        font-size: 0.93rem;
-        color: #4d6659;
-        line-height: 1.85;
-        margin-bottom: 0.9rem;
-      }
-      .who-hero .lead-text strong {
-        color: #0f2d1a;
-        font-weight: 700;
-      }
-      @media (max-width: 991px) {
-        .who-hero .text-col {
-          padding-right: 0;
-        }
-        .who-hero {
-          padding: 60px 0 50px;
-        }
+        padding-right: 0;
       }
 
-      /* â"€â"€ Stats Carousel â"€â"€ */
-      .stats-carousel-wrap {
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        padding: 12px 0 12px;
-        -webkit-mask-image: linear-gradient(
-          to right,
+      .who-hero {
+        padding: 60px 0 50px;
+      }
+    }
+
+    /* â"€â"€ Stats Carousel â"€â"€ */
+    .stats-carousel-wrap {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 12px 0 12px;
+      -webkit-mask-image: linear-gradient(to right,
           transparent 0%,
           #000 5%,
           #000 95%,
-          transparent 100%
-        );
-        mask-image: linear-gradient(
-          to right,
+          transparent 100%);
+      mask-image: linear-gradient(to right,
           transparent 0%,
           #000 5%,
           #000 95%,
-          transparent 100%
-        );
-      }
-      .stats-carousel-track {
-        display: flex;
-        gap: 14px;
-        width: max-content;
-      }
-      .stats-carousel-track.row-ltr {
-        animation: statsScrollLTR 22s linear infinite;
-      }
-      .stats-carousel-track.row-rtl {
-        animation: statsScrollRTL 22s linear infinite;
-      }
-      .stats-carousel-wrap:hover .stats-carousel-track {
-        animation-play-state: paused;
-      }
-      @keyframes statsScrollLTR {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-      @keyframes statsScrollRTL {
-        0% {
-          transform: translateX(-50%);
-        }
-        100% {
-          transform: translateX(0);
-        }
+          transparent 100%);
+    }
+
+    .stats-carousel-track {
+      display: flex;
+      gap: 14px;
+      width: max-content;
+    }
+
+    .stats-carousel-track.row-ltr {
+      animation: statsScrollLTR 22s linear infinite;
+    }
+
+    .stats-carousel-track.row-rtl {
+      animation: statsScrollRTL 22s linear infinite;
+    }
+
+    .stats-carousel-wrap:hover .stats-carousel-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes statsScrollLTR {
+      0% {
+        transform: translateX(0);
       }
 
-      .sc-card {
-        flex: 0 0 175px;
-        width: 175px;
-        height: 100px;
-        background: rgba(255, 255, 255, 0.35);
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        border-radius: 0;
-        padding: 18px 18px 16px;
-        box-shadow:
-          0 8px 32px rgba(15, 45, 26, 0.1),
-          inset 0 1px 0 rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        text-align: left;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        cursor: default;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      100% {
+        transform: translateX(-50%);
       }
-      .sc-card:hover {
-        transform: translateY(-4px);
-        box-shadow:
-          0 16px 40px rgba(15, 45, 26, 0.15),
-          inset 0 1px 0 rgba(255, 255, 255, 0.9);
-        background: rgba(255, 255, 255, 0.5);
+    }
+
+    @keyframes statsScrollRTL {
+      0% {
+        transform: translateX(-50%);
       }
 
-      /* left accent bar on hover */
-      .sc-card::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 15%;
-        bottom: 15%;
-        width: 3px;
-        background: #348e38;
-        border-radius: 0 3px 3px 0;
-        opacity: 0;
-        transition: opacity 0.3s;
+      100% {
+        transform: translateX(0);
       }
-      .sc-card:hover::before {
-        opacity: 1;
-      }
+    }
 
-      .sc-card-icon {
-        display: none;
-      }
+    .sc-card {
+      flex: 0 0 175px;
+      width: 175px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 0;
+      padding: 18px 18px 16px;
+      box-shadow:
+        0 8px 32px rgba(15, 45, 26, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      text-align: left;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-      .sc-card-num {
-        font-size: 1.7rem;
-        font-weight: 600;
-        font-family: "Jost", sans-serif;
-        color: #0f2d1a;
-        line-height: 1;
-        margin-bottom: 5px;
-        letter-spacing: -0.03em;
-      }
-      .sc-card-num span {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #348e38;
-      }
-      .sc-card-label {
-        font-size: 0.62rem;
-        font-weight: 500;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        color: #2d6a31;
-      }
+    .sc-card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 16px 40px rgba(15, 45, 26, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.5);
+    }
 
-      /* â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+    /* left accent bar on hover */
+    .sc-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 15%;
+      bottom: 15%;
+      width: 3px;
+      background: #348e38;
+      border-radius: 0 3px 3px 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .sc-card:hover::before {
+      opacity: 1;
+    }
+
+    .sc-card-icon {
+      display: none;
+    }
+
+    .sc-card-num {
+      font-size: 1.7rem;
+      font-weight: 600;
+      font-family: "Jost", sans-serif;
+      color: #0f2d1a;
+      line-height: 1;
+      margin-bottom: 5px;
+      letter-spacing: -0.03em;
+    }
+
+    .sc-card-num span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #348e38;
+    }
+
+    .sc-card-label {
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #2d6a31;
+    }
+
+    /* â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
        EXPERTISE + VISION  COMBINED SPLIT PANEL
     â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */
-      .ev-combined {
-        display: flex;
-        min-height: 680px;
-      }
+    .ev-combined {
+      display: flex;
+      min-height: 680px;
+    }
 
-      /* â"€â"€ LEFT: Expertise (light) â"€â"€ */
-      .ev-expertise {
-        flex: 1 1 50%;
-        background: #f7faf8;
-        padding: 80px 60px 80px max(24px, calc((100vw - 1320px) / 2 + 12px));
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .ev-expertise .inner {
-        max-width: 100%;
-        margin-left: auto;
-        padding-left: 0;
-      }
-      .ev-expertise h2 {
-        font-size: clamp(1.3rem, 2.2vw, 1.75rem);
-        font-weight: 800;
-        color: #0f2d1a;
-        line-height: 1.2;
-        margin-bottom: 0.9rem;
-      }
-      .ev-expertise > .inner > p {
-        font-size: 0.93rem;
-        color: #4d6659;
-        line-height: 1.85;
-        margin-bottom: 2rem;
-      }
+    /* â"€â"€ LEFT: Expertise (light) â"€â"€ */
+    .ev-expertise {
+      flex: 1 1 50%;
+      background: #f7faf8;
+      padding: 80px 60px 80px max(24px, calc((100vw - 1320px) / 2 + 12px));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
 
-      /* â"€â"€ Expertise Cards â"€â"€ */
-      .exp-card {
-        background: #fff;
-        border-radius: 14px;
-        padding: 24px 22px;
-        height: 100%;
-        min-height: 190px;
-        border: 1px solid #e0ebe3;
-        box-shadow: 0 4px 18px rgba(15, 45, 26, 0.06);
-        position: relative;
-        overflow: hidden;
-        transition:
-          transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
-          box-shadow 0.35s ease;
-      }
-      .exp-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 44px rgba(15, 45, 26, 0.12);
-      }
-      .exp-card-step {
-        position: absolute;
-        top: 14px;
-        right: 16px;
-        font-size: 0.62rem;
-        font-weight: 800;
-        letter-spacing: 0.14em;
-        color: rgba(52, 142, 56, 0.3);
-        font-family: "Jost", sans-serif;
-      }
-      .exp-card-header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 10px;
-      }
-      .exp-card-icon {
-        width: 46px;
-        height: 46px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, #edf7f1, #d0edda);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1rem;
-        color: #348e38;
-        flex-shrink: 0;
-        margin-bottom: 0;
-      }
-      .exp-card h5 {
-        font-size: 0.9rem;
-        font-weight: 700;
-        color: #0f2d1a;
-        margin-bottom: 0;
-      }
-      .exp-card p {
-        font-size: 0.81rem;
-        color: #5c7063;
-        line-height: 1.65;
-        margin: 0;
-      }
-      .exp-card::after {
-        display: none;
-      }
+    .ev-expertise .inner {
+      max-width: 100%;
+      margin-left: auto;
+      padding-left: 0;
+    }
 
-      /* â"€â"€ DIVIDER â"€â"€ */
-      .ev-divider {
-        width: 1px;
-        background: linear-gradient(
-          to bottom,
+    .ev-expertise h2 {
+      font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+      font-weight: 800;
+      color: #0f2d1a;
+      line-height: 1.2;
+      margin-bottom: 0.9rem;
+    }
+
+    .ev-expertise>.inner>p {
+      font-size: 0.93rem;
+      color: #4d6659;
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+
+    /* â"€â"€ Expertise Cards â"€â"€ */
+    .exp-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 22px;
+      height: 100%;
+      min-height: 190px;
+      border: 1px solid #e0ebe3;
+      box-shadow: 0 4px 18px rgba(15, 45, 26, 0.06);
+      position: relative;
+      overflow: hidden;
+      transition:
+        transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
+        box-shadow 0.35s ease;
+    }
+
+    .exp-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 44px rgba(15, 45, 26, 0.12);
+    }
+
+    .exp-card-step {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: rgba(52, 142, 56, 0.3);
+      font-family: "Jost", sans-serif;
+    }
+
+    .exp-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .exp-card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #edf7f1, #d0edda);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #348e38;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    .exp-card h5 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0f2d1a;
+      margin-bottom: 0;
+    }
+
+    .exp-card p {
+      font-size: 0.81rem;
+      color: #5c7063;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .exp-card::after {
+      display: none;
+    }
+
+    /* â"€â"€ DIVIDER â"€â"€ */
+    .ev-divider {
+      width: 1px;
+      background: linear-gradient(to bottom,
           transparent,
           #c2dece 20%,
           #c2dece 80%,
-          transparent
-        );
-        flex-shrink: 0;
-      }
+          transparent);
+      flex-shrink: 0;
+    }
 
-      /* â"€â"€ RIGHT: Vision (dark) â"€â"€ */
-      .ev-vision {
-        flex: 1 1 50%;
-        background: linear-gradient(135deg, #0d2b1a 0%, #1B4332 40%, #1e5c35 100%);
-        isolation: isolate;
-        padding: 80px max(24px, calc((100vw - 1320px) / 2 + 12px)) 80px 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        position: relative;
-        overflow: hidden;
-      }
-      .ev-vision::before {
-        display: none;
-      }
-      .ev-vision::after {
-        content: "";
-        position: absolute;
-        width: 280px;
-        height: 280px;
-        border-radius: 50%;
-        background: radial-gradient(
-          circle,
+    /* â"€â"€ RIGHT: Vision (dark) â"€â"€ */
+    .ev-vision {
+      flex: 1 1 50%;
+      background: linear-gradient(135deg, #0d2b1a 0%, #1B4332 40%, #1e5c35 100%);
+      isolation: isolate;
+      padding: 80px max(24px, calc((100vw - 1320px) / 2 + 12px)) 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ev-vision::before {
+      display: none;
+    }
+
+    .ev-vision::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle,
           rgba(52, 142, 56, 0.12) 0%,
-          transparent 70%
-        );
-        bottom: -80px;
-        left: -60px;
-        pointer-events: none;
+          transparent 70%);
+      bottom: -80px;
+      left: -60px;
+      pointer-events: none;
+    }
+
+    .ev-vision .inner {
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+      padding-right: 0;
+    }
+
+    .ev-vision .section-eyebrow {
+      color: #74c69d;
+    }
+
+    .ev-vision .section-eyebrow::before {
+      background: linear-gradient(90deg, #74c69d, #b7f5c7);
+    }
+
+    .ev-vision h2,
+    .ev-vision h3 {
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.18;
+      margin-bottom: 1rem;
+    }
+
+    .ev-vision h2 em,
+    .ev-vision h3 em {
+      font-style: normal;
+      background: linear-gradient(90deg, #74c69d, #d4f7e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ev-vision p {
+      font-size: 0.93rem;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.85;
+      margin-bottom: 1.8rem;
+    }
+
+    /* â"€â"€ Vision Cards â"€â"€ */
+    .vis-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 14px;
+      padding: 22px 20px;
+      height: 100%;
+      min-height: 190px;
+      border: 1px solid rgba(149, 213, 178, 0.22);
+      position: relative;
+      overflow: hidden;
+      transition:
+        transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
+        background 0.35s ease;
+    }
+
+    .vis-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-color: rgba(149, 213, 178, 0.45);
+    }
+
+    .vis-card-step {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: rgba(116, 198, 157, 0.55);
+      font-family: "Jost", sans-serif;
+    }
+
+    .vis-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .vis-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(52, 142, 56, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      color: #5dcaa5;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    .vis-card h5 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+    .vis-card p {
+      font-size: 0.79rem;
+      color: rgba(255, 255, 255, 0.62);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .vis-card::after {
+      display: none;
+    }
+
+    /* â"€â"€ Responsive â"€â"€ */
+    @media (max-width: 991px) {
+      .ev-combined {
+        flex-direction: column;
       }
-      .ev-vision .inner {
-        position: relative;
-        z-index: 1;
+
+      .ev-expertise {
+        flex: none;
+        padding: 60px 24px 50px;
+      }
+
+      .ev-expertise .inner {
         max-width: 100%;
-        padding-right: 0;
-      }
-      .ev-vision .section-eyebrow {
-        color: #74c69d;
-      }
-      .ev-vision .section-eyebrow::before {
-        background: linear-gradient(90deg, #74c69d, #b7f5c7);
-      }
-      .ev-vision h2, .ev-vision h3 {
-        font-size: clamp(1.4rem, 2.2vw, 1.85rem);
-        font-weight: 800;
-        color: #fff;
-        line-height: 1.18;
-        margin-bottom: 1rem;
-      }
-      .ev-vision h2 em, .ev-vision h3 em {
-        font-style: normal;
-        background: linear-gradient(90deg, #74c69d, #d4f7e0);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .ev-vision p {
-        font-size: 0.93rem;
-        color: rgba(255, 255, 255, 0.72);
-        line-height: 1.85;
-        margin-bottom: 1.8rem;
+        margin-left: 0;
+        padding-left: 0;
       }
 
-      /* â"€â"€ Vision Cards â"€â"€ */
-      .vis-card {
-        background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-        border-radius: 14px;
-        padding: 22px 20px;
-        height: 100%;
-        min-height: 190px;
-        border: 1px solid rgba(149,213,178,0.22);
-        position: relative;
-        overflow: hidden;
-        transition:
-          transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
-          background 0.35s ease;
-      }
-      .vis-card:hover {
-        transform: translateY(-6px);
-        background: rgba(255,255,255,0.15); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: rgba(149,213,178,0.45);
-      }
-      .vis-card-step {
-        position: absolute;
-        top: 14px;
-        right: 16px;
-        font-size: 0.62rem;
-        font-weight: 800;
-        letter-spacing: 0.14em;
-        color: rgba(116,198,157,0.55);
-        font-family: "Jost", sans-serif;
-      }
-      .vis-card-header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 10px;
-      }
-      .vis-card-icon {
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
-        background: rgba(52, 142, 56, 0.25);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.95rem;
-        color: #5dcaa5;
-        flex-shrink: 0;
-        margin-bottom: 0;
-      }
-      .vis-card h5 {
-        font-size: 0.88rem;
-        font-weight: 700;
-        color: #fff;
-        margin-bottom: 0;
-      }
-      .vis-card p {
-        font-size: 0.79rem;
-        color: rgba(255, 255, 255, 0.62);
-        line-height: 1.6;
-        margin: 0;
-      }
-      .vis-card::after {
-        display: none;
-      }
-
-      /* â"€â"€ Responsive â"€â"€ */
-      @media (max-width: 991px) {
-        .ev-combined {
-          flex-direction: column;
-        }
-        .ev-expertise {
-          flex: none;
-          padding: 60px 24px 50px;
-        }
-        .ev-expertise .inner {
-          max-width: 100%;
-          margin-left: 0;
-          padding-left: 0;
-        }
-        .ev-divider {
-          width: 100%;
-          height: 1px;
-          background: linear-gradient(
-            to right,
+      .ev-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right,
             transparent,
             #c2dece 20%,
             #c2dece 80%,
-            transparent
-          );
-        }
-        .ev-vision {
-          flex: none;
-          padding: 60px 24px 60px;
-        }
-        .ev-vision .inner {
-          max-width: 100%;
-          padding-right: 0;
-        }
-        .ev-vision::after {
-          display: none;
-        }
+            transparent);
       }
-    </style>
-  </head>
 
-  <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div
-        class="spinner-border text-primary"
-        role="status"
-        style="width: 3rem; height: 3rem"
-      ></div>
+      .ev-vision {
+        flex: none;
+        padding: 60px 24px 60px;
+      }
+
+      .ev-vision .inner {
+        max-width: 100%;
+        padding-right: 0;
+      }
+
+      .ev-vision::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem"></div>
+  </div>
+  <!-- Spinner End -->
+
+  <div id="navbar-placeholder"></div>
+  <script src="js/navbar.js"></script>
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-5 mb-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+      <h1 class="display-5 text-white mb-4 animated slideInDown">About Us</h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About</li>
+        </ol>
+      </nav>
     </div>
-    <!-- Spinner End -->
+  </div>
+  <!-- Page Header End -->
 
-    <div id="navbar-placeholder"></div>
-    <script src="js/navbar.js"></script>
+  <!-- Catchy Tagline Strip -->
+  <div class="container-fluid pt-5 pb-2 text-center" style="background: #fff">
+    <p class="text-success fw-semibold text-uppercase ls-wide mb-2" style="letter-spacing: 3px; font-size: 0.85rem">
+      Our Story
+    </p>
+    <h2 class="display-6 fw-bold" style="color: #1a1a1a; line-height: 1.2">
+      Where <span style="color: #28a745">Purpose</span> Meets the Planet
+    </h2>
+    <p class="mt-3 mx-auto text-muted" style="max-width: 600px; font-size: 1.05rem">
+      Innovating today for a climate-resilient tomorrow.
+    </p>
+  </div>
+  <!-- Catchy Tagline Strip End -->
 
-    <!-- Page Header Start -->
-    <div
-      class="container-fluid page-header py-5 mb-0 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container text-center py-5">
-        <h1 class="display-5 text-white mb-4 animated slideInDown">About Us</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-          <ol class="breadcrumb justify-content-center mb-0">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">About</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-    <!-- Page Header End -->
-
-    <!-- Catchy Tagline Strip -->
-    <div class="container-fluid pt-5 pb-2 text-center" style="background: #fff">
-      <p
-        class="text-success fw-semibold text-uppercase ls-wide mb-2"
-        style="letter-spacing: 3px; font-size: 0.85rem"
-      >
-        Our Story
-      </p>
-      <h2 class="display-6 fw-bold" style="color: #1a1a1a; line-height: 1.2">
-        Where <span style="color: #28a745">Purpose</span> Meets the Planet
-      </h2>
-      <p
-        class="mt-3 mx-auto text-muted"
-        style="max-width: 600px; font-size: 1.05rem"
-      >
-        Innovating today for a climate-resilient tomorrow.
-      </p>
-    </div>
-    <!-- Catchy Tagline Strip End -->
-
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          WHO WE ARE
     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-    <section class="who-hero">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <!-- Text col -->
-          <div class="col-lg-6 text-col wow fadeInLeft" data-wow-delay="0.1s" style="margin-top: -120px">
-            <span class="section-eyebrow">Who We Are</span>
-            <h3>Innovating for a <em>Sustainable</em> Future</h3>
-            <p class="lead-text">
-              At <strong>KLIMATE SHIELD</strong>, we are more than participants
-              in the fight against climate change&mdash;we are innovators,
-              pioneers, and visionaries redefining the boundaries of
-              possibility.
-            </p>
-            <p class="lead-text">
-              As a global leader in sustainable innovation, we integrate
-              cutting-edge research, rigorous audits, data-driven insights, and
-              transformative capacity-building programs to deliver solutions
-              that inspire action and drive measurable impact.
-            </p>
-            <p class="lead-text mb-0">
-              We equip businesses, governments, and communities with the
-              knowledge, tools, and strategies to navigate environmental
-              stewardship&mdash;whether it&rsquo;s achieving net-zero emissions,
-              enhancing resource efficiency, or building climate-resilient
-              systems.
-            </p>
+  <section class="who-hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <!-- Text col -->
+        <div class="col-lg-6 text-col wow fadeInLeft" data-wow-delay="0.1s" style="margin-top: -120px">
+          <span class="section-eyebrow">Who We Are</span>
+          <h3>Innovating for a <em>Sustainable</em> Future</h3>
+          <p class="lead-text">
+            At <strong>KLIMATE SHIELD</strong>, we are more than participants
+            in the fight against climate change&mdash;we are innovators,
+            pioneers, and visionaries redefining the boundaries of
+            possibility.
+          </p>
+          <p class="lead-text">
+            As a global leader in sustainable innovation, we integrate
+            cutting-edge research, rigorous audits, data-driven insights, and
+            transformative capacity-building programs to deliver solutions
+            that inspire action and drive measurable impact.
+          </p>
+          <p class="lead-text mb-0">
+            We equip businesses, governments, and communities with the
+            knowledge, tools, and strategies to navigate environmental
+            stewardship&mdash;whether it&rsquo;s achieving net-zero emissions,
+            enhancing resource efficiency, or building climate-resilient
+            systems.
+          </p>
+        </div>
+
+        <!-- Carousel col -->
+        <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s" style="padding-top: 110px">
+          <div class="stats-carousel-wrap">
+            <!-- Row 1 â†’ scrolls LEFT -->
+            <div class="stats-carousel-track row-ltr">
+              <div class="sc-card">
+                <div class="sc-card-num">50<span>+</span></div>
+                <div class="sc-card-label">Countries Reached</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">300<span>+</span></div>
+                <div class="sc-card-label">Projects Delivered</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">98<span>%</span></div>
+                <div class="sc-card-label">Client Satisfaction</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">50<span>+</span></div>
+                <div class="sc-card-label">Countries Reached</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">300<span>+</span></div>
+                <div class="sc-card-label">Projects Delivered</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">98<span>%</span></div>
+                <div class="sc-card-label">Client Satisfaction</div>
+              </div>
+            </div>
+
+            <!-- Row 2 â†’ scrolls RIGHT -->
+            <div class="stats-carousel-track row-rtl">
+              <div class="sc-card">
+                <div class="sc-card-num">10<span>+</span></div>
+                <div class="sc-card-label">Years of Impact</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">120<span>+</span></div>
+                <div class="sc-card-label">Expert Team</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">Net<span>-Zero</span></div>
+                <div class="sc-card-label">Carbon Neutrality</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">10<span>+</span></div>
+                <div class="sc-card-label">Years of Impact</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">120<span>+</span></div>
+                <div class="sc-card-label">Expert Team</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">Net<span>-Zero</span></div>
+                <div class="sc-card-label">Carbon Neutrality</div>
+              </div>
+            </div>
+
+            <!-- Row 3 â†’ scrolls LEFT -->
+            <div class="stats-carousel-track row-ltr">
+              <div class="sc-card">
+                <div class="sc-card-num">
+                  <i class="fas fa-tag" style="font-size: 1.2rem; color: #348e38"></i>
+                </div>
+                <div class="sc-card-label">No Hidden Cost</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">
+                  <i class="fas fa-users" style="font-size: 1.2rem; color: #348e38"></i>
+                </div>
+                <div class="sc-card-label">Dedicated Team</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">
+                  <i class="fas fa-headset" style="font-size: 1.2rem; color: #348e38"></i>
+                </div>
+                <div class="sc-card-label">24/7 Available</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">
+                  <i class="fas fa-tag" style="font-size: 1.2rem; color: #348e38"></i>
+                </div>
+                <div class="sc-card-label">No Hidden Cost</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">
+                  <i class="fas fa-users" style="font-size: 1.2rem; color: #348e38"></i>
+                </div>
+                <div class="sc-card-label">Dedicated Team</div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-num">
+                  <i class="fas fa-headset" style="font-size: 1.2rem; color: #348e38"></i>
+                </div>
+                <div class="sc-card-label">24/7 Available</div>
+              </div>
+            </div>
           </div>
-
-          <!-- Carousel col -->
-          <div
-            class="col-lg-6 wow fadeInRight"
-            data-wow-delay="0.2s"
-            style="padding-top: 110px"
-          >
-            <div class="stats-carousel-wrap">
-              <!-- Row 1 â†’ scrolls LEFT -->
-              <div class="stats-carousel-track row-ltr">
-                <div class="sc-card">
-                  <div class="sc-card-num">50<span>+</span></div>
-                  <div class="sc-card-label">Countries Reached</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">300<span>+</span></div>
-                  <div class="sc-card-label">Projects Delivered</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">98<span>%</span></div>
-                  <div class="sc-card-label">Client Satisfaction</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">50<span>+</span></div>
-                  <div class="sc-card-label">Countries Reached</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">300<span>+</span></div>
-                  <div class="sc-card-label">Projects Delivered</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">98<span>%</span></div>
-                  <div class="sc-card-label">Client Satisfaction</div>
-                </div>
+          <!-- Explore link below cards, right-aligned -->
+          <div class="pt-5 mt-3 d-flex justify-content-end">
+            <a href="service.html" class="about-explore-link">
+              <div>
+                <span class="explore-label-sub">Discover what we do</span>
+                <span class="explore-label-main">Explore Our Services</span>
               </div>
-
-              <!-- Row 2 â†’ scrolls RIGHT -->
-              <div class="stats-carousel-track row-rtl">
-                <div class="sc-card">
-                  <div class="sc-card-num">10<span>+</span></div>
-                  <div class="sc-card-label">Years of Impact</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">120<span>+</span></div>
-                  <div class="sc-card-label">Expert Team</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">Net<span>-Zero</span></div>
-                  <div class="sc-card-label">Carbon Neutrality</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">10<span>+</span></div>
-                  <div class="sc-card-label">Years of Impact</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">120<span>+</span></div>
-                  <div class="sc-card-label">Expert Team</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">Net<span>-Zero</span></div>
-                  <div class="sc-card-label">Carbon Neutrality</div>
-                </div>
+              <div class="about-explore-icon">
+                &#8594;
               </div>
-
-              <!-- Row 3 â†’ scrolls LEFT -->
-              <div class="stats-carousel-track row-ltr">
-                <div class="sc-card">
-                  <div class="sc-card-num">
-                    <i
-                      class="fas fa-tag"
-                      style="font-size: 1.2rem; color: #348e38"
-                    ></i>
-                  </div>
-                  <div class="sc-card-label">No Hidden Cost</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">
-                    <i
-                      class="fas fa-users"
-                      style="font-size: 1.2rem; color: #348e38"
-                    ></i>
-                  </div>
-                  <div class="sc-card-label">Dedicated Team</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">
-                    <i
-                      class="fas fa-headset"
-                      style="font-size: 1.2rem; color: #348e38"
-                    ></i>
-                  </div>
-                  <div class="sc-card-label">24/7 Available</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">
-                    <i
-                      class="fas fa-tag"
-                      style="font-size: 1.2rem; color: #348e38"
-                    ></i>
-                  </div>
-                  <div class="sc-card-label">No Hidden Cost</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">
-                    <i
-                      class="fas fa-users"
-                      style="font-size: 1.2rem; color: #348e38"
-                    ></i>
-                  </div>
-                  <div class="sc-card-label">Dedicated Team</div>
-                </div>
-                <div class="sc-card">
-                  <div class="sc-card-num">
-                    <i
-                      class="fas fa-headset"
-                      style="font-size: 1.2rem; color: #348e38"
-                    ></i>
-                  </div>
-                  <div class="sc-card-label">24/7 Available</div>
-                </div>
-              </div>
-            </div>
-            <!-- Explore link below cards, right-aligned -->
-            <div class="pt-5 mt-3 d-flex justify-content-end">
-              <a href="service.html" class="about-explore-link">
-                <div>
-                  <span class="explore-label-sub">Discover what we do</span>
-                  <span class="explore-label-main">Explore Our Services</span>
-                </div>
-                <div class="about-explore-icon">
-                  &#8594;
-                </div>
-              </a>
-            </div>
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
          EXPERTISE + VISION  COMBINED
     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
-    <section class="ev-combined wow fadeIn" data-wow-delay="0.1s">
-      <!-- LEFT: Expertise -->
-      <div class="ev-expertise">
-        <div class="inner">
-          <span class="section-eyebrow">Our Expertise</span>
-          <h3>A Multidisciplinary Approach</h3>
-          <p>
-            Our global team spans environmental science, circular economy,
-            climate resilience, renewable energy, and the SDGs&mdash;ensuring
-            every initiative is holistic and forward-thinking.
-          </p>
+  <section class="ev-combined wow fadeIn" data-wow-delay="0.1s">
+    <!-- LEFT: Expertise -->
+    <div class="ev-expertise">
+      <div class="inner">
+        <span class="section-eyebrow">Our Expertise</span>
+        <h3>A Multidisciplinary Approach</h3>
+        <p>
+          Our global team spans environmental science, circular economy,
+          climate resilience, renewable energy, and the SDGs&mdash;ensuring
+          every initiative is holistic and forward-thinking.
+        </p>
 
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <div class="exp-card">
-                <span class="exp-card-step">01</span>
-                <div class="exp-card-header">
-                  <div class="exp-card-icon"><i class="fas fa-flask"></i></div>
-                  <h5>Environmental Science</h5>
-                </div>
-                <p>
-                  Deep expertise in ecological systems and climate science to
-                  guide evidence-based decisions.
-                </p>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="exp-card">
+              <span class="exp-card-step">01</span>
+              <div class="exp-card-header">
+                <div class="exp-card-icon"><i class="fas fa-flask"></i></div>
+                <h5>Environmental Science</h5>
               </div>
+              <p>
+                Deep expertise in ecological systems and climate science to
+                guide evidence-based decisions.
+              </p>
             </div>
-            <div class="col-sm-6">
-              <div class="exp-card">
-                <span class="exp-card-step">02</span>
-                <div class="exp-card-header">
-                  <div class="exp-card-icon">
-                    <i class="fas fa-recycle"></i>
-                  </div>
-                  <h5>Circular Economy</h5>
+          </div>
+          <div class="col-sm-6">
+            <div class="exp-card">
+              <span class="exp-card-step">02</span>
+              <div class="exp-card-header">
+                <div class="exp-card-icon">
+                  <i class="fas fa-recycle"></i>
                 </div>
-                <p>
-                  Designing regenerative business models that eliminate waste
-                  and keep resources in use longer.
-                </p>
+                <h5>Circular Economy</h5>
               </div>
+              <p>
+                Designing regenerative business models that eliminate waste
+                and keep resources in use longer.
+              </p>
             </div>
-            <div class="col-sm-6">
-              <div class="exp-card">
-                <span class="exp-card-step">03</span>
-                <div class="exp-card-header">
-                  <div class="exp-card-icon">
-                    <i class="fas fa-shield-alt"></i>
-                  </div>
-                  <h5>Climate Resilience</h5>
+          </div>
+          <div class="col-sm-6">
+            <div class="exp-card">
+              <span class="exp-card-step">03</span>
+              <div class="exp-card-header">
+                <div class="exp-card-icon">
+                  <i class="fas fa-shield-alt"></i>
                 </div>
-                <p>
-                  Building adaptive capacity to withstand and recover from
-                  climate-related disruptions at scale.
-                </p>
+                <h5>Climate Resilience</h5>
               </div>
+              <p>
+                Building adaptive capacity to withstand and recover from
+                climate-related disruptions at scale.
+              </p>
             </div>
-            <div class="col-sm-6">
-              <div class="exp-card">
-                <span class="exp-card-step">04</span>
-                <div class="exp-card-header">
-                  <div class="exp-card-icon">
-                    <i class="fas fa-solar-panel"></i>
-                  </div>
-                  <h5>Renewable Energy &amp; SDGs</h5>
+          </div>
+          <div class="col-sm-6">
+            <div class="exp-card">
+              <span class="exp-card-step">04</span>
+              <div class="exp-card-header">
+                <div class="exp-card-icon">
+                  <i class="fas fa-solar-panel"></i>
                 </div>
-                <p>
-                  Aligning clean energy transitions with the UN Sustainable
-                  Development Goals for lasting impact.
-                </p>
+                <h5>Renewable Energy &amp; SDGs</h5>
               </div>
+              <p>
+                Aligning clean energy transitions with the UN Sustainable
+                Development Goals for lasting impact.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- DIVIDER -->
-      <div class="ev-divider"></div>
-
-      <!-- RIGHT: Vision -->
-      <div class="ev-vision">
-        <div class="inner">
-          <span class="section-eyebrow">Our Vision</span>
-          <h3>A <em>Regenerative</em> Future</h3>
-          <p>
-            We envision a world where innovative ideas meet actionable
-            solutions&mdash;where communities and ecosystems thrive in harmony.
-            Partner with KLIMATE SHIELD to build climate-resilient solutions for
-            today&rsquo;s challenges.
-          </p>
-
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <div class="vis-card">
-                <span class="vis-card-step">01</span>
-                <div class="vis-card-header">
-                  <div class="vis-card-icon">
-                    <i class="fas fa-balance-scale"></i>
-                  </div>
-                  <h5>Climate Justice</h5>
-                </div>
-                <p>
-                  Ensuring equitable solutions that protect vulnerable
-                  communities on the frontlines of climate change.
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="vis-card">
-                <span class="vis-card-step">02</span>
-                <div class="vis-card-header">
-                  <div class="vis-card-icon"><i class="fas fa-leaf"></i></div>
-                  <h5>Biodiversity Protection</h5>
-                </div>
-                <p>
-                  Safeguarding ecosystems and species diversity through
-                  science-led conservation strategies.
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="vis-card">
-                <span class="vis-card-step">03</span>
-                <div class="vis-card-header">
-                  <div class="vis-card-icon">
-                    <i class="fas fa-chart-line"></i>
-                  </div>
-                  <h5>Net-Zero Transitions</h5>
-                </div>
-                <p>
-                  Guiding organisations to achieve science-based net-zero
-                  targets across every sector.
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="vis-card">
-                <span class="vis-card-step">04</span>
-                <div class="vis-card-header">
-                  <div class="vis-card-icon">
-                    <i class="fas fa-lightbulb"></i>
-                  </div>
-                  <h5>Green Innovation</h5>
-                </div>
-                <p>
-                  Pioneering clean technologies and circular business models for
-                  a regenerative economy.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <div class="container-fluid px-0">
-      <div class="d-flex justify-content-end" style="background:#fff; padding: 28px max(24px, calc((100vw - 1320px) / 2 + 12px)) 28px 24px; border-top: 1px solid #e5ede8;">
-        <a href="contact.html" class="about-explore-link">
-          <div>
-            <span class="explore-label-sub">Join Our Mission</span>
-            <span class="explore-label-main">Partner With Us</span>
-          </div>
-          <div class="about-explore-icon">
-            <i class="fa fa-arrow-right"></i>
-          </div>
-        </a>
       </div>
     </div>
 
-    <div id="footer-placeholder"></div>
-    <script src="js/footer.js"></script>
+    <!-- DIVIDER -->
+    <div class="ev-divider"></div>
 
-    <!-- Back to Top -->
-    <a
-      href="#"
-      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
+    <!-- RIGHT: Vision -->
+    <div class="ev-vision">
+      <div class="inner">
+        <span class="section-eyebrow">Our Vision</span>
+        <h3>A <em>Regenerative</em> Future</h3>
+        <p>
+          We envision a world where innovative ideas meet actionable
+          solutions&mdash;where communities and ecosystems thrive in harmony.
+          Partner with KLIMATE SHIELD to build climate-resilient solutions for
+          today&rsquo;s challenges.
+        </p>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/parallax/parallax.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="vis-card">
+              <span class="vis-card-step">01</span>
+              <div class="vis-card-header">
+                <div class="vis-card-icon">
+                  <i class="fas fa-balance-scale"></i>
+                </div>
+                <h5>Climate Justice</h5>
+              </div>
+              <p>
+                Ensuring equitable solutions that protect vulnerable
+                communities on the frontlines of climate change.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="vis-card">
+              <span class="vis-card-step">02</span>
+              <div class="vis-card-header">
+                <div class="vis-card-icon"><i class="fas fa-leaf"></i></div>
+                <h5>Biodiversity Protection</h5>
+              </div>
+              <p>
+                Safeguarding ecosystems and species diversity through
+                science-led conservation strategies.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="vis-card">
+              <span class="vis-card-step">03</span>
+              <div class="vis-card-header">
+                <div class="vis-card-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h5>Net-Zero Transitions</h5>
+              </div>
+              <p>
+                Guiding organisations to achieve science-based net-zero
+                targets across every sector.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="vis-card">
+              <span class="vis-card-step">04</span>
+              <div class="vis-card-header">
+                <div class="vis-card-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <h5>Green Innovation</h5>
+              </div>
+              <p>
+                Pioneering clean technologies and circular business models for
+                a regenerative economy.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-  </body>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-0">
+    <div class="d-flex justify-content-end"
+      style="background:#fff; padding: 28px max(24px, calc((100vw - 1320px) / 2 + 12px)) 28px 24px; border-top: 1px solid #e5ede8;">
+      <a href="contact.html" class="about-explore-link">
+        <div>
+          <span class="explore-label-sub">Join Our Mission</span>
+          <span class="explore-label-main">Partner With Us</span>
+        </div>
+        <div class="about-explore-icon">
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/footer.js"></script>
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/parallax/parallax.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
-

@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -38,13 +40,25 @@
             border: 1px solid #e0e0e0;
             border-radius: 10px;
             padding: 1.2rem 1.6rem;
-            display: flex; align-items: flex-start; gap: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
             margin-bottom: 2.5rem;
         }
+
         .privacy-intro-bar .bar-icon {
-            font-size: 1.5rem; color: #888; flex-shrink: 0; margin-top: 2px;
+            font-size: 1.5rem;
+            color: #888;
+            flex-shrink: 0;
+            margin-top: 2px;
         }
-        .privacy-intro-bar p { margin: 0; color: #374151; font-size: 0.93rem; line-height: 1.75; }
+
+        .privacy-intro-bar p {
+            margin: 0;
+            color: #374151;
+            font-size: 0.93rem;
+            line-height: 1.75;
+        }
 
         /* â”€â”€ Policy cards â”€â”€ */
         .policy-card {
@@ -55,34 +69,68 @@
             margin-bottom: 1rem;
             transition: box-shadow 0.2s, border-color 0.2s;
         }
+
         .policy-card:hover {
-            box-shadow: 0 4px 20px rgba(52,142,56,0.1);
+            box-shadow: 0 4px 20px rgba(52, 142, 56, 0.1);
             border-color: #b6d9b6;
         }
+
         .policy-card-header {
-            display: flex; align-items: center; gap: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             margin-bottom: 0.85rem;
         }
+
         .pc-icon {
-            width: 44px; height: 44px; flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
             background: #4a8c6a;
             border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            color: #fff; font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.1rem;
         }
-        .pc-title { margin: 0; font-size: 1rem; font-weight: 700; color: #111827; }
+
+        .pc-title {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
         .pc-num {
             margin-left: auto;
-            font-size: 2rem; font-weight: 800;
-            color: #e8f5e8; line-height: 1;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #e8f5e8;
+            line-height: 1;
             user-select: none;
         }
-        .policy-card p, .policy-card li {
-            color: #4b5563; font-size: 0.91rem; line-height: 1.8; margin-bottom: 0;
+
+        .policy-card p,
+        .policy-card li {
+            color: #4b5563;
+            font-size: 0.91rem;
+            line-height: 1.8;
+            margin-bottom: 0;
         }
-        .policy-card ul { padding-left: 1.1rem; margin: 0.6rem 0 0; }
-        .policy-card ul li { margin-bottom: 5px; }
-        .policy-card ul li::marker { color: #4a8c6a; }
+
+        .policy-card ul {
+            padding-left: 1.1rem;
+            margin: 0.6rem 0 0;
+        }
+
+        .policy-card ul li {
+            margin-bottom: 5px;
+        }
+
+        .policy-card ul li::marker {
+            color: #4a8c6a;
+        }
 
         /* â”€â”€ Cookie type grid â”€â”€ */
         .cookie-type-grid {
@@ -91,12 +139,14 @@
             gap: 12px;
             margin-top: 1rem;
         }
+
         .cookie-type-item {
             background: #f8fdf8;
             border: 1px solid #ddeedd;
             border-radius: 10px;
             padding: 14px 16px;
         }
+
         .cookie-type-item .ct-label {
             font-weight: 600;
             color: #1a3c28;
@@ -106,8 +156,17 @@
             gap: 6px;
             margin-bottom: 4px;
         }
-        .cookie-type-item .ct-label i { color: #4a8c6a; }
-        .cookie-type-item p { margin: 0; font-size: 0.83rem; color: #5a6a5a; line-height: 1.5; }
+
+        .cookie-type-item .ct-label i {
+            color: #4a8c6a;
+        }
+
+        .cookie-type-item p {
+            margin: 0;
+            font-size: 0.83rem;
+            color: #5a6a5a;
+            line-height: 1.5;
+        }
 
         /* â”€â”€ Browser list â”€â”€ */
         .browser-list {
@@ -116,6 +175,7 @@
             gap: 10px;
             margin-top: 1rem;
         }
+
         .browser-item {
             display: flex;
             align-items: center;
@@ -128,16 +188,22 @@
             color: #374151;
             font-weight: 500;
         }
-        .browser-item i { font-size: 1.1rem; color: #4a8c6a; }
+
+        .browser-item i {
+            font-size: 1.1rem;
+            color: #4a8c6a;
+        }
 
         /* â”€â”€ Sidebar â”€â”€ */
         .toc-sidebar {
-            position: sticky; top: 100px;
+            position: sticky;
+            top: 100px;
             background: #fff;
             border: 1px solid #e5eae6;
             border-radius: 12px;
             overflow: hidden;
         }
+
         .toc-sidebar-head {
             background: #4a8c6a;
             color: #fff;
@@ -146,11 +212,19 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            display: flex; align-items: center; gap: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .toc-body { padding: 0.4rem 0; }
+
+        .toc-body {
+            padding: 0.4rem 0;
+        }
+
         .toc-link {
-            display: flex; align-items: center; gap: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             padding: 9px 1.3rem;
             color: #4b5563;
             font-size: 0.855rem;
@@ -158,37 +232,66 @@
             border-left: 3px solid transparent;
             transition: all 0.18s;
         }
-        .toc-link:hover, .toc-link.active {
+
+        .toc-link:hover,
+        .toc-link.active {
             background: #f0f7f0;
             color: #1a3c28;
             border-left-color: #4a8c6a;
             text-decoration: none;
         }
-        .toc-icon { font-size: 0.85rem; color: #9ca3af; width: 16px; text-align: center; }
-        .toc-link.active .toc-icon, .toc-link:hover .toc-icon { color: #4a8c6a; }
+
+        .toc-icon {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            width: 16px;
+            text-align: center;
+        }
+
+        .toc-link.active .toc-icon,
+        .toc-link:hover .toc-icon {
+            color: #4a8c6a;
+        }
 
         /* â”€â”€ Updated pill â”€â”€ */
         .updated-pill {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: #f2f2f2; border: 1px solid #ddd;
-            color: #555; border-radius: 20px;
-            padding: 4px 12px; font-size: 0.78rem; font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f2f2f2;
+            border: 1px solid #ddd;
+            color: #555;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            font-weight: 600;
             margin-bottom: 1.5rem;
         }
 
         @media (max-width: 576px) {
-            .cookie-type-grid, .browser-list { grid-template-columns: 1fr; }
+
+            .cookie-type-grid,
+            .browser-list {
+                grid-template-columns: 1fr;
+            }
         }
+
         @media (max-width: 991px) {
-            .policy-card { padding: 1.2rem 1.3rem; }
-            .pc-num { font-size: 1.4rem; }
+            .policy-card {
+                padding: 1.2rem 1.3rem;
+            }
+
+            .pc-num {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
@@ -224,7 +327,9 @@
                 <!-- Intro -->
                 <div class="privacy-intro-bar">
                     <div class="bar-icon"><i class="bi bi-info-circle-fill"></i></div>
-                    <p>This Cookie Policy explains what cookies are, how KlimateShield uses them, and your choices regarding cookies. By using our website, you consent to the use of cookies in accordance with this policy.</p>
+                    <p>This Cookie Policy explains what cookies are, how KlimateShield uses them, and your choices
+                        regarding cookies. By using our website, you consent to the use of cookies in accordance with
+                        this policy.</p>
                 </div>
 
                 <!-- Card 1 -->
@@ -234,7 +339,9 @@
                         <h5 class="pc-title">What Are Cookies</h5>
                         <span class="pc-num">01</span>
                     </div>
-                    <p>Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.</p>
+                    <p>Cookies are small text files that are placed on your device when you visit our website. They help
+                        us provide you with a better experience by remembering your preferences and understanding how
+                        you use our site.</p>
                 </div>
 
                 <!-- Card 2 -->
@@ -252,7 +359,8 @@
                         </div>
                         <div class="cookie-type-item">
                             <div class="ct-label"><i class="bi bi-speedometer2"></i> Performance Cookies</div>
-                            <p>Help us understand how visitors interact with our website by collecting anonymous data.</p>
+                            <p>Help us understand how visitors interact with our website by collecting anonymous data.
+                            </p>
                         </div>
                         <div class="cookie-type-item">
                             <div class="ct-label"><i class="bi bi-sliders"></i> Functional Cookies</div>
@@ -272,7 +380,10 @@
                         <h5 class="pc-title">Third-Party Cookies</h5>
                         <span class="pc-num">03</span>
                     </div>
-                    <p>Some cookies on our website are placed by third-party services such as Google Analytics. These third parties may use cookies to track your activity across multiple websites. We do not control these cookies and recommend reviewing the respective privacy policies of these third parties.</p>
+                    <p>Some cookies on our website are placed by third-party services such as Google Analytics. These
+                        third parties may use cookies to track your activity across multiple websites. We do not control
+                        these cookies and recommend reviewing the respective privacy policies of these third parties.
+                    </p>
                 </div>
 
                 <!-- Card 4 -->
@@ -282,12 +393,17 @@
                         <h5 class="pc-title">Managing Cookies</h5>
                         <span class="pc-num">04</span>
                     </div>
-                    <p>You can control and manage cookies through your browser settings. Most browsers allow you to refuse cookies or delete existing ones. Please note that disabling certain cookies may affect the functionality of our website.</p>
+                    <p>You can control and manage cookies through your browser settings. Most browsers allow you to
+                        refuse cookies or delete existing ones. Please note that disabling certain cookies may affect
+                        the functionality of our website.</p>
                     <div class="browser-list">
-                        <div class="browser-item"><i class="bi bi-browser-chrome"></i> Chrome: Settings â†’ Privacy</div>
-                        <div class="browser-item"><i class="bi bi-browser-firefox"></i> Firefox: Options â†’ Privacy</div>
+                        <div class="browser-item"><i class="bi bi-browser-chrome"></i> Chrome: Settings â†’ Privacy
+                        </div>
+                        <div class="browser-item"><i class="bi bi-browser-firefox"></i> Firefox: Options â†’ Privacy
+                        </div>
                         <div class="browser-item"><i class="bi bi-browser-edge"></i> Edge: Settings â†’ Privacy</div>
-                        <div class="browser-item"><i class="bi bi-browser-safari"></i> Safari: Preferences â†’ Privacy</div>
+                        <div class="browser-item"><i class="bi bi-browser-safari"></i> Safari: Preferences â†’ Privacy
+                        </div>
                     </div>
                 </div>
 
@@ -298,7 +414,8 @@
                         <h5 class="pc-title">Changes to This Policy</h5>
                         <span class="pc-num">05</span>
                     </div>
-                    <p>We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
+                    <p>We may update this Cookie Policy from time to time. Any changes will be posted on this page with
+                        an updated revision date. We encourage you to review this policy periodically.</p>
                 </div>
 
                 <!-- Card 6 -->
@@ -308,7 +425,10 @@
                         <h5 class="pc-title">Contact Us</h5>
                         <span class="pc-num">06</span>
                     </div>
-                    <p>If you have any questions about our Cookie Policy, please contact us at <a href="mailto:info@klimatesheild.com" style="color:#4a8c6a; font-weight:600;">info@klimatesheild.com</a> or visit our <a href="contact.html" style="color:#4a8c6a; font-weight:600;">Contact page</a>.</p>
+                    <p>If you have any questions about our Cookie Policy, please contact us at <a
+                            href="mailto:info@klimatesheild.com"
+                            style="color:#4a8c6a; font-weight:600;">info@klimatesheild.com</a> or visit our <a
+                            href="contact.html" style="color:#4a8c6a; font-weight:600;">Contact page</a>.</p>
                 </div>
 
             </div>
@@ -318,12 +438,18 @@
                 <div class="toc-sidebar">
                     <div class="toc-sidebar-head"><i class="bi bi-list-ul"></i> Contents</div>
                     <div class="toc-body">
-                        <a href="#section-1" class="toc-link"><span class="toc-icon"><i class="bi bi-question-circle"></i></span> What Are Cookies</a>
-                        <a href="#section-2" class="toc-link"><span class="toc-icon"><i class="bi bi-gear"></i></span> How We Use Cookies</a>
-                        <a href="#section-3" class="toc-link"><span class="toc-icon"><i class="bi bi-share"></i></span> Third-Party Cookies</a>
-                        <a href="#section-4" class="toc-link"><span class="toc-icon"><i class="bi bi-toggles"></i></span> Managing Cookies</a>
-                        <a href="#section-5" class="toc-link"><span class="toc-icon"><i class="bi bi-arrow-repeat"></i></span> Changes to Policy</a>
-                        <a href="#section-6" class="toc-link"><span class="toc-icon"><i class="bi bi-envelope"></i></span> Contact Us</a>
+                        <a href="#section-1" class="toc-link"><span class="toc-icon"><i
+                                    class="bi bi-question-circle"></i></span> What Are Cookies</a>
+                        <a href="#section-2" class="toc-link"><span class="toc-icon"><i class="bi bi-gear"></i></span>
+                            How We Use Cookies</a>
+                        <a href="#section-3" class="toc-link"><span class="toc-icon"><i class="bi bi-share"></i></span>
+                            Third-Party Cookies</a>
+                        <a href="#section-4" class="toc-link"><span class="toc-icon"><i
+                                    class="bi bi-toggles"></i></span> Managing Cookies</a>
+                        <a href="#section-5" class="toc-link"><span class="toc-icon"><i
+                                    class="bi bi-arrow-repeat"></i></span> Changes to Policy</a>
+                        <a href="#section-6" class="toc-link"><span class="toc-icon"><i
+                                    class="bi bi-envelope"></i></span> Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -338,7 +464,8 @@
     </script>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -370,4 +497,3 @@
 </body>
 
 </html>
-
