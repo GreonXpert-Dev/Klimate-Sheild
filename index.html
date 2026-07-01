@@ -1,738 +1,736 @@
 ﻿<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Klimate Sheild</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/logo.svg" rel="icon" type="image/svg+xml" />
+<head>
+  <meta charset="utf-8" />
+  <title>Klimate Sheild</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/logo.svg" rel="icon" type="image/svg+xml" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+    rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/projects.css" rel="stylesheet" />
-    <link href="css/custom.css" rel="stylesheet" />
-  </head>
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-  <body>
-    <!-- Spinner Start -->
-    <!-- Spinner End -->
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/projects.css" rel="stylesheet" />
+  <link href="css/custom.css" rel="stylesheet" />
+</head>
 
-    <div id="navbar-placeholder"></div>
-    <script src="js/navbar.js"></script>
+<body>
+  <!-- Spinner Start -->
+  <!-- Spinner End -->
 
-    <!-- ═══════════════════════════════════════════
+  <div id="navbar-placeholder"></div>
+  <script src="js/navbar.js"></script>
+
+  <!-- ═══════════════════════════════════════════
          SCROLL-DRIVEN VIDEO HERO  (50 frames)
          Seed falls → grows → Carbon-Neutral Future
     ════════════════════════════════════════════ -->
-    <style>
-      #svh-wrap {
-        height: 550vh;
-        position: relative;
-      }
-      #svh-sticky {
-        position: sticky;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        background: #06120a;
-      }
-      #svh-canvas {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-      #svh-loader { display: none; }
-      #svh-panels {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-      }
-      /* ── Panels: no box, pure text ── */
-      .svh-panel {
-        position: absolute;
-        pointer-events: none;
-      }
-      #svhP1 {
-        bottom: 8vh;
-        left: 6vw;
-        max-width: 460px;
-      }
+  <style>
+    #svh-wrap {
+      height: 550vh;
+      position: relative;
+    }
+
+    #svh-sticky {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: #06120a;
+    }
+
+    #svh-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    #svh-loader {
+      display: none;
+    }
+
+    #svh-panels {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    /* ── Panels: no box, pure text ── */
+    .svh-panel {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    #svhP1 {
+      bottom: 8vh;
+      left: 6vw;
+      max-width: 460px;
+    }
+
+    #svhP2 {
+      bottom: 8vh;
+      right: 6vw;
+      max-width: 420px;
+      text-align: right;
+    }
+
+    /* ── Word-by-word reveal ── */
+    .svh-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+      will-change: opacity, transform;
+    }
+
+    .svh-word.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Eyebrow ── */
+    .svh-eyebrow {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #81c784;
+      margin-bottom: 0.65rem;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .svh-eyebrow.show {
+      opacity: 1;
+    }
+
+    /* ── Headline ── */
+    .svh-headline {
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.18;
+      margin: 0 0 0.9rem;
+      text-shadow: 0 2px 28px rgba(0, 0, 0, 0.65);
+    }
+
+    /* ── Sub line ── */
+    .svh-sub {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.68);
+      line-height: 1.72;
+      margin: 0 0 0.6rem;
+    }
+
+    /* ── Catch phrase ── */
+    .svh-catch {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.22rem;
+      margin-top: 1.1rem;
+      text-decoration: none;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.55s ease;
+    }
+
+    .svh-catch.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .svh-catch-line {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.55);
+      font-style: italic;
+    }
+
+    .svh-catch-cta {
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #a5d6a7;
+      position: relative;
+      padding-bottom: 3px;
+    }
+
+    .svh-catch-cta::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1.5px;
+      background: #81c784;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.35s ease;
+    }
+
+    .svh-catch:hover .svh-catch-cta::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .svh-catch:hover .svh-catch-cta {
+      color: #fff;
+    }
+
+    @media (max-width: 640px) {
+
+      #svhP1,
       #svhP2 {
-        bottom: 8vh;
-        right: 6vw;
-        max-width: 420px;
-        text-align: right;
+        left: 5vw;
+        right: 5vw;
+        text-align: left;
+        max-width: 92vw;
       }
 
-      /* ── Word-by-word reveal ── */
-      .svh-word {
-        display: inline-block;
-        opacity: 0;
-        transform: translateY(18px);
-        transition: opacity 0.45s ease, transform 0.45s ease;
-        will-change: opacity, transform;
+      #svhP2 {
+        bottom: 26vh;
       }
-      .svh-word.show {
-        opacity: 1;
-        transform: translateY(0);
+    }
+
+    #svh-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #388e3c, #81c784);
+      transition: width 0.07s linear;
+      z-index: 10;
+    }
+
+    #svh-hint {
+      position: absolute;
+      bottom: 14vh;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: opacity 0.4s;
+      z-index: 10;
+    }
+
+    #svh-hint.gone {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .svh-chevron {
+      width: 28px;
+      height: 28px;
+      border-right: 3px solid rgba(255, 255, 255, 0.9);
+      border-bottom: 3px solid rgba(255, 255, 255, 0.9);
+      transform: rotate(45deg);
+      animation: svh-bounce 1.5s infinite;
+      margin-top: 4px;
+    }
+
+    @keyframes svh-bounce {
+
+      0%,
+      100% {
+        transform: rotate(45deg) translateY(0);
       }
 
-      /* ── Eyebrow ── */
-      .svh-eyebrow {
-        display: block;
-        text-transform: uppercase;
-        letter-spacing: 0.22em;
-        font-size: 0.68rem;
-        font-weight: 700;
-        color: #81c784;
-        margin-bottom: 0.65rem;
-        opacity: 0;
-        transition: opacity 0.5s ease;
+      50% {
+        transform: rotate(45deg) translateY(6px);
       }
-      .svh-eyebrow.show { opacity: 1; }
+    }
+  </style>
 
-      /* ── Headline ── */
-      .svh-headline {
-        font-size: clamp(1.7rem, 3vw, 2.5rem);
-        font-weight: 800;
-        color: #fff;
-        line-height: 1.18;
-        margin: 0 0 0.9rem;
-        text-shadow: 0 2px 28px rgba(0,0,0,0.65);
-      }
+  <div id="svh-wrap">
+    <div id="svh-sticky">
+      <canvas id="svh-canvas"></canvas>
+      <div id="svh-loader">
+        <div class="svh-loader-ring"></div>
+        <div class="svh-loader-pct" id="svh-pct">Loading frames... 0%</div>
+      </div>
+      <div id="svh-panels">
 
-      /* ── Sub line ── */
-      .svh-sub {
-        font-size: 0.9rem;
-        color: rgba(255,255,255,0.68);
-        line-height: 1.72;
-        margin: 0 0 0.6rem;
-      }
-
-      /* ── Catch phrase ── */
-      .svh-catch {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 0.22rem;
-        margin-top: 1.1rem;
-        text-decoration: none;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.55s ease;
-      }
-      .svh-catch.show {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .svh-catch-line {
-        font-size: 0.78rem;
-        font-weight: 400;
-        letter-spacing: 0.08em;
-        color: rgba(255,255,255,0.55);
-        font-style: italic;
-      }
-      .svh-catch-cta {
-        font-size: 0.88rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: #a5d6a7;
-        position: relative;
-        padding-bottom: 3px;
-      }
-      .svh-catch-cta::after {
-        content: '';
-        position: absolute;
-        left: 0; right: 0; bottom: 0;
-        height: 1.5px;
-        background: #81c784;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.35s ease;
-      }
-      .svh-catch:hover .svh-catch-cta::after { transform: scaleX(1); transform-origin: left; }
-      .svh-catch:hover .svh-catch-cta { color: #fff; }
-
-      @media (max-width: 640px) {
-        #svhP1, #svhP2 {
-          left: 5vw; right: 5vw;
-          text-align: left; max-width: 92vw;
-        }
-        #svhP2 { bottom: 26vh; }
-      }
-      #svh-bar {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 3px;
-        width: 0%;
-        background: linear-gradient(90deg, #388e3c, #81c784);
-        transition: width 0.07s linear;
-        z-index: 10;
-      }
-      #svh-hint {
-        position: absolute;
-        bottom: 14vh;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 7px;
-        color: rgba(255, 255, 255, 0.45);
-        font-size: 0.72rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        transition: opacity 0.4s;
-        z-index: 10;
-      }
-      #svh-hint.gone {
-        opacity: 0;
-        pointer-events: none;
-      }
-      .svh-chevron {
-        width: 28px;
-        height: 28px;
-        border-right: 3px solid rgba(255, 255, 255, 0.9);
-        border-bottom: 3px solid rgba(255, 255, 255, 0.9);
-        transform: rotate(45deg);
-        animation: svh-bounce 1.5s infinite;
-        margin-top: 4px;
-      }
-      @keyframes svh-bounce {
-        0%,
-        100% {
-          transform: rotate(45deg) translateY(0);
-        }
-        50% {
-          transform: rotate(45deg) translateY(6px);
-        }
-      }
-    </style>
-
-    <div id="svh-wrap">
-      <div id="svh-sticky">
-        <canvas id="svh-canvas"></canvas>
-        <div id="svh-loader">
-          <div class="svh-loader-ring"></div>
-          <div class="svh-loader-pct" id="svh-pct">Loading frames... 0%</div>
+        <!-- LEFT BOTTOM -->
+        <div class="svh-panel" id="svhP1">
+          <span class="svh-eyebrow" id="svhE1">ESG &amp; Climate Action</span>
+          <h2 class="svh-headline" id="svhH1"></h2>
+          <p class="svh-sub" id="svhS1"></p>
         </div>
-        <div id="svh-panels">
 
-          <!-- LEFT BOTTOM -->
-          <div class="svh-panel" id="svhP1">
-            <span class="svh-eyebrow" id="svhE1">ESG &amp; Climate Action</span>
-            <h2 class="svh-headline" id="svhH1"></h2>
-            <p class="svh-sub" id="svhS1"></p>
-          </div>
-
-          <!-- RIGHT BOTTOM -->
-          <div class="svh-panel" id="svhP2">
-            <span class="svh-eyebrow" id="svhE2">ESGLink Platform</span>
-            <h2 class="svh-headline" id="svhH2"></h2>
-            <p class="svh-sub" id="svhS2"></p>
-            <a href="contact.html" class="svh-catch" id="svhC2">
-              <span class="svh-catch-line">Ready to make an impact?</span>
-              <span class="svh-catch-cta">Let's Talk &nbsp;&#x2192;</span>
-            </a>
-          </div>
-
+        <!-- RIGHT BOTTOM -->
+        <div class="svh-panel" id="svhP2">
+          <span class="svh-eyebrow" id="svhE2">ESGLink Platform</span>
+          <h2 class="svh-headline" id="svhH2"></h2>
+          <p class="svh-sub" id="svhS2"></p>
+          <a href="contact.html" class="svh-catch" id="svhC2">
+            <span class="svh-catch-line">Ready to make an impact?</span>
+            <span class="svh-catch-cta">Let's Talk &nbsp;&#x2192;</span>
+          </a>
         </div>
-        <div id="svh-bar"></div>
-        <div id="svh-hint">
-          <span>Scroll to explore</span>
-          <div class="svh-chevron"></div>
-        </div>
+
+      </div>
+      <div id="svh-bar"></div>
+      <div id="svh-hint">
+        <span>Scroll to explore</span>
+        <div class="svh-chevron"></div>
       </div>
     </div>
+  </div>
 
-    <script>
-      (function () {
-        var TOTAL = 50,
-          DIR = "img/frames/",
-          PREFIX = "ezgif-frame-",
-          EXT = ".png";
-        var wrap = document.getElementById("svh-wrap");
-        var canvas = document.getElementById("svh-canvas");
-        var ctx = canvas.getContext("2d");
-        var loader = document.getElementById("svh-loader");
-        var pctEl = document.getElementById("svh-pct");
-        var bar = document.getElementById("svh-bar");
-        var hint = document.getElementById("svh-hint");
-        // Word-by-word reveal helpers
-        function buildWords(el, text) {
-          el.innerHTML = '';
-          text.split(' ').forEach(function(w, i) {
-            var span = document.createElement('span');
-            span.className = 'svh-word';
-            span.textContent = w;
-            span.dataset.i = i;
-            el.appendChild(span);
-            if (i < text.split(' ').length - 1) el.appendChild(document.createTextNode(' '));
-          });
-        }
+  <script>
+    (function () {
+      var TOTAL = 50,
+        DIR = "img/frames/",
+        PREFIX = "ezgif-frame-",
+        EXT = ".png";
+      var wrap = document.getElementById("svh-wrap");
+      var canvas = document.getElementById("svh-canvas");
+      var ctx = canvas.getContext("2d");
+      var loader = document.getElementById("svh-loader");
+      var pctEl = document.getElementById("svh-pct");
+      var bar = document.getElementById("svh-bar");
+      var hint = document.getElementById("svh-hint");
+      // Word-by-word reveal helpers
+      function buildWords(el, text) {
+        el.innerHTML = '';
+        text.split(' ').forEach(function (w, i) {
+          var span = document.createElement('span');
+          span.className = 'svh-word';
+          span.textContent = w;
+          span.dataset.i = i;
+          el.appendChild(span);
+          if (i < text.split(' ').length - 1) el.appendChild(document.createTextNode(' '));
+        });
+      }
 
-        buildWords(document.getElementById('svhH1'), 'Leading the Way to a Carbon-Neutral Future');
-        buildWords(document.getElementById('svhS1'), 'We help organisations measure, reduce and offset their carbon footprint — delivering real, verifiable environmental impact at every stage of their sustainability journey.');
-        buildWords(document.getElementById('svhH2'), 'Empower Your ESG Journey with ESGLink');
-        buildWords(document.getElementById('svhS2'), 'Streamline compliance, track sustainability targets and demonstrate real environmental impact to investors and stakeholders — all in one intelligent platform.');
+      buildWords(document.getElementById('svhH1'), 'Leading the Way to a Carbon-Neutral Future');
+      buildWords(document.getElementById('svhS1'), 'We help organisations measure, reduce and offset their carbon footprint — delivering real, verifiable environmental impact at every stage of their sustainability journey.');
+      buildWords(document.getElementById('svhH2'), 'Empower Your ESG Journey with ESGLink');
+      buildWords(document.getElementById('svhS2'), 'Streamline compliance, track sustainability targets and demonstrate real environmental impact to investors and stakeholders — all in one intelligent platform.');
 
-        // pIn = start entering, pFull = fully in, pOut = start exiting, pGone = fully gone
-        // pOut / pGone = 1.1 means "never exit"
-        function revealWords(container, eyebrow, catchEl, pIn, pFull, pOut, pGone, prg) {
-          var entering = prg >= pIn && prg < pOut;
-          var visible  = prg >= pIn && prg < pGone;
+      // pIn = start entering, pFull = fully in, pOut = start exiting, pGone = fully gone
+      // pOut / pGone = 1.1 means "never exit"
+      function revealWords(container, eyebrow, catchEl, pIn, pFull, pOut, pGone, prg) {
+        var entering = prg >= pIn && prg < pOut;
+        var visible = prg >= pIn && prg < pGone;
 
-          if (eyebrow) eyebrow.classList.toggle('show', visible);
-          if (catchEl)  catchEl.classList.toggle('show', prg >= pFull + 0.04 && prg < pGone);
+        if (eyebrow) eyebrow.classList.toggle('show', visible);
+        if (catchEl) catchEl.classList.toggle('show', prg >= pFull + 0.04 && prg < pGone);
 
-          var words = container.querySelectorAll('.svh-word');
-          var inSpan  = pFull - pIn;
-          var outSpan = pGone - pOut;
+        var words = container.querySelectorAll('.svh-word');
+        var inSpan = pFull - pIn;
+        var outSpan = pGone - pOut;
 
-          words.forEach(function(w, i) {
-            var frac = i / Math.max(words.length - 1, 1);
-            var showAt = pIn   + frac * inSpan;
-            var hideAt = pOut  + frac * outSpan;
-            var on = prg >= showAt && (prg < hideAt || pOut >= 1.0);
-            w.classList.toggle('show', on);
-          });
-        }
+        words.forEach(function (w, i) {
+          var frac = i / Math.max(words.length - 1, 1);
+          var showAt = pIn + frac * inSpan;
+          var hideAt = pOut + frac * outSpan;
+          var on = prg >= showAt && (prg < hideAt || pOut >= 1.0);
+          w.classList.toggle('show', on);
+        });
+      }
 
-        var panels = [];
-        var imgs = new Array(TOTAL),
-          loaded = 0,
-          ready = false;
-        var curFrame = 0,
-          targetPrg = 0,
-          smoothPrg = 0,
-          ticking = false;
+      var panels = [];
+      var imgs = new Array(TOTAL),
+        loaded = 0,
+        ready = false;
+      var curFrame = 0,
+        targetPrg = 0,
+        smoothPrg = 0,
+        ticking = false;
 
-        function pad(n) {
-          return n < 10 ? "00" + n : n < 100 ? "0" + n : "" + n;
-        }
+      function pad(n) {
+        return n < 10 ? "00" + n : n < 100 ? "0" + n : "" + n;
+      }
 
-        function resizeCanvas() {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-          drawFrame(curFrame);
-        }
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        drawFrame(curFrame);
+      }
 
-        function drawFrame(idx) {
-          var img = imgs[idx];
-          if (!img || !img.complete || !img.naturalWidth) return;
-          var cw = canvas.width,
-            ch = canvas.height;
-          var iw = img.naturalWidth,
-            ih = img.naturalHeight;
-          var sc = Math.max(cw / iw, ch / ih);
-          var dw = iw * sc,
-            dh = ih * sc;
-          ctx.clearRect(0, 0, cw, ch);
-          ctx.drawImage(img, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
-        }
+      function drawFrame(idx) {
+        var img = imgs[idx];
+        if (!img || !img.complete || !img.naturalWidth) return;
+        var cw = canvas.width,
+          ch = canvas.height;
+        var iw = img.naturalWidth,
+          ih = img.naturalHeight;
+        var sc = Math.max(cw / iw, ch / ih);
+        var dw = iw * sc,
+          dh = ih * sc;
+        ctx.clearRect(0, 0, cw, ch);
+        ctx.drawImage(img, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
+      }
 
-        for (var i = 0; i < TOTAL; i++) {
-          (function (idx) {
-            var img = new Image();
-            img.onload = function () {
-              loaded++;
-              if (pctEl)
-                pctEl.textContent =
-                  "Loading... " + Math.round((loaded / TOTAL) * 100) + "%";
-              if (idx === 0) {
-                resizeCanvas();
-                drawFrame(0);
-              }
-              if (loaded === TOTAL) {
-                ready = true;
-                loader.classList.add("hide");
-                drawFrame(0);
-                loop();
-              }
-            };
-            img.onerror = function () {
-              loaded++;
-              if (loaded === TOTAL) {
-                ready = true;
-                loader.classList.add("hide");
-                loop();
-              }
-            };
-            img.src = DIR + PREFIX + pad(idx + 1) + EXT;
-            imgs[idx] = img;
-          })(i);
-        }
-
-        function getProgress() {
-          var rect = wrap.getBoundingClientRect();
-          var total = wrap.offsetHeight - window.innerHeight;
-          return Math.max(0, Math.min(1, -rect.top / total));
-        }
-
-        window.addEventListener(
-          "scroll",
-          function () {
-            if (!ticking) {
-              ticking = true;
-              requestAnimationFrame(function () {
-                targetPrg = getProgress();
-                ticking = false;
-              });
+      for (var i = 0; i < TOTAL; i++) {
+        (function (idx) {
+          var img = new Image();
+          img.onload = function () {
+            loaded++;
+            if (pctEl)
+              pctEl.textContent =
+                "Loading... " + Math.round((loaded / TOTAL) * 100) + "%";
+            if (idx === 0) {
+              resizeCanvas();
+              drawFrame(0);
             }
-          },
-          { passive: true },
+            if (loaded === TOTAL) {
+              ready = true;
+              loader.classList.add("hide");
+              drawFrame(0);
+              loop();
+            }
+          };
+          img.onerror = function () {
+            loaded++;
+            if (loaded === TOTAL) {
+              ready = true;
+              loader.classList.add("hide");
+              loop();
+            }
+          };
+          img.src = DIR + PREFIX + pad(idx + 1) + EXT;
+          imgs[idx] = img;
+        })(i);
+      }
+
+      function getProgress() {
+        var rect = wrap.getBoundingClientRect();
+        var total = wrap.offsetHeight - window.innerHeight;
+        return Math.max(0, Math.min(1, -rect.top / total));
+      }
+
+      window.addEventListener(
+        "scroll",
+        function () {
+          if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(function () {
+              targetPrg = getProgress();
+              ticking = false;
+            });
+          }
+        },
+        { passive: true },
+      );
+
+      function loop() {
+        requestAnimationFrame(loop);
+        smoothPrg += (targetPrg - smoothPrg) * 0.1;
+        var fi = Math.min(
+          TOTAL - 1,
+          Math.max(0, Math.round(smoothPrg * (TOTAL - 1))),
+        );
+        if (fi !== curFrame) {
+          curFrame = fi;
+          drawFrame(fi);
+        }
+        bar.style.width = (smoothPrg * 100).toFixed(2) + "%";
+
+        // LEFT: enters 35%→50%, exits 55%→65%
+        revealWords(
+          document.getElementById('svhH1'),
+          document.getElementById('svhE1'),
+          null,
+          0.35, 0.50, 0.55, 0.65, smoothPrg
+        );
+        revealWords(
+          document.getElementById('svhS1'),
+          null, null,
+          0.42, 0.54, 0.57, 0.66, smoothPrg
         );
 
-        function loop() {
-          requestAnimationFrame(loop);
-          smoothPrg += (targetPrg - smoothPrg) * 0.1;
-          var fi = Math.min(
-            TOTAL - 1,
-            Math.max(0, Math.round(smoothPrg * (TOTAL - 1))),
-          );
-          if (fi !== curFrame) {
-            curFrame = fi;
-            drawFrame(fi);
-          }
-          bar.style.width = (smoothPrg * 100).toFixed(2) + "%";
+        // RIGHT: enters 67%→85%, never exits
+        revealWords(
+          document.getElementById('svhH2'),
+          document.getElementById('svhE2'),
+          document.getElementById('svhC2'),
+          0.67, 0.82, 1.1, 1.1, smoothPrg
+        );
+        revealWords(
+          document.getElementById('svhS2'),
+          null, null,
+          0.75, 0.92, 1.1, 1.1, smoothPrg
+        );
 
-          // LEFT: enters 35%→50%, exits 55%→65%
-          revealWords(
-            document.getElementById('svhH1'),
-            document.getElementById('svhE1'),
-            null,
-            0.35, 0.50, 0.55, 0.65, smoothPrg
-          );
-          revealWords(
-            document.getElementById('svhS1'),
-            null, null,
-            0.42, 0.54, 0.57, 0.66, smoothPrg
-          );
+        if (smoothPrg > 0.04) hint.classList.add("gone");
+        else hint.classList.remove("gone");
+      }
 
-          // RIGHT: enters 67%→85%, never exits
-          revealWords(
-            document.getElementById('svhH2'),
-            document.getElementById('svhE2'),
-            document.getElementById('svhC2'),
-            0.67, 0.82, 1.1, 1.1, smoothPrg
-          );
-          revealWords(
-            document.getElementById('svhS2'),
-            null, null,
-            0.75, 0.92, 1.1, 1.1, smoothPrg
-          );
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+    })();
+  </script>
+  <!-- Scroll Video Hero End -->
 
-          if (smoothPrg > 0.04) hint.classList.add("gone");
-          else hint.classList.remove("gone");
-        }
+  <!-- About Start -->
+  <!-- About Start -->
+  <div class="container-xxl about-section py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+          <div class="about-img-wrap">
+            <img src="img/about.jpg" alt="About Klimate Shield" class="about-main-img" />
+            <div class="about-badge">
+              <span class="about-badge-number">2+</span>
+              <span class="about-badge-label">Years of<br />Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
+          <p class="fs-5 fw-bold text-primary mb-2">Who We Are</p>
+          <h2 class="display-6 mb-4" style="color: #0f2d1a; line-height: 1.2">
+            Pioneering the Fight Against Climate Change
+          </h2>
+          <p class="mb-4" style="color: #555; line-height: 1.8">
+            At <strong>Klimate Shield</strong>, we are more than just
+            participants in the fight against climate change — we are
+            innovators, pioneers, and visionaries redefining the boundaries of
+            possibility.
+          </p>
+          <div class="about-cards-arc">
+            <!-- Orbit ellipse track drawn by JS -->
+            <div class="arc-card arc-1">
+              <div class="arc-card-inner">
+                <div class="arc-face arc-front">
+                  <i class="fa fa-leaf"></i>
+                  <h5>ESG Strategy</h5>
+                  <p>Tailored sustainability roadmaps for every business.</p>
+                </div>
+                <div class="arc-face arc-back">
+                  <i class="fa fa-leaf"></i>
+                  <h5>ESG Strategy</h5>
+                  <ul>
+                    <li>GRI & BRSR reporting</li>
+                    <li>Materiality assessment</li>
+                    <li>Stakeholder engagement</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-        window.addEventListener("resize", resizeCanvas);
-        resizeCanvas();
-      })();
-    </script>
-    <!-- Scroll Video Hero End -->
+            <div class="arc-card arc-2">
+              <div class="arc-card-inner">
+                <div class="arc-face arc-front">
+                  <i class="fa fa-globe"></i>
+                  <h5>Climate Advisory</h5>
+                  <p>Expert guidance on climate risk and resilience.</p>
+                </div>
+                <div class="arc-face arc-back">
+                  <i class="fa fa-globe"></i>
+                  <h5>Climate Advisory</h5>
+                  <ul>
+                    <li>TCFD alignment</li>
+                    <li>Risk scenario planning</li>
+                    <li>Adaptation strategies</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-    <!-- About Start -->
-    <!-- About Start -->
-    <div class="container-xxl about-section py-5">
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-            <div class="about-img-wrap">
-              <img
-                src="img/about.jpg"
-                alt="About Klimate Shield"
-                class="about-main-img"
-              />
-              <div class="about-badge">
-                <span class="about-badge-number">2+</span>
-                <span class="about-badge-label">Years of<br />Experience</span>
+            <div class="arc-card arc-3">
+              <div class="arc-card-inner">
+                <div class="arc-face arc-front">
+                  <i class="fa fa-users"></i>
+                  <h5>Expert Team</h5>
+                  <p>Global specialists united by a common mission.</p>
+                </div>
+                <div class="arc-face arc-back">
+                  <i class="fa fa-users"></i>
+                  <h5>Expert Team</h5>
+                  <ul>
+                    <li>20+ specialists</li>
+                    <li>Multi-sector expertise</li>
+                    <li>On-ground support</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="arc-card arc-4">
+              <div class="arc-card-inner">
+                <div class="arc-face arc-front">
+                  <i class="fa fa-chart-line"></i>
+                  <h5>Measurable Impact</h5>
+                  <p>Data-driven solutions with trackable results.</p>
+                </div>
+                <div class="arc-face arc-back">
+                  <i class="fa fa-chart-line"></i>
+                  <h5>Measurable Impact</h5>
+                  <ul>
+                    <li>Real-time dashboards</li>
+                    <li>KPI benchmarking</li>
+                    <li>Progress reporting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="arc-card arc-5">
+              <div class="arc-card-inner">
+                <div class="arc-face arc-front">
+                  <i class="fa fa-seedling"></i>
+                  <h5>Net Zero Planning</h5>
+                  <p>Roadmaps to achieve carbon neutrality on time.</p>
+                </div>
+                <div class="arc-face arc-back">
+                  <i class="fa fa-seedling"></i>
+                  <h5>Net Zero Planning</h5>
+                  <ul>
+                    <li>Science-based targets</li>
+                    <li>Carbon offsetting</li>
+                    <li>Decarbonisation roadmap</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
-            <p class="fs-5 fw-bold text-primary mb-2">Who We Are</p>
-            <h2 class="display-6 mb-4" style="color: #0f2d1a; line-height: 1.2">
-              Pioneering the Fight Against Climate Change
-            </h2>
-            <p class="mb-4" style="color: #555; line-height: 1.8">
-              At <strong>Klimate Shield</strong>, we are more than just
-              participants in the fight against climate change — we are
-              innovators, pioneers, and visionaries redefining the boundaries of
-              possibility.
-            </p>
-            <div class="about-cards-arc">
-              <!-- Orbit ellipse track drawn by JS -->
-              <div class="arc-card arc-1">
-                <div class="arc-card-inner">
-                  <div class="arc-face arc-front">
-                    <i class="fa fa-leaf"></i>
-                    <h5>ESG Strategy</h5>
-                    <p>Tailored sustainability roadmaps for every business.</p>
-                  </div>
-                  <div class="arc-face arc-back">
-                    <i class="fa fa-leaf"></i>
-                    <h5>ESG Strategy</h5>
-                    <ul>
-                      <li>GRI & BRSR reporting</li>
-                      <li>Materiality assessment</li>
-                      <li>Stakeholder engagement</li>
-                    </ul>
-                  </div>
-                </div>
+          <div class="d-flex justify-content-end" style="margin-top: 20px; padding-top: 12px;">
+            <a href="about.html" class="about-explore-link d-inline-flex align-items-center gap-3 text-decoration-none">
+              <div class="about-explore-icon">
+                <i class="fa fa-arrow-right"></i>
               </div>
-
-              <div class="arc-card arc-2">
-                <div class="arc-card-inner">
-                  <div class="arc-face arc-front">
-                    <i class="fa fa-globe"></i>
-                    <h5>Climate Advisory</h5>
-                    <p>Expert guidance on climate risk and resilience.</p>
-                  </div>
-                  <div class="arc-face arc-back">
-                    <i class="fa fa-globe"></i>
-                    <h5>Climate Advisory</h5>
-                    <ul>
-                      <li>TCFD alignment</li>
-                      <li>Risk scenario planning</li>
-                      <li>Adaptation strategies</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="arc-card arc-3">
-                <div class="arc-card-inner">
-                  <div class="arc-face arc-front">
-                    <i class="fa fa-users"></i>
-                    <h5>Expert Team</h5>
-                    <p>Global specialists united by a common mission.</p>
-                  </div>
-                  <div class="arc-face arc-back">
-                    <i class="fa fa-users"></i>
-                    <h5>Expert Team</h5>
-                    <ul>
-                      <li>20+ specialists</li>
-                      <li>Multi-sector expertise</li>
-                      <li>On-ground support</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="arc-card arc-4">
-                <div class="arc-card-inner">
-                  <div class="arc-face arc-front">
-                    <i class="fa fa-chart-line"></i>
-                    <h5>Measurable Impact</h5>
-                    <p>Data-driven solutions with trackable results.</p>
-                  </div>
-                  <div class="arc-face arc-back">
-                    <i class="fa fa-chart-line"></i>
-                    <h5>Measurable Impact</h5>
-                    <ul>
-                      <li>Real-time dashboards</li>
-                      <li>KPI benchmarking</li>
-                      <li>Progress reporting</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="arc-card arc-5">
-                <div class="arc-card-inner">
-                  <div class="arc-face arc-front">
-                    <i class="fa fa-seedling"></i>
-                    <h5>Net Zero Planning</h5>
-                    <p>Roadmaps to achieve carbon neutrality on time.</p>
-                  </div>
-                  <div class="arc-face arc-back">
-                    <i class="fa fa-seedling"></i>
-                    <h5>Net Zero Planning</h5>
-                    <ul>
-                      <li>Science-based targets</li>
-                      <li>Carbon offsetting</li>
-                      <li>Decarbonisation roadmap</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="d-flex justify-content-end"
-              style="margin-top: 20px; padding-top: 12px;"
-            >
-              <a
-                href="about.html"
-                class="about-explore-link d-inline-flex align-items-center gap-3 text-decoration-none"
-              >
-                <div class="about-explore-icon">
-                  <i class="fa fa-arrow-right"></i>
-                </div>
-                <div>
-                  <span
-                    class="d-block text-muted"
-                    style="
+              <div>
+                <span class="d-block text-muted" style="
                       font-size: 0.78rem;
                       letter-spacing: 0.1em;
                       text-transform: uppercase;
-                    "
-                    >Discover Our Story</span
-                  >
-                  <span
-                    class="d-block fw-bold"
-                    style="font-size: 1.05rem; color: #0f2d1a"
-                    >Learn More About Us</span
-                  >
-                </div>
-              </a>
+                    ">Discover Our Story</span>
+                <span class="d-block fw-bold" style="font-size: 1.05rem; color: #0f2d1a">Learn More About Us</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About End -->
+
+  <!-- Features Start -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <!-- Left Column: Text Content -->
+        <div class="col-lg-6 features-content wow fadeInUp" data-wow-delay="0.1s" style="padding-top: 10px">
+          <p class="subheading fs-5 fw-bold text-primary">Why Choose Us?</p>
+          <h2 class="display-6 mb-4">
+            Pioneering Sustainable Innovation for the Future
+          </h2>
+          <p class="mb-4">
+            At Klimate Shield, we empower businesses to achieve
+            sustainability, profitability, and competitive advantage in a
+            rapidly evolving regulatory landscape.
+          </p>
+          <p class="mb-4">
+            Our comprehensive ESG, carbon accounting, and sustainability
+            consulting services are tailored for the challenges of tomorrow.
+          </p>
+          <p class="mb-4">
+            From energy efficiency to green finance advisory and circular
+            economy solutions, we provide customized strategies for startups,
+            SMEs, and large enterprises. With advanced analytics and digital
+            tools, we deliver measurable sustainability impact.
+          </p>
+        </div>
+
+        <!-- Right Column: Sticky Notes Board -->
+        <div class="col-lg-6 features-cards">
+          <div class="sboard" id="stickyBoard">
+            <!-- Note 1  right -->
+            <div class="sb-row sb-right">
+              <div class="snote snote-lavender wow fadeInRight" data-wow-delay="0.3s">
+                <i class="fas fa-thumbtack snote-pin" data-pin="true"></i>
+                <em class="snote-num">01</em>
+                <h5 class="snote-title">Dedicated Team</h5>
+                <p class="snote-body">
+                  Our specialists bring deep ESG, carbon accounting, and
+                  sustainability expertise to every project.
+                </p>
+              </div>
+            </div>
+
+            <!-- Note 2  left -->
+            <div class="sb-row sb-left">
+              <div class="snote snote-purple wow fadeInLeft" data-wow-delay="0.45s">
+                <i class="fas fa-thumbtack snote-pin" data-pin="true"></i>
+                <em class="snote-num">02</em>
+                <h5 class="snote-title">Advanced Digital Tools</h5>
+                <p class="snote-body">
+                  Cutting-edge analytics platforms that turn sustainability
+                  data into strategic decisions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Note 3  right -->
+            <div class="sb-row sb-right">
+              <div class="snote snote-cream wow fadeInRight" data-wow-delay="0.6s">
+                <i class="fas fa-thumbtack snote-pin" data-pin="true"></i>
+                <em class="snote-num">03</em>
+                <h5 class="snote-title">Proven Impact</h5>
+                <p class="snote-body">
+                  Delivering quantifiable sustainability improvements aligned
+                  with global reporting standards.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- About End -->
+  </section>
+  <!-- Features End -->
 
-    <!-- Features Start -->
-    <section class="py-5">
-      <div class="container">
-        <div class="row g-5 align-items-start">
-          <!-- Left Column: Text Content -->
-          <div
-            class="col-lg-6 features-content wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="padding-top: 10px"
-          >
-            <p class="subheading fs-5 fw-bold text-primary">Why Choose Us?</p>
-            <h2 class="display-6 mb-4">
-              Pioneering Sustainable Innovation for the Future
-            </h2>
-            <p class="mb-4">
-              At Klimate Shield, we empower businesses to achieve
-              sustainability, profitability, and competitive advantage in a
-              rapidly evolving regulatory landscape.
-            </p>
-            <p class="mb-4">
-              Our comprehensive ESG, carbon accounting, and sustainability
-              consulting services are tailored for the challenges of tomorrow.
-            </p>
-            <p class="mb-4">
-              From energy efficiency to green finance advisory and circular
-              economy solutions, we provide customized strategies for startups,
-              SMEs, and large enterprises. With advanced analytics and digital
-              tools, we deliver measurable sustainability impact.
-            </p>
-          </div>
-
-          <!-- Right Column: Sticky Notes Board -->
-          <div class="col-lg-6 features-cards">
-            <div class="sboard" id="stickyBoard">
-              <!-- Note 1  right -->
-              <div class="sb-row sb-right">
-                <div
-                  class="snote snote-lavender wow fadeInRight"
-                  data-wow-delay="0.3s"
-                >
-                  <i class="fas fa-thumbtack snote-pin" data-pin="true"></i>
-                  <em class="snote-num">01</em>
-                  <h5 class="snote-title">Dedicated Team</h5>
-                  <p class="snote-body">
-                    Our specialists bring deep ESG, carbon accounting, and
-                    sustainability expertise to every project.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Note 2  left -->
-              <div class="sb-row sb-left">
-                <div
-                  class="snote snote-purple wow fadeInLeft"
-                  data-wow-delay="0.45s"
-                >
-                  <i class="fas fa-thumbtack snote-pin" data-pin="true"></i>
-                  <em class="snote-num">02</em>
-                  <h5 class="snote-title">Advanced Digital Tools</h5>
-                  <p class="snote-body">
-                    Cutting-edge analytics platforms that turn sustainability
-                    data into strategic decisions.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Note 3  right -->
-              <div class="sb-row sb-right">
-                <div
-                  class="snote snote-cream wow fadeInRight"
-                  data-wow-delay="0.6s"
-                >
-                  <i class="fas fa-thumbtack snote-pin" data-pin="true"></i>
-                  <em class="snote-num">03</em>
-                  <h5 class="snote-title">Proven Impact</h5>
-                  <p class="snote-body">
-                    Delivering quantifiable sustainability improvements aligned
-                    with global reporting standards.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- Service Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <!-- Title centred -->
+      <div class="text-center mx-auto wow fadeInUp mb-2" data-wow-delay="0.1s" style="max-width: 600px">
+        <p class="fs-6 fw-bold">Our Services</p>
+        <h2 class="display-6 fw-bold mb-0" style="color:#1a1a1a;line-height:1.2;">
+          <span class="text-primary">Services That We</span> Offer For You
+        </h2>
       </div>
-    </section>
-    <!-- Features End -->
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <!-- Title centred -->
-        <div
-          class="text-center mx-auto wow fadeInUp mb-2"
-          data-wow-delay="0.1s"
-          style="max-width: 600px"
-        >
-          <p class="fs-6 fw-bold">Our Services</p>
-          <h2 class="display-6 fw-bold mb-0" style="color:#1a1a1a;line-height:1.2;">
-            <span class="text-primary">Services That We</span> Offer For You
-          </h2>
-        </div>
-
-        <!-- Stacked card carousel -->
-        <div class="svc-layout">
-          <div class="svc-outer-row">
+      <!-- Stacked card carousel -->
+      <div class="svc-layout">
+        <div class="svc-outer-row">
           <button class="svc-side-arrow svc-side-left" id="svcPrev">
             <i class="fa fa-chevron-left"></i>
           </button>
@@ -749,9 +747,8 @@
                       ESG, Sustainable Assurance, Green Strategy Advisory
                       Services, Corporate Strategy, Sustainable Building
                     </p>
-                    <a class="btn btn-sm" href="service.html#esg"
-                      ><span><i class="fa fa-arrow-right me-2"></i>Read More</span></a
-                    >
+                    <a class="btn btn-sm" href="service.html#esg"><span><i class="fa fa-arrow-right me-2"></i>Read
+                        More</span></a>
                   </div>
                 </div>
               </div>
@@ -766,9 +763,8 @@
                       Carbon Neutrality, Carbon Footprint, Net Zero, Science
                       Based Target Emission
                     </p>
-                    <a class="btn btn-sm" href="service.html#carbon"
-                      ><span><i class="fa fa-arrow-right me-2"></i>Read More</span></a
-                    >
+                    <a class="btn btn-sm" href="service.html#carbon"><span><i class="fa fa-arrow-right me-2"></i>Read
+                        More</span></a>
                   </div>
                 </div>
               </div>
@@ -782,9 +778,8 @@
                       Renewable Energy &amp; Clean Technology
                     </h4>
                     <p class="mb-3">Renewable Energy Services</p>
-                    <a class="btn btn-sm" href="service.html#renewable"
-                      ><span><i class="fa fa-arrow-right me-2"></i>Read More</span></a
-                    >
+                    <a class="btn btn-sm" href="service.html#renewable"><span><i class="fa fa-arrow-right me-2"></i>Read
+                        More</span></a>
                   </div>
                 </div>
               </div>
@@ -800,9 +795,8 @@
                     <p class="mb-3">
                       Environmental Management Systems, Water Foot Print
                     </p>
-                    <a class="btn btn-sm" href="service.html#ems"
-                      ><span><i class="fa fa-arrow-right me-2"></i>Read More</span></a
-                    >
+                    <a class="btn btn-sm" href="service.html#ems"><span><i class="fa fa-arrow-right me-2"></i>Read
+                        More</span></a>
                   </div>
                 </div>
               </div>
@@ -818,9 +812,8 @@
                     <p class="mb-3">
                       Sustainability Procurement, Green Investments Consultant
                     </p>
-                    <a class="btn btn-sm" href="service.html#procurement"
-                      ><span><i class="fa fa-arrow-right me-2"></i>Read More</span></a
-                    >
+                    <a class="btn btn-sm" href="service.html#procurement"><span><i
+                          class="fa fa-arrow-right me-2"></i>Read More</span></a>
                   </div>
                 </div>
               </div>
@@ -835,32 +828,29 @@
                       We help you to achieve carbon neutrality and net-zero
                       economy
                     </p>
-                    <a
-                      class="btn btn-sm"
-                      href="service.html#quantitative-survey"
-                      ><span><i class="fa fa-arrow-right me-2"></i>Read More</span></a
-                    >
+                    <a class="btn btn-sm" href="service.html#quantitative-survey"><span><i
+                          class="fa fa-arrow-right me-2"></i>Read More</span></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-            <button class="svc-side-arrow svc-side-right" id="svcNext">
-              <i class="fa fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Dot indicators -->
-        <div class="svc-bottom-nav wow fadeInUp" data-wow-delay="0.2s">
-          <div class="svc-dots" id="svcDots"></div>
+          <button class="svc-side-arrow svc-side-right" id="svcNext">
+            <i class="fa fa-chevron-right"></i>
+          </button>
         </div>
       </div>
-    </div>
-    <!-- Service End -->
 
-    <!-- Quote Start -->
-    <!-- <div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+      <!-- Dot indicators -->
+      <div class="svc-bottom-nav wow fadeInUp" data-wow-delay="0.2s">
+        <div class="svc-dots" id="svcDots"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Service End -->
+
+  <!-- Quote Start -->
+  <!-- <div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -906,29 +896,26 @@
             </div>
         </div>
     </div> -->
-    <!-- Quote End -->
+  <!-- Quote End -->
 
-    <!-- Projects Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div
-          class="text-center mx-auto wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="max-width: 700px"
-        >
-          <p class="fs-6 fw-bold">Our Projects</p>
-          <h2 class="display-6 fw-bold mb-4" style="color:#1a1a1a;line-height:1.2;"><span class="text-primary">Some Of Our Wonderful</span> Projects</h2>
-        </div>
+  <!-- Projects Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px">
+        <p class="fs-6 fw-bold">Our Projects</p>
+        <h2 class="display-6 fw-bold mb-4" style="color:#1a1a1a;line-height:1.2;"><span class="text-primary">Some Of Our
+            Wonderful</span> Projects</h2>
       </div>
+    </div>
 
-      <!-- Wrapper: [arrow] [carousel] [arrow] -->
-      <div class="proj-carousel-wrap">
-        <button class="proj-side-arrow proj-side-left" id="projArrowLeft" aria-label="Previous">
-          <i class="fa fa-chevron-left"></i>
-        </button>
-        <div class="proj-carousel-outer">
-          <div class="proj-carousel-viewport">
-            <div class="proj-carousel-track" id="projCarouselTrack">
+    <!-- Wrapper: [arrow] [carousel] [arrow] -->
+    <div class="proj-carousel-wrap">
+      <button class="proj-side-arrow proj-side-left" id="projArrowLeft" aria-label="Previous">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      <div class="proj-carousel-outer">
+        <div class="proj-carousel-viewport">
+          <div class="proj-carousel-track" id="projCarouselTrack">
 
             <div class="proj-scroll-item">
               <div class="proj-scroll-card">
@@ -996,245 +983,256 @@
               </div>
             </div>
 
-            </div>
           </div>
-        </div><!-- /proj-carousel-outer -->
-
-        <button class="proj-side-arrow proj-side-right" id="projArrowRight" aria-label="Next">
-          <i class="fa fa-chevron-right"></i>
-        </button>
-      </div><!-- /proj-carousel-wrap -->
-
-    </div>
-    <!-- Projects End -->
-
-    <style>
-      /* ── Projects Carousel ── */
-      .proj-carousel-wrap {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .proj-carousel-outer {
-        flex: 1;
-        min-width: 0;
-        overflow: hidden;
-        padding: 10px 0 30px;
-      }
-      .proj-carousel-viewport {
-        overflow: hidden;
-        width: 100%;
-      }
-      .proj-carousel-track {
-        display: flex;
-        gap: 0;
-        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        will-change: transform;
-        transform-style: preserve-3d;
-        padding: 16px 0;
-      }
-      /* 4 cards visible */
-      .proj-scroll-item {
-        flex: 0 0 calc(25%);
-        min-width: 0;
-        transition: transform 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease;
-        transform-style: preserve-3d;
-        backface-visibility: hidden;
-      }
-      @media (max-width: 991px) {
-        .proj-scroll-item { flex: 0 0 50%; }
-      }
-      @media (max-width: 575px) {
-        .proj-scroll-item { flex: 0 0 100%; }
-      }
-      .proj-scroll-card {
-        position: relative;
-        height: 320px;
-        border-radius: 18px;
-        overflow: hidden;
-        box-shadow: 0 6px 24px rgba(0,0,0,0.15);
-        cursor: pointer;
-        margin: 0 6px;
-      }
-      .proj-scroll-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.4s ease;
-      }
-      .proj-scroll-card:hover img { transform: scale(1.05); }
-      .proj-scroll-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 60%);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 20px;
-      }
-      .proj-scroll-overlay h5 {
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 700;
-        margin: 0 0 3px;
-      }
-      .proj-scroll-overlay small {
-        color: rgba(255,255,255,0.72);
-        font-size: 0.78rem;
-        display: block;
-      }
-      .proj-scroll-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        color: #fff;
-        font-size: 0.78rem;
-        font-weight: 600;
-        text-decoration: none;
-        margin-top: 8px;
-        opacity: 0;
-        transform: translateY(6px);
-        transition: opacity 0.25s ease, transform 0.25s ease;
-      }
-      .proj-scroll-card:hover .proj-scroll-link {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      /* Plain icon arrows */
-      .proj-side-arrow {
-        flex-shrink: 0;
-        background: none;
-        border: none;
-        color: #2d6a4f;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: 8px;
-        line-height: 1;
-        transition: color 0.2s, transform 0.2s;
-      }
-      .proj-side-arrow:hover {
-        color: #1b4332;
-        transform: scale(1.2);
-      }
-    </style>
-
-    <script>
-      (function () {
-        var track = document.getElementById("projCarouselTrack");
-        if (!track) return;
-
-        var originals = Array.prototype.slice.call(track.querySelectorAll(".proj-scroll-item"));
-        var total = originals.length;
-
-        /* Clone front and back for seamless infinite loop */
-        originals.slice().reverse().forEach(function (el) {
-          var c = el.cloneNode(true); c.setAttribute("aria-hidden","true");
-          track.insertBefore(c, track.firstChild);
-        });
-        originals.forEach(function (el) {
-          var c = el.cloneNode(true); c.setAttribute("aria-hidden","true");
-          track.appendChild(c);
-        });
-
-        var idx = total; /* start at first real card */
-
-        function itemW() { return originals[0].offsetWidth; }
-
-        function applyTransform(animate) {
-          var ease = animate ? "transform 0.6s cubic-bezier(0.4,0,0.2,1)" : "none";
-          track.style.transition = ease;
-
-          var halfCard = Math.round(itemW() / 2);
-          track.style.transform = "translateX(-" + (idx * itemW() - halfCard) + "px)";
-
-          var VISIBLE  = 3;
-          var CENTER   = 1;
-          var ARC_STEP = 22;
-          var PEEK_DEG = 55;
-
-          track.querySelectorAll(".proj-scroll-item").forEach(function (item, i) {
-            var pos    = i - idx;
-            var offset = pos - CENTER;
-            var iTr    = animate
-              ? "transform 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease"
-              : "none";
-            item.style.transition      = iTr;
-            item.style.transformOrigin = "50% 50%";
-
-            var deg, opacity;
-            if (pos >= 0 && pos < VISIBLE) {
-              deg = -(offset * ARC_STEP); opacity = 1;
-            } else if (pos === -1) {
-              deg = PEEK_DEG;  opacity = 1;
-            } else if (pos === VISIBLE) {
-              deg = -PEEK_DEG; opacity = 1;
-            } else {
-              deg = offset > 0 ? -85 : 85; opacity = 0;
-            }
-            item.style.transform = "perspective(1100px) rotateY(" + deg + "deg)";
-            item.style.opacity   = String(opacity);
-          });
-        }
-
-        function next() {
-          idx++;
-          applyTransform(true);
-          if (idx >= total * 2) {
-            setTimeout(function () { idx = total; applyTransform(false); track.getBoundingClientRect(); }, 620);
-          }
-        }
-
-        function prev() {
-          if (idx <= 0) { idx = total * 2; applyTransform(false); track.getBoundingClientRect(); }
-          idx--;
-          applyTransform(true);
-        }
-
-        var btnL = document.getElementById("projArrowLeft");
-        var btnR = document.getElementById("projArrowRight");
-        if (btnL) btnL.addEventListener("click", function () { prev(); });
-        if (btnR) btnR.addEventListener("click", function () { next(); });
-
-        applyTransform(false);
-        setInterval(next, 2800);
-      })();
-    </script>
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div
-          class="text-center mx-auto wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="max-width: 700px"
-        >
-          <p class="fs-6 fw-bold">Our Testimonial</p>
-          <h2 class="display-6 fw-bold mb-5" style="color:#1a1a1a;line-height:1.2;"><span class="text-primary">What Our Clients Say</span> About Us!</h2>
         </div>
-        <div class="testimonial-section-wrap">
-        <div
-          class="owl-carousel testimonial-carousel wow fadeInUp"
-          data-wow-delay="0.3s"
-        >
+      </div><!-- /proj-carousel-outer -->
+
+      <button class="proj-side-arrow proj-side-right" id="projArrowRight" aria-label="Next">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </div><!-- /proj-carousel-wrap -->
+
+  </div>
+  <!-- Projects End -->
+
+  <style>
+    /* ── Projects Carousel ── */
+    .proj-carousel-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .proj-carousel-outer {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      padding: 10px 0 30px;
+    }
+
+    .proj-carousel-viewport {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .proj-carousel-track {
+      display: flex;
+      gap: 0;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+      transform-style: preserve-3d;
+      padding: 16px 0;
+    }
+
+    /* 4 cards visible */
+    .proj-scroll-item {
+      flex: 0 0 calc(25%);
+      min-width: 0;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+    }
+
+    @media (max-width: 991px) {
+      .proj-scroll-item {
+        flex: 0 0 50%;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .proj-scroll-item {
+        flex: 0 0 100%;
+      }
+    }
+
+    .proj-scroll-card {
+      position: relative;
+      height: 320px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      margin: 0 6px;
+    }
+
+    .proj-scroll-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .proj-scroll-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .proj-scroll-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    .proj-scroll-overlay h5 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 3px;
+    }
+
+    .proj-scroll-overlay small {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.78rem;
+      display: block;
+    }
+
+    .proj-scroll-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 8px;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .proj-scroll-card:hover .proj-scroll-link {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Plain icon arrows */
+    .proj-side-arrow {
+      flex-shrink: 0;
+      background: none;
+      border: none;
+      color: #2d6a4f;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      line-height: 1;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .proj-side-arrow:hover {
+      color: #1b4332;
+      transform: scale(1.2);
+    }
+  </style>
+
+  <script>
+    (function () {
+      var track = document.getElementById("projCarouselTrack");
+      if (!track) return;
+
+      var originals = Array.prototype.slice.call(track.querySelectorAll(".proj-scroll-item"));
+      var total = originals.length;
+
+      /* Clone front and back for seamless infinite loop */
+      originals.slice().reverse().forEach(function (el) {
+        var c = el.cloneNode(true); c.setAttribute("aria-hidden", "true");
+        track.insertBefore(c, track.firstChild);
+      });
+      originals.forEach(function (el) {
+        var c = el.cloneNode(true); c.setAttribute("aria-hidden", "true");
+        track.appendChild(c);
+      });
+
+      var idx = total; /* start at first real card */
+
+      function itemW() { return originals[0].offsetWidth; }
+
+      function applyTransform(animate) {
+        var ease = animate ? "transform 0.6s cubic-bezier(0.4,0,0.2,1)" : "none";
+        track.style.transition = ease;
+
+        var halfCard = Math.round(itemW() / 2);
+        track.style.transform = "translateX(-" + (idx * itemW() - halfCard) + "px)";
+
+        var VISIBLE = 3;
+        var CENTER = 1;
+        var ARC_STEP = 22;
+        var PEEK_DEG = 55;
+
+        track.querySelectorAll(".proj-scroll-item").forEach(function (item, i) {
+          var pos = i - idx;
+          var offset = pos - CENTER;
+          var iTr = animate
+            ? "transform 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease"
+            : "none";
+          item.style.transition = iTr;
+          item.style.transformOrigin = "50% 50%";
+
+          var deg, opacity;
+          if (pos >= 0 && pos < VISIBLE) {
+            deg = -(offset * ARC_STEP); opacity = 1;
+          } else if (pos === -1) {
+            deg = PEEK_DEG; opacity = 1;
+          } else if (pos === VISIBLE) {
+            deg = -PEEK_DEG; opacity = 1;
+          } else {
+            deg = offset > 0 ? -85 : 85; opacity = 0;
+          }
+          item.style.transform = "perspective(1100px) rotateY(" + deg + "deg)";
+          item.style.opacity = String(opacity);
+        });
+      }
+
+      function next() {
+        idx++;
+        applyTransform(true);
+        if (idx >= total * 2) {
+          setTimeout(function () { idx = total; applyTransform(false); track.getBoundingClientRect(); }, 620);
+        }
+      }
+
+      function prev() {
+        if (idx <= 0) { idx = total * 2; applyTransform(false); track.getBoundingClientRect(); }
+        idx--;
+        applyTransform(true);
+      }
+
+      var btnL = document.getElementById("projArrowLeft");
+      var btnR = document.getElementById("projArrowRight");
+      if (btnL) btnL.addEventListener("click", function () { prev(); });
+      if (btnR) btnR.addEventListener("click", function () { next(); });
+
+      applyTransform(false);
+      setInterval(next, 2800);
+    })();
+  </script>
+
+  <!-- Testimonial Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px">
+        <p class="fs-6 fw-bold">Our Testimonial</p>
+        <h2 class="display-6 fw-bold mb-5" style="color:#1a1a1a;line-height:1.2;"><span class="text-primary">What Our
+            Clients Say</span> About Us!</h2>
+      </div>
+      <div class="testimonial-section-wrap">
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
           <div class="tcard">
             <div class="tcard-stars">
-              <i class="fa fa-star"></i><i class="fa fa-star"></i
-              ><i class="fa fa-star"></i><i class="fa fa-star"></i
-              ><i class="fa fa-star"></i>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                class="fa fa-star"></i>
             </div>
             <p class="tcard-text">
               KlimateShield transformed how we think about roofing. Their
               energy-efficient solutions cut our building's cooling costs by
-              nearly 30%  and the installation team was professional from day
+              nearly 30% and the installation team was professional from day
               one.
             </p>
             <div class="tcard-author">
-              <img
-                src="img/testimonial/testimonial-1.jpg"
-                alt="Rajiv Menon"
-                class="tcard-avatar"
-              />
+              <img src="img/testimonial/testimonial-1.jpg" alt="Rajiv Menon" class="tcard-avatar" />
               <div>
                 <h6 class="tcard-name">Rajiv Menon</h6>
                 <span class="tcard-role">Founder &amp; CEO @GreenBuild</span>
@@ -1244,21 +1242,16 @@
 
           <div class="tcard">
             <div class="tcard-stars">
-              <i class="fa fa-star"></i><i class="fa fa-star"></i
-              ><i class="fa fa-star"></i><i class="fa fa-star"></i
-              ><i class="fa fa-star"></i>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                class="fa fa-star"></i>
             </div>
             <p class="tcard-text">
               What impressed me most was their attention to climate science.
-              They didn't just sell a product  they designed a system
+              They didn't just sell a product they designed a system
               tailored to our region's heat patterns. Outstanding expertise.
             </p>
             <div class="tcard-author">
-              <img
-                src="img/testimonial/testimonial-2.jpg"
-                alt="Priya Sharma"
-                class="tcard-avatar"
-              />
+              <img src="img/testimonial/testimonial-2.jpg" alt="Priya Sharma" class="tcard-avatar" />
               <div>
                 <h6 class="tcard-name">Priya Sharma</h6>
                 <span class="tcard-role">CEO @EcoHomes India</span>
@@ -1268,9 +1261,8 @@
 
           <div class="tcard">
             <div class="tcard-stars">
-              <i class="fa fa-star"></i><i class="fa fa-star"></i
-              ><i class="fa fa-star"></i><i class="fa fa-star"></i
-              ><i class="fa fa-star-half-alt"></i>
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                class="fa fa-star-half-alt"></i>
             </div>
             <p class="tcard-text">
               We've partnered with KlimateShield across five projects now.
@@ -1278,11 +1270,7 @@
               cares about sustainable outcomes. Highly recommended.
             </p>
             <div class="tcard-author">
-              <img
-                src="img/testimonial/testimonial-3.jpg"
-                alt="Anil Verma"
-                class="tcard-avatar"
-              />
+              <img src="img/testimonial/testimonial-3.jpg" alt="Anil Verma" class="tcard-avatar" />
               <div>
                 <h6 class="tcard-name">Anil Verma</h6>
                 <span class="tcard-role">Director @UrbanNest Projects</span>
@@ -1290,59 +1278,59 @@
             </div>
           </div>
         </div>
-        </div>
       </div>
     </div>
-    <!-- Testimonial End -->
+  </div>
+  <!-- Testimonial End -->
 
-    <div id="footer-placeholder"></div>
-    <script src="js/footer.js"></script>
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/parallax/parallax.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <div id="footer-placeholder"></div>
+  <script src="js/footer.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/parallax/parallax.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
 
-    <!-- Sticky Notes 3D Tilt -->
-    <script>
-      (function () {
-        document.querySelectorAll(".snote").forEach(function (card) {
-          card.addEventListener("mousemove", function (e) {
-            var r = card.getBoundingClientRect();
-            var cx = r.left + r.width / 2;
-            var cy = r.top + r.height / 2;
-            var dx = (e.clientX - cx) / (r.width / 2);
-            var dy = (e.clientY - cy) / (r.height / 2);
-            card.style.animation = "none";
-            card.style.transform =
-              "perspective(600px) rotateX(" +
-              dy * -12 +
-              "deg) rotateY(" +
-              dx * 12 +
-              "deg) scale(1.06)";
-            card.style.transition = "transform 0.08s ease";
-          });
-          card.addEventListener("mouseleave", function () {
-            card.style.transform = "";
-            card.style.transition = "transform 0.5s ease";
-            setTimeout(function () {
-              card.style.animation = "";
-              card.style.transition = "";
-            }, 500);
-          });
+  <!-- Sticky Notes 3D Tilt -->
+  <script>
+    (function () {
+      document.querySelectorAll(".snote").forEach(function (card) {
+        card.addEventListener("mousemove", function (e) {
+          var r = card.getBoundingClientRect();
+          var cx = r.left + r.width / 2;
+          var cy = r.top + r.height / 2;
+          var dx = (e.clientX - cx) / (r.width / 2);
+          var dy = (e.clientY - cy) / (r.height / 2);
+          card.style.animation = "none";
+          card.style.transform =
+            "perspective(600px) rotateX(" +
+            dy * -12 +
+            "deg) rotateY(" +
+            dx * 12 +
+            "deg) scale(1.06)";
+          card.style.transition = "transform 0.08s ease";
         });
-      })();
-    </script>
+        card.addEventListener("mouseleave", function () {
+          card.style.transform = "";
+          card.style.transition = "transform 0.5s ease";
+          setTimeout(function () {
+            card.style.animation = "";
+            card.style.transition = "";
+          }, 500);
+        });
+      });
+    })();
+  </script>
 
-  </body>
+</body>
+
 </html>
-

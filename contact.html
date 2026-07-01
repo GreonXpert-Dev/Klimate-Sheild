@@ -11,7 +11,9 @@
     <link href="img/logo.svg" rel="icon" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -30,6 +32,7 @@
             gap: 0;
             border-right: 1px solid #e5e7eb;
         }
+
         .cp-content {
             padding: 2.2rem 2rem;
             display: flex;
@@ -37,17 +40,38 @@
             flex: 1;
         }
 
-        .cp-heading { color: #111827; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.3rem; }
-        .cp-sub { color: #9ca3af; font-size: 0.85rem; margin-bottom: 2rem; }
-        .cp-section-title { color: #111827; font-size: 1rem; font-weight: 700; margin-bottom: 1rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; }
+        .cp-heading {
+            color: #111827;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .cp-sub {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+
+        .cp-section-title {
+            color: #111827;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
 
         .cp-info-item {
-            display: flex; align-items: flex-start; gap: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
             margin-bottom: 0.85rem;
             color: #111827;
             font-size: 0.875rem;
             line-height: 1.6;
         }
+
         .cp-info-item i {
             color: #374151;
             font-size: 0.95rem;
@@ -55,28 +79,61 @@
             flex-shrink: 0;
             width: 16px;
         }
-        .cp-info-item a { color: #111827; text-decoration: none; }
-        .cp-info-item a:hover { color: #1D9E75; }
 
-        .cp-divider { border: none; border-top: 1px solid #e5e7eb; margin: 1.4rem 0; }
+        .cp-info-item a {
+            color: #111827;
+            text-decoration: none;
+        }
 
-        .cp-social { display: flex; gap: 10px; margin-top: auto; padding-top: 1.5rem; }
+        .cp-info-item a:hover {
+            color: #1D9E75;
+        }
+
+        .cp-divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 1.4rem 0;
+        }
+
+        .cp-social {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+            padding-top: 1.5rem;
+        }
+
         .cp-social a {
-            width: 34px; height: 34px;
+            width: 34px;
+            height: 34px;
             background: #f3f4f6;
             border-radius: 6px;
-            display: flex; align-items: center; justify-content: center;
-            color: #111827; font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111827;
+            font-size: 0.85rem;
             text-decoration: none;
             transition: background 0.18s, color 0.18s;
         }
-        .cp-social a:hover { background: #e5e7eb; color: #111827; }
+
+        .cp-social a:hover {
+            background: #e5e7eb;
+            color: #111827;
+        }
 
         /* Right form panel */
         @keyframes bgSwing {
-            0%   { background-position: 40% center; }
-            50%  { background-position: 60% center; }
-            100% { background-position: 40% center; }
+            0% {
+                background-position: 40% center;
+            }
+
+            50% {
+                background-position: 60% center;
+            }
+
+            100% {
+                background-position: 40% center;
+            }
         }
 
         .contact-panel-right {
@@ -85,15 +142,30 @@
             padding-top: 1.7rem;
             border-right: 1px solid #e5e7eb;
         }
-        .cp-form-title { font-size: 1.2rem; font-weight: 700; color: #111827; margin-bottom: 0.3rem; }
-        .cp-form-sub { font-size: 0.85rem; color: #9ca3af; margin-bottom: 2rem; }
+
+        .cp-form-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.3rem;
+        }
+
+        .cp-form-sub {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-bottom: 2rem;
+        }
 
         .cp-field-label {
-            font-size: 0.78rem; font-weight: 600;
-            color: #374151; text-transform: capitalize;
-            letter-spacing: 0.02em; margin-bottom: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #374151;
+            text-transform: capitalize;
+            letter-spacing: 0.02em;
+            margin-bottom: 6px;
             display: block;
         }
+
         .cp-input {
             width: 100%;
             border: 1.5px solid #e5e7eb;
@@ -106,18 +178,55 @@
             font-family: inherit;
             background: #fafafa;
         }
+
         .cp-input:focus {
             border-color: #1D9E75;
-            box-shadow: 0 0 0 3px rgba(29,158,117,0.1);
+            box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.1);
             background: #fff;
         }
-        textarea.cp-input { height: 90px; resize: none; }
-        select.cp-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.9rem center; cursor: pointer; }
-        .cp-field { margin-bottom: 1.2rem; }
-        .cp-radio-group { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 4px; }
-        .cp-radio-option { display: flex; align-items: center; gap: 6px; cursor: pointer; }
-        .cp-radio-option input[type="radio"] { accent-color: #1D9E75; width: 15px; height: 15px; cursor: pointer; }
-        .cp-radio-option span { font-size: 0.85rem; color: #374151; }
+
+        textarea.cp-input {
+            height: 90px;
+            resize: none;
+        }
+
+        select.cp-input {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.9rem center;
+            cursor: pointer;
+        }
+
+        .cp-field {
+            margin-bottom: 1.2rem;
+        }
+
+        .cp-radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 4px;
+        }
+
+        .cp-radio-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .cp-radio-option input[type="radio"] {
+            accent-color: #1D9E75;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        .cp-radio-option span {
+            font-size: 0.85rem;
+            color: #374151;
+        }
 
         .btn-contact-send {
             width: 100%;
@@ -130,9 +239,13 @@
             font-weight: 600;
             cursor: pointer;
             transition: background 0.2s, transform 0.15s;
-            display: flex; align-items: center; justify-content: center; gap: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             font-family: inherit;
         }
+
         .btn-contact-send:hover {
             background: #2a7a2e;
             transform: translateY(-1px);
@@ -156,20 +269,41 @@
             height: 100%;
             min-height: 500px;
         }
-        .map-strip iframe { width: 100%; height: 100%; display: block; border: none; }
+
+        .map-strip iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: none;
+        }
 
         @media (max-width: 991px) {
-            .contact-page-row { grid-template-columns: 1fr; border-radius: 16px; }
-            .contact-panel-left { padding: 2rem 1.5rem; }
-            .contact-panel-right { padding: 2rem 1.5rem; }
-            .map-strip { min-height: 300px; border-left: none; border-top: 1px solid #e5eae6; }
+            .contact-page-row {
+                grid-template-columns: 1fr;
+                border-radius: 16px;
+            }
+
+            .contact-panel-left {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-panel-right {
+                padding: 2rem 1.5rem;
+            }
+
+            .map-strip {
+                min-height: 300px;
+                border-left: none;
+                border-top: 1px solid #e5eae6;
+            }
         }
     </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
@@ -200,45 +334,45 @@
             <div class="contact-panel-left">
                 <div class="cp-content">
 
-                <!-- <h2 class="cp-heading">Get in Touch</h2> -->
-                <!-- <p class="cp-sub">Reach out to us for any queries, project discussions, or general information. We're happy to help.</p> -->
+                    <!-- <h2 class="cp-heading">Get in Touch</h2> -->
+                    <!-- <p class="cp-sub">Reach out to us for any queries, project discussions, or general information. We're happy to help.</p> -->
 
-                <h4 class="cp-section-title">Our Office</h4>
-                <div class="cp-info-item">
-                    <i class="fa fa-map-marker-alt mt-1"></i>
-                    <span>Door no. 1/376, Jr Janatha Rd, Cheranallur, Kochi, Ernakulam, Kerala 682034</span>
-                </div>
-                <div class="cp-info-item">
-                    <i class="fa fa-envelope"></i>
-                    <span><a href="mailto:info@klimatesheild.com">info@klimatesheild.com</a></span>
-                </div>
+                    <h4 class="cp-section-title">Our Office</h4>
+                    <div class="cp-info-item">
+                        <i class="fa fa-map-marker-alt mt-1"></i>
+                        <span>Door no. 1/376, Jr Janatha Rd, Cheranallur, Kochi, Ernakulam, Kerala 682034</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <i class="fa fa-envelope"></i>
+                        <span><a href="mailto:info@klimatesheild.com">info@klimatesheild.com</a></span>
+                    </div>
 
-                <hr class="cp-divider">
+                    <hr class="cp-divider">
 
-                <h4 class="cp-section-title">Contact Hours</h4>
-                <div class="cp-info-item">
-                    <i class="fa fa-clock"></i>
-                    <span>Mon to Sat: 9:00 AM - 6:00 PM</span>
-                </div>
-                <div class="cp-info-item">
-                    <i class="fa fa-phone-alt"></i>
-                    <span>+91 70121 86963</span>
-                </div>
-                <div class="cp-info-item">
-                    <i class="fa fa-phone-alt"></i>
-                    <span>+91 98957 08504</span>
-                </div>
-                <div class="cp-info-item">
-                    <i class="fa fa-globe"></i>
-                    <span>www.klimatesheild.com</span>
-                </div>
+                    <h4 class="cp-section-title">Contact Hours</h4>
+                    <div class="cp-info-item">
+                        <i class="fa fa-clock"></i>
+                        <span>Mon to Sat: 9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <i class="fa fa-phone-alt"></i>
+                        <span>+91 70121 86963</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <i class="fa fa-phone-alt"></i>
+                        <span>+91 98957 08504</span>
+                    </div>
+                    <div class="cp-info-item">
+                        <i class="fa fa-globe"></i>
+                        <span>www.klimatesheild.com</span>
+                    </div>
 
-                <div class="cp-social">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                </div>
+                    <div class="cp-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                    </div>
                 </div><!-- end cp-content -->
             </div>
 
@@ -289,13 +423,13 @@
                 </form>
             </div>
 
-        <!-- Map strip -->
-        <div class="map-strip">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.468053787675!2d76.299789!3d9.992136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d13ee1347b1%3A0x89c9267d1aeeaac4!2sKaloor%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1698753929937!5m2!1sen!2sin"
-                allowfullscreen="" aria-hidden="false" tabindex="0">
-            </iframe>
-        </div>
+            <!-- Map strip -->
+            <div class="map-strip">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.468053787675!2d76.299789!3d9.992136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d13ee1347b1%3A0x89c9267d1aeeaac4!2sKaloor%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1698753929937!5m2!1sen!2sin"
+                    allowfullscreen="" aria-hidden="false" tabindex="0">
+                </iframe>
+            </div>
 
         </div><!-- end contact-page-row -->
 
@@ -307,7 +441,8 @@
     </script>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -323,4 +458,3 @@
 </body>
 
 </html>
-
