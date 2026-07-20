@@ -259,14 +259,48 @@
     /* â"€â"€ LEFT: Expertise (light) â"€â"€ */
     .ev-expertise {
       flex: 1 1 50%;
-      background: #f7faf8;
+      background: linear-gradient(135deg, #e8f3ec 0%, #eef6f0 50%, #f4f9f6 100%);
+      isolation: isolate;
       padding: 80px 60px 80px max(24px, calc((100vw - 1320px) / 2 + 12px));
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* soft colour blobs, mirrored from the vision panel */
+    .ev-expertise::before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle,
+          rgba(52, 142, 56, 0.18) 0%,
+          transparent 70%);
+      top: -110px;
+      left: -70px;
+      pointer-events: none;
+    }
+
+    .ev-expertise::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle,
+          rgba(116, 198, 157, 0.22) 0%,
+          transparent 70%);
+      bottom: -80px;
+      right: -60px;
+      pointer-events: none;
     }
 
     .ev-expertise .inner {
+      position: relative;
+      z-index: 1;
       max-width: 100%;
       margin-left: auto;
       padding-left: 0;
@@ -287,24 +321,31 @@
       margin-bottom: 2rem;
     }
 
-    /* â"€â"€ Expertise Cards â"€â"€ */
+    /* â"€â"€ Expertise Cards (glass, matches vision cards) â"€â"€ */
     .exp-card {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-radius: 14px;
       padding: 24px 22px;
       height: 100%;
       min-height: 190px;
-      border: 1px solid #e0ebe3;
+      border: 1px solid rgba(255, 255, 255, 0.7);
       box-shadow: 0 4px 18px rgba(15, 45, 26, 0.06);
       position: relative;
       overflow: hidden;
       transition:
         transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
+        background 0.35s ease,
         box-shadow 0.35s ease;
     }
 
     .exp-card:hover {
       transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-color: rgba(52, 142, 56, 0.35);
       box-shadow: 0 18px 44px rgba(15, 45, 26, 0.12);
     }
 
@@ -369,21 +410,32 @@
       flex-shrink: 0;
     }
 
-    /* â"€â"€ RIGHT: Vision (dark) â"€â"€ */
+    /* â"€â"€ RIGHT: Vision (glassmorphism) â"€â"€ */
     .ev-vision {
       flex: 1 1 50%;
-      background: linear-gradient(135deg, #0d2b1a 0%, #1B4332 40%, #1e5c35 100%);
+      background: linear-gradient(135deg, #f4f9f6 0%, #eef6f0 50%, #e8f3ec 100%);
       isolation: isolate;
       padding: 80px max(24px, calc((100vw - 1320px) / 2 + 12px)) 80px 60px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       position: relative;
       overflow: hidden;
     }
 
+    /* soft colour blobs behind the glass panel */
     .ev-vision::before {
-      display: none;
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle,
+          rgba(52, 142, 56, 0.18) 0%,
+          transparent 70%);
+      top: -110px;
+      right: -70px;
+      pointer-events: none;
     }
 
     .ev-vision::after {
@@ -393,7 +445,7 @@
       height: 280px;
       border-radius: 50%;
       background: radial-gradient(circle,
-          rgba(52, 142, 56, 0.12) 0%,
+          rgba(116, 198, 157, 0.22) 0%,
           transparent 70%);
       bottom: -80px;
       left: -60px;
@@ -408,18 +460,18 @@
     }
 
     .ev-vision .section-eyebrow {
-      color: #74c69d;
+      color: #2d6a31;
     }
 
     .ev-vision .section-eyebrow::before {
-      background: linear-gradient(90deg, #74c69d, #b7f5c7);
+      background: linear-gradient(90deg, #348e38, #81c784);
     }
 
     .ev-vision h2,
     .ev-vision h3 {
       font-size: clamp(1.4rem, 2.2vw, 1.85rem);
       font-weight: 800;
-      color: #fff;
+      color: #0f2d1a;
       line-height: 1.18;
       margin-bottom: 1rem;
     }
@@ -427,7 +479,7 @@
     .ev-vision h2 em,
     .ev-vision h3 em {
       font-style: normal;
-      background: linear-gradient(90deg, #74c69d, #d4f7e0);
+      background: linear-gradient(90deg, #2d6a31, #348e38);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -435,34 +487,37 @@
 
     .ev-vision p {
       font-size: 0.93rem;
-      color: rgba(255, 255, 255, 0.72);
+      color: #4d6659;
       line-height: 1.85;
       margin-bottom: 1.8rem;
     }
 
-    /* â"€â"€ Vision Cards â"€â"€ */
+    /* â"€â"€ Vision Cards (glass) â"€â"€ */
     .vis-card {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.5);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-radius: 14px;
       padding: 22px 20px;
       height: 100%;
       min-height: 190px;
-      border: 1px solid rgba(149, 213, 178, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 4px 18px rgba(15, 45, 26, 0.06);
       position: relative;
       overflow: hidden;
       transition:
         transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
-        background 0.35s ease;
+        background 0.35s ease,
+        box-shadow 0.35s ease;
     }
 
     .vis-card:hover {
       transform: translateY(-6px);
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.75);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-color: rgba(149, 213, 178, 0.45);
+      border-color: rgba(52, 142, 56, 0.35);
+      box-shadow: 0 18px 44px rgba(15, 45, 26, 0.12);
     }
 
     .vis-card-step {
@@ -472,7 +527,7 @@
       font-size: 0.62rem;
       font-weight: 800;
       letter-spacing: 0.14em;
-      color: rgba(116, 198, 157, 0.55);
+      color: rgba(52, 142, 56, 0.35);
       font-family: "Jost", sans-serif;
     }
 
@@ -487,12 +542,12 @@
       width: 42px;
       height: 42px;
       border-radius: 12px;
-      background: rgba(52, 142, 56, 0.25);
+      background: rgba(52, 142, 56, 0.15);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.95rem;
-      color: #5dcaa5;
+      color: #2d6a31;
       flex-shrink: 0;
       margin-bottom: 0;
     }
@@ -500,13 +555,13 @@
     .vis-card h5 {
       font-size: 0.88rem;
       font-weight: 700;
-      color: #fff;
+      color: #0f2d1a;
       margin-bottom: 0;
     }
 
     .vis-card p {
       font-size: 0.79rem;
-      color: rgba(255, 255, 255, 0.62);
+      color: #5c7063;
       line-height: 1.6;
       margin: 0;
     }
@@ -532,6 +587,11 @@
         padding-left: 0;
       }
 
+      .ev-expertise::before,
+      .ev-expertise::after {
+        display: none;
+      }
+
       .ev-divider {
         width: 100%;
         height: 1px;
@@ -552,6 +612,7 @@
         padding-right: 0;
       }
 
+      .ev-vision::before,
       .ev-vision::after {
         display: none;
       }

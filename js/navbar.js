@@ -61,8 +61,8 @@
     var html =
         '<!-- Navbar Start -->' +
         '<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="z-index:1030;">' +
-            '<a href="' + base + 'index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">' +
-                '<img src="' + base + 'img/logo.svg" alt="Logo" style="height:44px; margin-right:10px;">' +
+            '<a href="' + base + 'index.html" class="navbar-brand d-flex align-items-center px-3 px-lg-4">' +
+                '<img src="' + base + 'img/logo.svg" alt="Logo" style="height:34px; margin-right:8px;">' +
                 '<h1 class="m-0" style="font-size:1.35rem; font-weight:700; color:#085041;">Klimate Shield</h1>' +
             '</a>' +
             '<button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">' +
