@@ -173,8 +173,11 @@
         startAuto();
         stack.addEventListener('mouseenter', stopAuto);
         stack.addEventListener('mouseleave', function () {
-            if (isDragging) releaseDrag(0);
-            startAuto();
+            // Don't force-release here: window-level mousemove/mouseup already
+            // keep tracking the drag correctly even once the cursor leaves the
+            // (narrow) stack area. releaseDrag() restarts autoplay once the
+            // real mouseup happens.
+            if (!isDragging) startAuto();
         });
 
         // Smooth lerp drag
@@ -197,6 +200,10 @@
         }
 
         function startDrag(x) {
+            // Ignore drag starts while a slide transition is still in flight —
+            // grabbing a card mid-exit-animation corrupts its transform/position
+            // once the pending transition timeout also tries to reposition it.
+            if (busy) return;
             dragStartX = x; isDragging = false;
             targetDx = 0; currentDx = 0;
             getFront().classList.add('is-dragging');

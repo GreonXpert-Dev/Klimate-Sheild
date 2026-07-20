@@ -113,12 +113,12 @@ h6,
 
 .navbar .navbar-brand,
 .navbar a.btn {
-    height: 60px
+    height: 48px
 }
 
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
-    padding: 14px 0;
+    padding: 10px 0;
     color: var(--dark);
     font-size: 15px;
     font-weight: 400;
@@ -215,6 +215,18 @@ h6,
 .page-header {
     background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+}
+
+.page-header .container {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+}
+
+.page-header h1 {
+    font-size: 28px !important;
+    margin-bottom: 14px !important;
 }
 
 .page-header .breadcrumb-item+.breadcrumb-item::before {
@@ -223,7 +235,7 @@ h6,
 
 .page-header .breadcrumb-item,
 .page-header .breadcrumb-item a {
-    font-size: 18px;
+    font-size: 15px;
     color: var(--light);
 }
 
@@ -388,7 +400,7 @@ h6,
 /*** Service Stacked Card Carousel ***/
 
 /* Section layout */
-.svc-layout { margin-top: 2rem; }
+.svc-layout { margin-top: 2.75rem; }
 
 /* Outer row: stack + right arrow side by side */
 .svc-outer-row {
@@ -402,12 +414,12 @@ h6,
 .svc-stack-wrapper {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 354px;
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    padding-top: 60px;
+    padding-top: 50px;
     padding-right: 0;
     overflow: visible;
     flex: 1;
@@ -416,8 +428,8 @@ h6,
 /* Stack container */
 .svc-stack {
     position: relative;
-    width: 520px;
-    height: 380px;
+    width: 440px;
+    height: 270px;
     cursor: grab;
     user-select: none;
     overflow: visible;
@@ -428,8 +440,8 @@ h6,
 .svc-card {
     position: absolute;
     width: 100%;
-    height: 320px;
-    top: 60px;
+    height: 230px;
+    top: 40px;
     left: 0;
     border-radius: 0 !important;
     transition: transform 0.85s cubic-bezier(.25,.1,.25,1), opacity 0.85s, box-shadow 0.4s;
@@ -444,27 +456,27 @@ h6,
     box-shadow: 0 8px 36px rgba(0,0,0,0.22);
 }
 .svc-card[data-pos="1"] {
-    transform: translate(-120px,-18px) rotate(-6deg)  scale(0.97);
+    transform: translate(-100px,-13px) rotate(-6deg)  scale(0.97);
     opacity: 1; z-index: 9;
     box-shadow: 0 6px 22px rgba(0,0,0,0.16);
 }
 .svc-card[data-pos="2"] {
-    transform: translate(-230px,-34px) rotate(-12deg) scale(0.94);
+    transform: translate(-195px,-24px) rotate(-12deg) scale(0.94);
     opacity: 0.88; z-index: 8;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 .svc-card[data-pos="3"] {
-    transform: translate(-330px,-48px) rotate(-18deg) scale(0.91);
+    transform: translate(-280px,-34px) rotate(-18deg) scale(0.91);
     opacity: 0.72; z-index: 7;
     box-shadow: 0 6px 12px rgba(0,0,0,0.09);
 }
 .svc-card[data-pos="4"] {
-    transform: translate(-420px,-60px) rotate(-24deg) scale(0.88);
+    transform: translate(-355px,-43px) rotate(-24deg) scale(0.88);
     opacity: 0.55; z-index: 6;
     box-shadow: 0 6px 8px rgba(0,0,0,0.06);
 }
 .svc-card[data-pos="hidden"] {
-    transform: translate(-500px,-70px) rotate(-28deg) scale(0.85);
+    transform: translate(-425px,-50px) rotate(-28deg) scale(0.85);
     opacity: 0; z-index: 1;
     pointer-events: none;
 }
@@ -493,7 +505,7 @@ h6,
     background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.50) 45%, transparent 75%) !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    padding: 1.75rem 2rem !important;
+    padding: 1.1rem 1.5rem !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-end !important;
@@ -507,17 +519,21 @@ h6,
 /* Always-white heading & description */
 .svc-card .service-item .service-text h4 {
     color: #ffffff !important;
-    font-size: 1.35rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 .svc-card .service-item .service-text p {
     color: rgba(255,255,255,0.88) !important;
-    font-size: 0.92rem;
-    line-height: 1.55;
-    margin-bottom: 1rem;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
     text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* READ MORE — plain arrow link style like reference */
@@ -526,10 +542,10 @@ h6,
     height: auto !important;
     background: transparent !important;
     color: #ffffff !important;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 0.06em;
-    padding: 0 0 6px 0 !important;
+    padding: 0 0 4px 0 !important;
     border: none !important;
     text-transform: uppercase;
     display: block !important;
@@ -596,7 +612,7 @@ h6,
 .svc-bottom-nav {
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
 }
 .svc-dots { display: flex; gap: 8px; align-items: center; }
 .svc-dot {
@@ -614,9 +630,9 @@ h6,
 
 /* Responsive */
 @media (max-width: 768px) {
-    .svc-stack-wrapper { height: 320px; padding-right: 20px; padding-top: 40px; }
+    .svc-stack-wrapper { height: 280px; padding-right: 20px; padding-top: 40px; }
     .svc-stack { width: 90%; }
-    .svc-card { height: 240px; }
+    .svc-card { height: 200px; top: 24px; }
 }
 
 /*** Project Portfolio ***/
@@ -958,11 +974,13 @@ h6,
 .footer h4 { color: #ffffff !important; }
 .footer p, .footer i { color: #ffffff !important; }
 .footer .btn.btn-link { color: #ffffff; }
-.footer h4 { font-size:1rem; letter-spacing:0.05em; text-transform:uppercase; border-bottom:2px solid rgba(255,255,255,.35); padding-bottom:10px; margin-bottom:16px !important; }
+.footer h4 { font-size:0.9rem !important; letter-spacing:0.05em; text-transform:uppercase; border-bottom:2px solid rgba(255,255,255,.35); padding-bottom:10px; margin-bottom:16px !important; }
+.footer p, .footer .btn.btn-link { font-size: 0.85rem; }
 
 .copyright {
     color: var(--light);
     background: #085041;
+    font-size: 0.82rem;
 }
 
 .copyright a {
@@ -986,9 +1004,9 @@ h4, .h4 { font-family: "Jost", sans-serif !important; font-size: 1.25rem !import
 
 /* Navbar improvements */
 .navbar.sticky-top { box-shadow: 0 2px 12px rgba(0,0,0,.08); }
-.navbar .navbar-brand h1 { font-size:1.4rem !important; color:#085041 !important; }
+.navbar .navbar-brand h1 { font-size:1.15rem !important; color:#085041 !important; }
 /* ── Navbar font — edit HERE to change font/size across ALL pages ── */
-.navbar .navbar-nav .nav-link { margin-right:28px; padding:14px 0; color:#444; font-family:'Jost',sans-serif !important; font-size:15px; font-weight:600; letter-spacing:0.02em; }
+.navbar .navbar-nav .nav-link { margin-right:28px; padding:10px 0; color:#444; font-family:'Jost',sans-serif !important; font-size:14px; font-weight:600; letter-spacing:0.02em; }
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active { color: var(--primary); }
 

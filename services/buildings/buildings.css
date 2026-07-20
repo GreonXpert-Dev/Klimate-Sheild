@@ -1,6 +1,6 @@
 /* ── Variables & Base ─────────────────────── */
 :root {
-  --green-900: #1a1a1a; --green-700: #085041; --green-500: #085041;
+  --green-900: #0f2d1a; --green-700: #085041; --green-500: #085041;
   --green-400: #5cd97a; --green-200: #b7f5c7; --green-50: #f0fff4;
   --text: #374151; --muted: #6B7280; --white: #FFFFFF; --bg-alt: #F8FAFC;
   --border: #E5E7EB; --radius: 12px;
@@ -31,7 +31,7 @@ body { color: var(--text); }
 }
 .sub-heading {
   font-family: 'Jost', sans-serif; font-size: 1.55rem; font-weight: 700;
-  color: var(--green-900); margin-bottom: 28px; text-align: center;
+  color: #28a745; margin-bottom: 28px; text-align: center;
 }
 .body-text { font-size: .97rem; line-height: 1.8; color: var(--text); margin-bottom: 18px; }
 
@@ -66,7 +66,7 @@ body { color: var(--text); }
 .svc-intro-label {
   display: flex; align-items: center; gap: 8px;
   font-family: 'Jost', sans-serif; font-size: .76rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .08em; color: var(--green-700);
+  text-transform: uppercase; letter-spacing: .08em; color: #28a745;
   margin-bottom: 16px;
 }
 .svc-accent-line {
@@ -94,8 +94,14 @@ body { color: var(--text); }
 .bld-num--3 { background: #0b6b53; }
 .bld-num--4 { background: #0d806a; color: #fff; }
 .bld-item-body { display: flex; flex-direction: column; gap: 3px; }
-.bld-item-body strong { font-size: .93rem; color: var(--green-900); font-weight: 700; display: block; }
+.bld-item-body strong { font-size: .93rem; font-weight: 700; display: block; }
 .bld-item-body span   { font-size: .83rem; color: var(--muted); line-height: 1.6; }
+
+/* Title colour follows the same dark-to-light gradient as the number badges */
+.bld-item-list .bld-item:nth-child(1) .bld-item-body strong { color: #0e6b4f; }
+.bld-item-list .bld-item:nth-child(2) .bld-item-body strong { color: #148a63; }
+.bld-item-list .bld-item:nth-child(3) .bld-item-body strong { color: #1aa87e; }
+.bld-item-list .bld-item:nth-child(4) .bld-item-body strong { color: #2ac693; }
 
 /* ── Feature Blocks ── */
 .feature-block {
@@ -155,20 +161,41 @@ body { color: var(--text); }
 }
 
 /* ── Let's Talk CTA ── */
-.bld-letstalk { padding: 40px 0 !important; border-top: 1px solid var(--border); }
-.img-cta-sub {
-  font-family: 'Open Sans', sans-serif; font-size: .85rem; font-style: italic;
-  color: var(--muted); margin: 0 0 10px; letter-spacing: .01em;
+.bld-letstalk { padding: 32px 0 !important; background: #fff; border-top: 1px solid #e5ede8; }
+.svc-cta-link {
+  display: inline-flex; align-items: center; gap: 16px;
+  text-decoration: none; cursor: pointer;
+  border-bottom: 1.5px solid transparent;
+  padding: 8px 0;
+  transition: border-color .3s;
 }
-.img-cta-link {
-  display: inline-block;
-  font-family: 'Jost', sans-serif; font-size: 1.1rem; font-weight: 700;
-  letter-spacing: .12em; text-transform: uppercase;
-  color: var(--green-700); text-decoration: none;
-  border-bottom: 2px solid var(--green-400); padding-bottom: 3px;
-  transition: color var(--transition), border-color var(--transition);
+.svc-cta-link:hover { border-bottom-color: #28a745; }
+.svc-cta-sub {
+  font-family: 'Jost', sans-serif; font-size: .68rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: #28a745; display: block; margin-bottom: 4px;
 }
-.img-cta-link:hover { color: var(--green-900); border-color: var(--green-700); }
+.svc-cta-main {
+  font-family: 'Jost', sans-serif; font-size: 1.15rem; font-weight: 700;
+  color: #0f2d1a; display: block; letter-spacing: .01em;
+}
+.svc-cta-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 50%;
+  border: 1.5px solid #28a745; color: #28a745; font-size: 1.25rem; line-height: 1;
+  flex-shrink: 0;
+  transition: background .3s ease, color .3s ease, transform .35s cubic-bezier(0.34,1.56,0.64,1), border-color .3s ease;
+}
+.svc-cta-link:hover .svc-cta-icon {
+  background: #28a745; color: #fff; border-color: #28a745;
+  transform: translateX(6px);
+}
+.svc-cta-icon span { display: block; animation: svc-arrow-bounce 1.6s ease-in-out infinite; }
+.svc-cta-link:hover .svc-cta-icon span { animation: none; }
+@keyframes svc-arrow-bounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
 
 /* ── Responsive ── */
 @media (max-width: 991px) {

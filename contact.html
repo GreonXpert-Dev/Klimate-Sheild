@@ -25,12 +25,12 @@
     <style>
         /* Left panel */
         .contact-panel-left {
-            background: #f9fafb;
+            background: #ffffff;
             padding: 0;
             display: flex;
             flex-direction: column;
             gap: 0;
-            border-right: 1px solid #e5e7eb;
+            border-right: 1px solid #cfe8dd;
         }
 
         .cp-content {
@@ -57,9 +57,20 @@
             color: #111827;
             font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 0.5rem;
+            margin-bottom: 1.1rem;
+            padding-left: 0.75rem;
+            position: relative;
+        }
+
+        .cp-section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 3px;
+            background: #1D9E75;
+            border-radius: 3px;
         }
 
         .cp-info-item {
@@ -91,7 +102,7 @@
 
         .cp-divider {
             border: none;
-            border-top: 1px solid #e5e7eb;
+            border-top: 1px solid #e8f3ee;
             margin: 1.4rem 0;
         }
 
@@ -105,20 +116,21 @@
         .cp-social a {
             width: 34px;
             height: 34px;
-            background: #f3f4f6;
+            background: #ffffff;
+            border: 1px solid #1D9E75;
             border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #111827;
+            color: #1D9E75;
             font-size: 0.85rem;
             text-decoration: none;
             transition: background 0.18s, color 0.18s;
         }
 
         .cp-social a:hover {
-            background: #e5e7eb;
-            color: #111827;
+            background: #1D9E75;
+            color: #ffffff;
         }
 
         /* Right form panel */
@@ -140,14 +152,27 @@
             background: #ffffff;
             padding: 2.2rem 2.5rem;
             padding-top: 1.7rem;
-            border-right: 1px solid #e5e7eb;
+            border-right: 1px solid #cfe8dd;
         }
 
         .cp-form-title {
             font-size: 1.2rem;
             font-weight: 700;
             color: #111827;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.7rem;
+            padding-left: 0.8rem;
+            position: relative;
+        }
+
+        .cp-form-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 3px;
+            background: #1D9E75;
+            border-radius: 3px;
         }
 
         .cp-form-sub {
@@ -168,21 +193,19 @@
 
         .cp-input {
             width: 100%;
-            border: 1.5px solid #e5e7eb;
-            border-radius: 8px;
+            border: 1.5px solid #cfe8dd;
+            border-radius: 6px;
             padding: 0.65rem 0.9rem;
             font-size: 0.9rem;
             color: #111827;
             outline: none;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: border-color 0.2s;
             font-family: inherit;
-            background: #fafafa;
+            background: #ffffff;
         }
 
         .cp-input:focus {
             border-color: #1D9E75;
-            box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.1);
-            background: #fff;
         }
 
         textarea.cp-input {
@@ -257,15 +280,16 @@
             grid-template-columns: 300px 1fr 360px;
             gap: 0;
             align-items: stretch;
-            border-radius: 16px;
+            border-radius: 0;
             overflow: hidden;
-            border: 1px solid #e5eae6;
+            border: none;
+            background: #ffffff;
         }
 
         /* â”€â”€ Map â”€â”€ */
         .map-strip {
             overflow: hidden;
-            border-left: 1px solid #e5eae6;
+            border-left: 1px solid #cfe8dd;
             height: 100%;
             min-height: 500px;
         }
@@ -280,7 +304,7 @@
         @media (max-width: 991px) {
             .contact-page-row {
                 grid-template-columns: 1fr;
-                border-radius: 16px;
+                border-radius: 0;
             }
 
             .contact-panel-left {
@@ -294,7 +318,7 @@
             .map-strip {
                 min-height: 300px;
                 border-left: none;
-                border-top: 1px solid #e5eae6;
+                border-top: 1px solid #cfe8dd;
             }
         }
     </style>
@@ -379,7 +403,6 @@
             <!-- Right form panel -->
             <div class="contact-panel-right">
                 <div class="cp-form-title">Send us a message</div>
-                <hr class="cp-divider" style="margin-top: 0.5rem; margin-bottom: 1rem;">
                 <div class="cp-form-sub" style="margin-bottom: 1.2rem;">We'll get back to you within 24 hours.</div>
 
                 <form>

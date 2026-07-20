@@ -4,7 +4,7 @@
 
 /* ── Variables ─────────────────────────────────────────── */
 :root {
-  --green-900: #1a1a1a;
+  --green-900: #0f2d1a;
   --green-700: #085041;
   --green-500: #085041;
   --green-400: #5cd97a;
@@ -67,7 +67,7 @@ body { color: var(--text); }
   font-family: 'Jost', sans-serif;
   font-size: 1.65rem;
   font-weight: 700;
-  color: var(--green-900);
+  color: #28a745;
   margin-bottom: 12px;
   text-align: center;
 }
@@ -259,26 +259,43 @@ body { color: var(--text); }
 }
 
 /* ── Let's Talk CTA ────────────────────────────────────── */
-.esg-letstalk  { padding: 40px 0 !important; border-top: 1px solid var(--border); }
+.esg-letstalk  { padding: 32px 0 !important; background: #fff; border-top: 1px solid #e5ede8; }
 .esg-intro     { padding-bottom: 24px !important; }
 .esg-pillars   { padding-top: 24px !important; padding-bottom: 32px !important; }
-.img-cta-sub {
-  font-family: 'Open Sans', sans-serif;
-  font-size: .85rem; font-style: italic;
-  color: var(--muted);
-  margin: 0 0 10px;
-  letter-spacing: .01em;
+.svc-cta-link {
+  display: inline-flex; align-items: center; gap: 16px;
+  text-decoration: none; cursor: pointer;
+  border-bottom: 1.5px solid transparent;
+  padding: 8px 0;
+  transition: border-color .3s;
 }
-.img-cta-link {
-  display: inline-block;
-  font-family: 'Jost', sans-serif; font-size: 1.1rem; font-weight: 700;
-  letter-spacing: .12em; text-transform: uppercase;
-  color: var(--green-700); text-decoration: none;
-  border-bottom: 2px solid var(--green-400);
-  padding-bottom: 3px;
-  transition: color var(--transition), border-color var(--transition);
+.svc-cta-link:hover { border-bottom-color: #28a745; }
+.svc-cta-sub {
+  font-family: 'Jost', sans-serif; font-size: .68rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: #28a745; display: block; margin-bottom: 4px;
 }
-.img-cta-link:hover { color: var(--green-900); border-color: var(--green-700); }
+.svc-cta-main {
+  font-family: 'Jost', sans-serif; font-size: 1.15rem; font-weight: 700;
+  color: #0f2d1a; display: block; letter-spacing: .01em;
+}
+.svc-cta-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 50%;
+  border: 1.5px solid #28a745; color: #28a745; font-size: 1.25rem; line-height: 1;
+  flex-shrink: 0;
+  transition: background .3s ease, color .3s ease, transform .35s cubic-bezier(0.34,1.56,0.64,1), border-color .3s ease;
+}
+.svc-cta-link:hover .svc-cta-icon {
+  background: #28a745; color: #fff; border-color: #28a745;
+  transform: translateX(6px);
+}
+.svc-cta-icon span { display: block; animation: svc-arrow-bounce 1.6s ease-in-out infinite; }
+.svc-cta-link:hover .svc-cta-icon span { animation: none; }
+@keyframes svc-arrow-bounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
 
 /* ── Frameworks Grid ───────────────────────────────────── */
 .fw-card {
@@ -316,55 +333,67 @@ body { color: var(--text); }
 /* ── Process Grid ──────────────────────────────────────── */
 .esg-process-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 250px));
+  justify-content: center;
+  gap: 20px;
 }
 .esg-process-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px 24px 28px;
+  padding: 18px 18px 20px;
   position: relative;
   overflow: hidden;
-  transition: border-color var(--transition);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .esg-process-card:hover {
+  transform: translateY(-6px);
   border-color: var(--green-400);
+  box-shadow: var(--shadow);
 }
 .esg-process-num {
   font-family: 'Jost', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 900;
-  color: var(--green-200);
+  font-size: .85rem;
+  font-weight: 800;
+  color: var(--white);
   line-height: 1;
-  display: block;
-  transition: color var(--transition);
-  text-align: right;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 5px 0 5px 7px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, var(--green-700), var(--green-500));
+  box-shadow: 0 8px 20px rgba(8,80,65,.3);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 0;
+  transition: transform var(--transition);
+  text-align: left;
 }
-.esg-process-card:hover .esg-process-num { color: var(--green-400); }
-.esg-process-line {
-  width: 32px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--green-700), var(--green-400));
-  border-radius: 2px;
-  margin-bottom: 10px;
-  margin-left: auto;
-}
+.esg-process-card:hover .esg-process-num { color: var(--white); transform: scale(1.08) rotate(4deg); }
 .esg-process-title {
   font-family: 'Jost', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--green-900);
-  margin-bottom: 10px;
+  margin: 22px 0 8px;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
 }
 .esg-process-body {
-  font-size: .875rem;
-  line-height: 1.75;
+  font-size: .84rem;
+  line-height: 1.6;
   color: var(--muted);
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* ── CTA Section ───────────────────────────────────────── */
